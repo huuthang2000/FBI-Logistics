@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="15dp"
+    app:cardElevation="5dp"
+    app:cardBackgroundColor="@color/rcv_price"
+    app:cardUseCompatPadding="true">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        tools:ignore="UselessParent">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/row_cv_import_lcl"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/tv_label_stt"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/col1"
+                android:textSize="17sp"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="@id/guideline2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_row_price_import_lcl_stt"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/stt"
+                android:textColor="@color/black"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@id/guideline2"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/term"
+                android:textSize="17sp"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="@id/guideline2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_label_stt" />
+
+            <TextView
+                android:id="@+id/tv_row_price_import_lcl_term"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/term"
+                android:textColor="@color/black"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@id/guideline2"
+                app:layout_constraintTop_toBottomOf="@id/tv_row_price_import_lcl_stt" />
+
+
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/col2"
+                android:textSize="17sp"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="@id/guideline2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_row_price_import_lcl_term" />
+
+            <TextView
+                android:id="@+id/tv_row_price_import_lcl_pol"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/pol"
+                android:textColor="@color/black"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@id/guideline2"
+                app:layout_constraintTop_toBottomOf="@id/tv_row_price_import_lcl_term" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/col3"
+                android:textSize="17sp"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="@id/guideline2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_row_price_import_lcl_pol" />
+
+            <TextView
+                android:id="@+id/tv_row_price_import_lcl_pod"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/pod"
+                android:textColor="@color/black"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@id/guideline2"
+                app:layout_constraintTop_toBottomOf="@id/tv_row_price_import_lcl_pol" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/cargo"
+                android:textSize="17sp"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="@id/guideline2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_row_price_import_lcl_pod" />
+
+            <TextView
+                android:id="@+id/tv_row_price_import_lcl_cargo"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/cargo"
+                android:textColor="@color/black"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@id/guideline2"
+                app:layout_constraintTop_toBottomOf="@id/tv_row_price_import_lcl_pod" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/col_of"
+                android:textSize="17sp"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="@id/guideline2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_row_price_import_lcl_cargo" />
+
+            <TextView
+                android:id="@+id/tv_row_price_import_lcl_of"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/col_of"
+                android:textColor="@color/black"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@id/guideline2"
+                app:layout_constraintTop_toBottomOf="@id/tv_row_price_import_lcl_cargo" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/local_pol"
+                android:textSize="17sp"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="@id/guideline2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_row_price_import_lcl_of" />
+
+            <TextView
+                android:id="@+id/tv_row_price_import_lcl_local_pol"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/local_pol"
+                android:textColor="@color/black"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@id/guideline2"
+                app:layout_constraintTop_toBottomOf="@id/tv_row_price_import_lcl_of" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/local_pod"
+                android:textSize="17sp"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="@id/guideline2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_row_price_import_lcl_local_pol" />
+
+            <TextView
+                android:id="@+id/tv_row_price_import_lcl_local_pod"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/col_su2"
+                android:textColor="@color/black"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@id/guideline2"
+                app:layout_constraintTop_toBottomOf="@id/tv_row_price_import_lcl_local_pol" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/carrier"
+                android:textSize="17sp"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="@id/guideline2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_row_price_import_lcl_local_pod" />
+
+            <TextView
+                android:id="@+id/tv_row_price_import_lcl_carrier"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/carrier"
+                android:textColor="@color/black"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@id/guideline2"
+                app:layout_constraintTop_toBottomOf="@id/tv_row_price_import_lcl_local_pod" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/schedule"
+                android:textSize="17sp"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="@id/guideline2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_row_price_import_lcl_carrier" />
+
+            <TextView
+                android:id="@+id/tv_row_price_import_lcl_schedule"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/schedule"
+                android:textColor="@color/black"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@id/guideline2"
+                app:layout_constraintTop_toBottomOf="@id/tv_row_price_import_lcl_carrier" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/transit_time"
+                android:textSize="17sp"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="@id/guideline2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_row_price_import_lcl_schedule" />
+
+            <TextView
+                android:id="@+id/tv_row_price_import_lcl_transit"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/transit_time"
+                android:textColor="@color/black"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@id/guideline2"
+                app:layout_constraintTop_toBottomOf="@id/tv_row_price_import_lcl_schedule" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/valid"
+                android:textSize="17sp"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="@id/guideline2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_row_price_import_lcl_transit" />
+
+            <TextView
+                android:id="@+id/tv_row_price_import_lcl_valid"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/valid"
+                android:textColor="@color/black"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@id/guideline2"
+                app:layout_constraintTop_toBottomOf="@id/tv_row_price_import_lcl_transit" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/note"
+                android:textSize="17sp"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="@id/guideline2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_row_price_import_lcl_valid" />
+
+            <TextView
+                android:id="@+id/tv_row_price_import_lcl_note"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/note"
+                android:textColor="@color/black"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@id/guideline2"
+                app:layout_constraintTop_toBottomOf="@id/tv_row_price_import_lcl_valid" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_begin="20dp"
+                app:layout_constraintGuide_percent="0.4" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</com.google.android.material.card.MaterialCardView>
+

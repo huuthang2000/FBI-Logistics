@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/table_price_background"
+    android:layout_marginStart="10dp"
+    android:layout_height="wrap_content">
+
+    <TableRow>
+        <TextView
+            android:layout_width="100dp"
+            android:id="@+id/tv_row_price_log_stt"
+            android:layout_marginStart="2dp"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:layout_column="1"
+            android:paddingHorizontal="20dp"
+            android:paddingVertical="10dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="200dp"
+            android:id="@+id/tv_row_price_log_tenhang"
+            android:layout_marginStart="1dp"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:paddingHorizontal="20dp"
+            android:paddingVertical="10dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="200dp"
+            android:id="@+id/tv_row_price_log_hscode"
+            android:layout_marginStart="1dp"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:paddingHorizontal="20dp"
+            android:paddingVertical="10dp"
+            android:textStyle="bold" />
+        <TextView
+            android:layout_width="200dp"
+            android:id="@+id/tv_row_price_log_congdung"
+            android:layout_marginStart="1dp"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:paddingHorizontal="20dp"
+            android:paddingVertical="10dp"
+            android:textStyle="bold">
+        </TextView>
+
+        <TextView
+            android:layout_width="200dp"
+            android:id="@+id/tv_row_price_log_hinhanh"
+            android:layout_marginStart="1dp"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:paddingHorizontal="20dp"
+            android:paddingVertical="10dp"
+            android:textStyle="bold">
+        </TextView>
+
+
+        <TextView
+            android:layout_width="200dp"
+            android:id="@+id/tv_row_price_log_cangdi"
+            android:layout_marginStart="1dp"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:paddingHorizontal="20dp"
+            android:paddingVertical="10dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="250dp"
+            android:id="@+id/tv_row_price_log_cangden"
+            android:layout_marginStart="1dp"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:paddingHorizontal="20dp"
+            android:paddingVertical="10dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="200dp"
+            android:id="@+id/tv_row_price_log_loaihang"
+            android:layout_marginStart="1dp"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:paddingHorizontal="20dp"
+            android:paddingVertical="10dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="200dp"
+            android:id="@+id/tv_row_price_log_soluongcuthe"
+            android:layout_marginStart="1dp"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:paddingHorizontal="20dp"
+            android:paddingVertical="10dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="200dp"
+            android:id="@+id/tv_row_price_log_yeucaudacbiet"
+            android:layout_marginStart="1dp"
+            android:textColor="@color/black"
+            android:gravity="center"
+            android:paddingHorizontal="20dp"
+            android:paddingVertical="10dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="200dp"
+            android:id="@+id/tv_row_price_log_valid"
+            android:layout_marginStart="1dp"
+            android:textColor="@color/black"
+            android:gravity="center"
+            android:paddingHorizontal="20dp"
+            android:paddingVertical="10dp"
+            android:textStyle="bold" />
+
+    </TableRow>
+
+</TableLayout>

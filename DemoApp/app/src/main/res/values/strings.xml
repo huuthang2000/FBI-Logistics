@@ -1,0 +1,271 @@
+<resources>
+
+    <!--    Menu-->
+    <string name="app_name">DemoApp</string>
+    <string name="welcome">Welcome To FBI</string>
+    <string name="nav_home">Home</string>
+    <string name="nav_fcl">Phòng FCL</string>
+    <string name="nav_lcl">Phòng AIR</string>
+    <string name="nav_dom">Phòng DOM</string>
+    <string name="nav_export">Phòng EXPORT</string>
+    <string name="nav_import">Phòng IMPORT</string>
+    <string name="nav_log">Phòng LOG</string>
+    <string name="nav_hq">Phòng Hải Quan</string>
+    <string name="nav_bh">Phòng Bảo Hiểm</string>
+    <string name="nav_os">Phòng Oversea</string>
+    <string name="nav_nvocc">Phòng NVOCC</string>
+    <string name="nav_depot">Phòng DEPOT</string>
+    <string name="nav_wh">Phòng Warehouse</string>
+
+    <!--    About Us-->
+    <string name="tru_so_chinh">TRỤ SỞ CHÍNH: 19F Đường 28, Khu phố 7, Phường Linh Đông, Thành phố Thủ Đức, Thành phố Hồ Chí Minh, Việt Nam</string>
+    <string name="giay_phep">Giấy phép ĐKKD: 0316508978</string>
+    <string name="phone">Điện thoại: +84 28 3535 7878</string>
+    <string name="email">Email: Info@fbilogistics.vn</string>
+    <string name="hotline">HOTLINE 24/7: +84 772 50 10 20</string>
+
+    <string name="navigation_drawer_open">Open navigation</string>
+    <string name="navigation_drawer_close">Close navigation</string>
+    <string name="company_name">FBI Logistics</string>
+    <!-- hint of dropdown menu-->
+    <string name="select_month">Chọn Tháng</string>
+    <string name="select_continent">Chọn Châu</string>
+    <string name="typeof_container">Chọn Loại Container</string>
+    <!--    price list table-->
+    <string name="stt">STT</string>
+    <string name="pol">POL</string>
+    <string name="pod">POD</string>
+    <string name="lines">LINES</string>
+    <string name="notes">NOTES</string>
+    <string name="valid">VALID</string>
+    <string name="notes2">NOTES</string>
+
+    <!--Continents -->
+    <string name="asia">Asia</string>
+    <string name="america">America</string>
+    <string name="Europe">Europe</string>
+
+    <!-- Type of price list-->
+    <string name="gp">GP</string>
+    <string name="fr">FR</string>
+    <string name="rf">RF</string>
+    <string name="ot">OT</string>
+    <string name="hc">HC</string>
+    <string name="all">ALL</string>
+    <string name="hq">HQ</string>
+    <string name="tk">TK</string>
+    <string name="ft">FT</string>
+    <string name="iso">ISO</string>
+
+
+    <!--Table columns name -->
+    <string name="col1">STT</string>
+    <string name="col2">POL</string>
+    <string name="col3">POD</string>
+
+
+    <string name="col_of2">O/F 20</string>
+    <string name="col_of4">O/F 40</string>
+    <string name="col_of45">O/F 45</string>
+    <string name="col_su2">SUR 20</string>
+    <string name="col_su4">SUR 40</string>
+    <string name="col8">LINES</string>
+    <string name="col9">Free time</string>
+    <string name="col10">VALID</string>
+    <string name="col11">NOTES</string>
+
+    <!-- Table name of Import -->
+    <string name="surcharge">SUR</string>
+    <string name="total_freight">TOTAL FREIGHT</string>
+    <string name="carrier">CARRIER</string>
+    <string name="schedule">SCHEDULE</string>
+    <string name="transit_time">TRANSIT TIME</string>
+    <string name="free_time">FREE TIME</string>
+    <string name="note">NOTE</string>
+    <!--     Buttons name-->
+    <string name="btn_add_txt">Insert</string>
+    <string name="btn_update_txt">Update</string>
+    <string name="btn_cancel_txt">Cancel</string>
+    <string name="btn_del">XÓA</string>
+    <string name="btn_edit">SỬA</string>
+    <string name="des_fab_add">Add new row</string>
+
+    <!--    custom dialog-->
+    <string name="hint_username">Username</string>
+    <string name="hint_password">Password</string>
+
+    <string name="app_namesale">SaleLogistics</string>
+
+    <string name="nav_homesale">Home</string>
+    <string name="nav_duongbiem">Đường Biển Quốc Tế</string>
+    <string name="nav_hangkhong">Đường Hàng Không Quốc Tế</string>
+    <string name="nav_duongbo">Đường Bộ Xuyên Biên Giới</string>
+    <string name="nav_noidia">Nội Địa</string>
+    <string name="nav_oversea">Oversea</string>
+    <string name="nav_container">Loại Container</string>
+    <string name="nav_luukho">Lưu Kho</string>
+    <string name="nav_haiquan">Thủ Tục Hải Quan</string>
+    <string name="nav_baohiem">Bảo Hiểm</string>
+    <string name="nav_nameInfoSale">FBILogistics</string>
+    <string name="nav_linkInfoSale">www.fbi.amoris.vn</string>
+
+    <string name="nav_drawer_open">Open navigation drawer</string>
+    <string name="nav_drawer_close">Close navigation drawer</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+    <string name="colAIR_col2">AOL</string>
+    <string name="colAIR_col3">AOD</string>
+    <string name="colAIR_col4">DIM (LxHxW cm)</string>
+    <string name="DIM_M">DIM (LxHxW m)</string>
+    <string name="colAIR_col5">GROSS WEIGHT</string>
+    <string name="colAIR_col6">TYPE OF CARGO</string>
+    <string name="colAIR_col7">AIR FREIGHT</string>
+    <string name="colAIR_col8">SUR</string>
+    <string name="colAIR_col9">AIRLINES</string>
+    <string name="colAIR_col10">SCHEDULE</string>
+    <string name="colAIR_col11">TRANSIT TIME</string>
+    <string name="colAIR_col12">VALID</string>
+    <!--    dom-->
+    <string name="dom_type1">Trucking hàng containers</string>
+    <string name="dom_type2">Trucking xe tải</string>
+    <string name="dom_type3">Vận chuyển đường biển</string>
+
+    <string name="bottom_imp">Hàng nhập</string>
+    <string name="bottom_ex">Hàng xuất</string>
+    <string name="created_date">CREATED DATE</string>
+    <string name="created_date1">Created date</string>
+    <string name="btn_update">Update</string>
+    <string name="btn_add_new">Insert</string>
+    <string name="favorite">Favorite</string>
+    <string name="content_description_favorite">Nothing</string>
+    <string name="search">Search</string>
+    <string name="content_description_search">search_des</string>
+
+    <string name="truck_ie">Trucking Hàng Container</string>
+    <string name="product_name">Tên Hàng</string>
+    <string name="tv_dom_export_weight">Trọng Lượng</string>
+    <string name="temp">Nhiệt Độ</string>
+    <string name="address">Địa Chỉ</string>
+    <string name="seaport">Cảng Chờ Xuất</string>
+    <string name="length">Chiều dài</string>
+    <string name="width">Chiều rộng</string>
+    <string name="height">Chiều cao</string>
+
+
+    <string name="collog_1">Tên hàng</string>
+    <string name="collog_2">H/S code</string>
+    <string name="collog_3">Công dụng</string>
+    <string name="collog_4">Hình ảnh</string>
+    <string name="collog_5">Cảng đi</string>
+    <string name="collog_6">Cảng đến</string>
+    <string name="collog_7">Loại hàng</string>
+    <string name="collog_8">Số lượng cụ thể</string>
+    <string name="collog_9">Yêu cầu đặc biệt</string>
+    <string name="collog_9a">Yêu cầu đặc biệt</string>
+    <string name="collog_10">Price</string>
+    <string name="collog_11">Valid</string>
+    <string name="btn_dinhkem">Đính kèm ảnh</string>
+    <string name="select_ExportAndImport">Loại Vận Chuyển</string>
+    <string name="txt_dom_name">Tên Hàng</string>
+    <string name="txt_dom_weight">Trọng Lượng</string>
+    <string name="txt_dom_quantity">SL Cont</string>
+    <string name="txt_dom_temp">Nhiệt Độ</string>
+    <string name="txt_dom_address">Địa Chỉ</string>
+    <string name="txt_dom_port">Cảng Chờ Xuất</string>
+    <string name="txt_dom_length">Chiều Dài</string>
+    <string name="txt_dom_height">Chiều Cao</string>
+    <string name="txt_dom_width">Chiều Rộng</string>
+
+    <string name="title_activity_pro_import">ProImportActivity</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="label_import_imp">IMPORT</string>
+    <string name="label_import_lcl">LCL</string>
+    <string name="col_su45">SUR 45</string>
+    <string name="title_activity_dom">DomActivity</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="term">TERM</string>
+    <string name="cargo">CARGO</string>
+    <string name="col_of">OF</string>
+    <string name="local_pol">LOCAL_POL</string>
+    <string name="local_pod">LOCAL_POD</string>
+    <string name="ph_ng_kinh_doanh">PHÒNG KINH DOANH</string>
+    <string name="name_intro">Name: Ms. Julia</string>
+    <string name="phone_intro">Điện thoại: 0773 40 10 20</string>
+    <string name="email_intro">Email: Julia@fbilogistics.vn</string>
+    <string name="name_pro_intro">OVERSEA DEPARTMENT</string>
+    <string name="name2_intro">Name: Ms. Chloe</string>
+    <string name="phone2_intro">Tel: +84 28 3535 7878 EXT: 170</string>
+    <string name="email2_intro">Email: chloe@fbilogistics.vn</string>
+    <string name="name3_intro">CHĂM SÓC KHÁCH HÀNG</string>
+    <string name="phone3_intro">Điện thoại: +84 28 3535 7878 EXT: 100</string>
+    <string name="phone4_intro">Hotline: 0772 50 10 20</string>
+    <string name="email4_intro">Email: chamsockhachhang@fbilogistics.vn</string>
+    <string name="nav_dom_export">Hàng xuất</string>
+    <string name="nav_dom_import">Hàng nhập</string>
+    <string name="nav_dom_dry">Xe tải khô</string>
+    <string name="nav_dom_cold">Xe tải lạnh</string>
+    <string name="nav_dom_cy">Đường sắt - CY-CY</string>
+    <string name="nav_dom_door">Đường sắt - Door to Door</string>
+
+    <string name="nav_dom_cy_sea">Đường biển - CY-CY</string>
+    <string name="nav_dom_door_sea">Đường biển - Door to Door</string>
+
+    <string name="created_date_case">Ngày Tạo</string>
+    <string name="port_receive">Cảng lấy hàng</string>
+    <string name="txt_dom_port_receive">Cảng nhận hàng</string>
+    <string name="txt_dom_quantity_pallet">SL Kiện</string>
+    <string name="txt_dom_quantity_carton">SL Carton</string>
+    <string name="address_receive">ĐC Lấy Hàng</string>
+    <string name="address_delivery">ĐC Giao Hàng</string>
+    <string name="station_go">Ga đi</string>
+    <string name="station_come">Ga đến</string>
+    <string name="etd">ETD</string>
+    <string name="address_receive2">ĐC Đóng Hàng</string>
+
+    <string name="action_search">Search</string>
+    <string name="btn_import_air">Nhập Khẩu</string>
+    <string name="btn_export_air">Xuất Khẩu</string>
+    <string name="title_dialog_air">Chọn loại vận chuyển</string>
+    <string name="title_import_air">Nhập khẩu</string>
+    <string name="title_export_air">Xuất khẩu</string>
+    <string name="menu_zoom_air">Zoom-out page transformer</string>
+    <string name="menu_depth_air">Depth page transformer</string>
+    <string name="title_retail_goods_air">Hàng lẻ xuất</string>
+    <string name="ocean_airfreight">OCEAN FREIGHT</string>
+    <string name="local_charge">LOCAL CHARGE</string>
+    <string name="select_type">Loại hình</string>
+    <string name="title_activity_log_pro">LogProActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_log">Log</string>
+
+    <string name="label_fcl">FCL</string>
+    <string name="port_go">Cảng đi</string>
+    <string name="port_come">Cảng đến</string>
+
+    <string name="nav_cy_cy">Cy</string>
+    <string name="title_door_to_door">Door</string>
+    <string name="nav_truck_cold">Cold</string>
+    <string name="title_truck_dry">Dry</string>
+    <string name="nav_container_import">Import</string>
+    <string name="title_container_export">Export</string>
+    <string name="title_activity_air_page">AirPageActivity</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+    <string name="title_fbi">FBI Logistics</string>
+    <string name="name">Nguyễn Văn A</string>
+    <string name="gmail">NguyenVanA@fbilogistics.vn</string>
+    <string name="nav_account">Account</string>
+    <string name="Mesenger">Mesenger</string>
+    <string name="nav_my_profile">Tài khoản</string>
+
+
+</resources>

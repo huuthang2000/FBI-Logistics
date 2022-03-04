@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.demoapp">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.DemoApp"
+        android:usesCleartextTraffic="true">
+        <activity
+            android:name=".view.activity.air.AirPageActivity"
+            android:exported="true">
+
+        </activity>
+        <activity
+            android:name=".view.activity.sale.waterway.WaterWayActivity"
+            android:exported="true">
+
+        </activity>
+        <activity
+            android:name=".view.activity.sale.road.RoadSaleActivity"
+            android:exported="true">
+
+        </activity>
+        <activity
+            android:name=".view.activity.sale.ImportLclSaleActivity"
+            android:exported="true">
+
+        </activity>
+        <activity
+            android:name=".view.activity.sale.DomImportSaleActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.activity.imp.ProImportActivity"
+            android:exported="true"
+            android:label="@string/title_activity_dom"
+            android:theme="@style/Theme.DemoApp.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".view.activity.dom.DomActivity"
+            android:exported="true"
+            android:label="@string/title_activity_dom">
+
+        </activity>
+        <activity
+            android:name=".view.activity.pro.ProActivity"
+            android:exported="true"
+            android:label="@string/title_activity_pro_import">
+
+        </activity>
+        <activity
+            android:name=".view.activity.sale.rail.RailSaleActivity"
+            android:exported="true">
+
+        </activity>
+        <activity
+            android:name=".view.activity.sale.air.AirImportSaleActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.activity.sale.RetailGoodsExportActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.activity.log.LogProActivity"
+            android:exported="true">
+
+        </activity>
+        <activity
+            android:name=".view.activity.air.AirActivity"
+            android:exported="true">
+
+        </activity>
+        <activity
+            android:name=".view.activity.sale.ImportActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.activity.sale.LogActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.activity.sale.ContainerActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.activity.fcl.FclActivity"
+            android:exported="true"
+            android:theme="@style/Theme.DemoApp.NoActionBar">
+
+        </activity>
+        <activity
+            android:name=".view.activity.sale.SaleActivity"
+            android:exported="true">
+
+        </activity>
+        <activity
+            android:name=".view.activity.sale.TablePriceAirActivity"
+            android:exported="true" />
+        <activity
+            android:name=".view.activity.LoginActivity"
+            android:exported="true">
+
+        </activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+    </application>
+
+</manifest>

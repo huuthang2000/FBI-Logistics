@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/tab_dom_cold"
+        android:icon="@drawable/ic_dashboard_black_24dp"
+        android:title="@string/nav_truck_cold"/>
+    <item android:id="@+id/tab_dom_dry"
+        android:icon="@drawable/ic_notifications_black_24dp"
+        android:title="@string/title_truck_dry"/>
+    <item android:id="@+id/tab_container_import"
+        android:icon="@drawable/ic_baseline_grade_24"
+        android:title="@string/nav_container_import"/>
+    <item android:id="@+id/tab_container_export"
+        android:icon="@drawable/ic_baseline_local_shipping_24"
+        android:title="@string/title_container_export"/>
+
+
+</menu>

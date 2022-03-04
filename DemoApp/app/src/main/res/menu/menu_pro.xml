@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_baseline_star_24"
+            android:title="@string/nav_home" />
+        <item
+            android:id="@+id/nav_fcl"
+            android:icon="@drawable/ic_baseline_star_24"
+            android:title="@string/nav_fcl" />
+        <item
+            android:id="@+id/nav_lcl"
+            android:icon="@drawable/ic_baseline_star_24"
+            android:title="@string/nav_lcl" />
+        <item
+            android:id="@+id/nav_dom"
+            android:icon="@drawable/ic_baseline_star_24"
+            android:title="@string/nav_dom" />
+        <item
+            android:id="@+id/nav_import"
+            android:icon="@drawable/ic_baseline_star_24"
+            android:title="@string/nav_import" />
+        <item
+            android:id="@+id/nav_log"
+            android:icon="@drawable/ic_baseline_star_24"
+            android:title="@string/nav_log" />
+        <item
+            android:id="@+id/nav_hq"
+            android:icon="@drawable/ic_baseline_star_24"
+            android:title="@string/nav_hq" />
+        <item
+            android:id="@+id/nav_bh"
+            android:icon="@drawable/ic_baseline_star_24"
+            android:title="@string/nav_bh" />
+        <item
+            android:id="@+id/nav_oversea"
+            android:icon="@drawable/ic_baseline_star_24"
+            android:title="@string/nav_os" />
+        <item
+            android:id="@+id/nav_nvocc"
+            android:icon="@drawable/ic_baseline_star_24"
+            android:title="@string/nav_nvocc" />
+        <item
+            android:id="@+id/nav_depot"
+            android:icon="@drawable/ic_baseline_star_24"
+            android:title="@string/nav_depot" />
+        <item
+            android:id="@+id/nav_wh"
+            android:icon="@drawable/ic_baseline_star_24"
+            android:title="@string/nav_wh" />
+    </group>
+</menu>

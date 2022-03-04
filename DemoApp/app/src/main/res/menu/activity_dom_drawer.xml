@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_home_black_24dp"
+            android:title="@string/nav_home" />
+        <item
+            android:id="@+id/nav_dom_export"
+            android:icon="@drawable/baseline_travel_explore_black_24"
+            android:title="@string/nav_dom_export" />
+        <item
+            android:id="@+id/nav_dom_import"
+            android:icon="@drawable/ic_baseline_import_export_24"
+            android:title="@string/nav_dom_import" />
+
+        <item
+            android:id="@+id/nav_dom_dry"
+            android:icon="@drawable/ic_baseline_directions_container_24"
+            android:title="@string/nav_dom_dry" />
+        <item
+            android:id="@+id/nav_dom_cold"
+            android:icon="@drawable/ic_baseline_directions_container_24"
+            android:title="@string/nav_dom_cold" />
+
+        <item
+            android:id="@+id/nav_dom_cy"
+            android:icon="@drawable/ic_baseline_baohiem_24"
+            android:title="@string/nav_dom_cy" />
+        <item
+            android:id="@+id/nav_dom_door"
+            android:icon="@drawable/ic_baseline_baohiem_24"
+            android:title="@string/nav_dom_door" />
+
+        <item
+            android:id="@+id/nav_dom_cy_sea"
+            android:icon="@drawable/ic_baseline_baohiem_24"
+            android:title="@string/nav_dom_cy_sea" />
+        <item
+            android:id="@+id/nav_dom_door_sea"
+            android:icon="@drawable/ic_baseline_baohiem_24"
+            android:title="@string/nav_dom_door_sea" />
+
+    </group>
+</menu>

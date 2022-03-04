@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/dom_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.example.demoapp.view.fragment.home.HomeFragment"
+        android:label="@string/nav_home"
+        tools:layout="@layout/fragment_home_pro" />
+
+    <fragment
+        android:id="@+id/nav_dom_export"
+        android:name="com.example.demoapp.view.fragment.dom.DomExportFragment"
+        android:label="@string/nav_dom_export"
+        tools:layout="@layout/fragment_dom_export" />
+
+    <fragment
+        android:id="@+id/nav_dom_import"
+        android:name="com.example.demoapp.view.fragment.dom.DomImportFragment"
+        android:label="@string/nav_dom_import"
+        tools:layout="@layout/fragment_dom_import" />
+    <fragment
+        android:id="@+id/nav_dom_dry"
+        android:name="com.example.demoapp.view.fragment.dom.DomDryFragment"
+        android:label="@string/nav_dom_dry"
+        tools:layout="@layout/fragment_dom_dry" />
+    <fragment
+        android:id="@+id/nav_dom_cold"
+        android:name="com.example.demoapp.view.fragment.dom.DomColdFragment"
+        android:label="@string/nav_dom_cold"
+        tools:layout="@layout/fragment_dom_cold" />
+    <fragment
+        android:id="@+id/nav_dom_cy"
+        android:name="com.example.demoapp.view.fragment.dom.DomCyFragment"
+        android:label="@string/nav_dom_cy"
+        tools:layout="@layout/fragment_dom_cy" />
+    <fragment
+        android:id="@+id/nav_dom_door"
+        android:name="com.example.demoapp.view.fragment.dom.DomDoorFragment"
+        android:label="@string/nav_dom_door"
+        tools:layout="@layout/fragment_dom_door" />
+    <fragment
+        android:id="@+id/nav_dom_cy_sea"
+        android:name="com.example.demoapp.view.fragment.dom.DomCySeaFragment"
+        android:label="@string/nav_dom_cy_sea" />
+    <fragment
+        android:id="@+id/nav_dom_door_sea"
+        android:name="com.example.demoapp.view.fragment.dom.DomDoorSeaFragment"
+        android:label="@string/nav_dom_door_sea" />
+
+
+</navigation>

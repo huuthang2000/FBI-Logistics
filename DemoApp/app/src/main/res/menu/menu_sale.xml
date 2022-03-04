@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item android:id="@+id/nav_home"
+            android:title="@string/nav_home"
+            android:icon="@drawable/ic_baseline_home_24"/>
+    </group>
+    <item android:title="Danh Mục">
+        <menu>
+            <item android:id="@+id/nav_duongbien"
+                android:title="@string/nav_duongbiem"
+                android:icon="@drawable/ic_baseline_directions_boat_24"/>
+            <item android:id="@+id/nav_hangkhong"
+                android:title="@string/nav_hangkhong"
+                android:icon="@drawable/ic_baseline_airplanemode_blane_24"/>
+            <item android:id="@+id/nav_duongbo"
+                android:title="@string/nav_duongbo"
+                android:icon="@drawable/ic_baseline_local_play_24"/>
+            <item android:id="@+id/nav_noidia"
+                android:title="@string/nav_noidia"
+                android:icon="@drawable/ic_baseline_local_play_24"/>
+            <item android:id="@+id/nav_oversea"
+                android:title="@string/nav_oversea"
+                android:icon="@drawable/ic_baseline_store_24"/>
+            <item android:id="@+id/nav_luukho"
+                android:title="@string/nav_luukho"
+                android:icon="@drawable/ic_baseline_local_pharmacy_24"/>
+            <item android:id="@+id/nav_haiquan"
+                android:title="@string/nav_haiquan"
+                android:icon="@drawable/ic_baseline_local_pharmacy_24"/>
+            <item android:id="@+id/nav_baohiem"
+                android:title="@string/nav_baohiem"
+                android:icon="@drawable/ic_baseline_baohiem_24"/>
+            <item android:id="@+id/nav_nvocc"
+                android:title="@string/nav_nvocc"
+                android:icon="@drawable/ic_baseline_wb_cloudy_24"/>
+            <item android:id="@+id/nav_depot"
+                android:title="@string/nav_depot"
+                android:icon="@drawable/ic_baseline_favorite_24"/>
+        </menu>
+    </item>
+</menu>
