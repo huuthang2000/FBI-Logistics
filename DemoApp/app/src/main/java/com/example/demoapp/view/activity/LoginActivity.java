@@ -51,54 +51,7 @@ public class LoginActivity extends AppCompatActivity  {
                 clickLogin();
             }
         });
-//        btnLogin.setOnClickListener(new View.OnClickListener() {
-//
-//            @Override
-//            public void onClick(View v) {
-//                final String username, password;
-//                username = String.valueOf(EditText_username.getText());
-//                password = String.valueOf(EditText_password.getText());
-//
-//
-//                if(!username.equals("") && !password.equals("")){
-//                    Handler handler = new Handler();
-//                    handler.post(new Runnable() {
-//                        @Override
-//                        public void run() {
-//                            String[] field = new String[2];
-//                            field[0] = "username";
-//                            field[1] = "password";
-//                            //Creating array for data
-//                            String[] data = new String[2];
-//                            data[0] = username;
-//                            data[1] = password;
-//                            PutData putData = new PutData("http://192.168.1.6/login/login.php", "POST", field, data);
-//                            if(putData.startPut()){
-//                                if(putData.onComplete()){
-//                                    String result = putData.getResult();
-//                                    if(result.equals("Professional")){
-//                                        Toast.makeText(getApplicationContext(),result,Toast.LENGTH_SHORT).show();
-//                                        Intent intent = new Intent(getApplicationContext(), ProActivity.class);
-//                                        startActivity(intent);
-//                                        finish();
-//                                    }else if ( result.equals("Sale")) {
-//                                        Toast.makeText(getApplicationContext(),result,Toast.LENGTH_SHORT).show();
-//                                        Intent intent = new Intent(getApplicationContext(), SaleActivity.class);
-//                                        startActivity(intent);
-//                                        finish();
-//                                    } else{
-//                                        Toast.makeText(getApplicationContext(),result,Toast.LENGTH_SHORT).show();
-//                                    }
-//                                }
-//                            }
-//                        }
-//                    });
-//                }
-//                else {
-//                    Toast.makeText(getApplicationContext(),"All the field required",Toast.LENGTH_SHORT).show();
-//                }
-//            }
-//        });
+
   }
 
     private void clickLogin() {

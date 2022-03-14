@@ -266,6 +266,9 @@
     <string name="nav_account">Account</string>
     <string name="Mesenger">Mesenger</string>
     <string name="nav_my_profile">Tài khoản</string>
+    <string name="sign_up">Sign up</string>
+    <string name="position">Position</string>
+    <string name="confirm_password">confirm password</string>
 
 
 </resources>
