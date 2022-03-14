@@ -20,6 +20,7 @@
             app:popupTheme="@style/Theme.AppCompat.Light"
             app:title="@string/company_name" />
 
+
     </com.google.android.material.appbar.AppBarLayout>
 
     <androidx.viewpager2.widget.ViewPager2

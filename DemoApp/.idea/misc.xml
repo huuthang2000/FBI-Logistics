@@ -17,6 +17,32 @@
         <entry key="..\:/.FBILogistics/Github/FBILogistics/DemoApp/app/src/main/res/layout/fragment_pricelist_europe.xml" value="0.1" />
         <entry key="..\:/.FBILogistics/Github/FBILogistics/DemoApp/app/src/main/res/layout/fragment_pricelist_table.xml" value="0.1597222222222222" />
         <entry key="..\:/.FBILogistics/Github/FBILogistics/DemoApp/app/src/main/res/layout/row_pricelist_asia.xml" value="0.22" />
+        <entry key="..\:/Dowloads/Compressed/FBI-Logistics-main/FBI-Logistics-main/DemoApp/app/src/main/res/drawable/botron_button.xml" value="0.176" />
+        <entry key="..\:/Dowloads/Compressed/FBI-Logistics-main/FBI-Logistics-main/DemoApp/app/src/main/res/drawable/layout_banel.xml" value="0.176" />
+        <entry key="..\:/Dowloads/Compressed/FBI-Logistics-main/FBI-Logistics-main/DemoApp/app/src/main/res/layout/activity_air.xml" value="0.309375" />
+        <entry key="..\:/Dowloads/Compressed/FBI-Logistics-main/FBI-Logistics-main/DemoApp/app/src/main/res/layout/activity_air_import_sale.xml" value="0.21510416666666668" />
+        <entry key="..\:/Dowloads/Compressed/FBI-Logistics-main/FBI-Logistics-main/DemoApp/app/src/main/res/layout/activity_dom.xml" value="0.21510416666666668" />
+        <entry key="..\:/Dowloads/Compressed/FBI-Logistics-main/FBI-Logistics-main/DemoApp/app/src/main/res/layout/activity_fcl.xml" value="0.21510416666666668" />
+        <entry key="..\:/Dowloads/Compressed/FBI-Logistics-main/FBI-Logistics-main/DemoApp/app/src/main/res/layout/activity_import.xml" value="0.21510416666666668" />
+        <entry key="..\:/Dowloads/Compressed/FBI-Logistics-main/FBI-Logistics-main/DemoApp/app/src/main/res/layout/activity_import_lcl.xml" value="0.21510416666666668" />
+        <entry key="..\:/Dowloads/Compressed/FBI-Logistics-main/FBI-Logistics-main/DemoApp/app/src/main/res/layout/activity_import_lcl_sale.xml" value="0.21510416666666668" />
+        <entry key="..\:/Dowloads/Compressed/FBI-Logistics-main/FBI-Logistics-main/DemoApp/app/src/main/res/layout/activity_log_pro.xml" value="0.21510416666666668" />
+        <entry key="..\:/Dowloads/Compressed/FBI-Logistics-main/FBI-Logistics-main/DemoApp/app/src/main/res/layout/activity_login.xml" value="0.2988679352838745" />
+        <entry key="..\:/Dowloads/Compressed/FBI-Logistics-main/FBI-Logistics-main/DemoApp/app/src/main/res/layout/activity_main.xml" value="0.21510416666666668" />
+        <entry key="..\:/Dowloads/Compressed/FBI-Logistics-main/FBI-Logistics-main/DemoApp/app/src/main/res/layout/activity_pro_import.xml" value="0.21510416666666668" />
+        <entry key="..\:/Dowloads/Compressed/FBI-Logistics-main/FBI-Logistics-main/DemoApp/app/src/main/res/layout/activity_professional_main.xml" value="0.21510416666666668" />
+        <entry key="..\:/Dowloads/Compressed/FBI-Logistics-main/FBI-Logistics-main/DemoApp/app/src/main/res/layout/activity_sale.xml" value="0.2988679352838745" />
+        <entry key="..\:/Dowloads/Compressed/FBI-Logistics-main/FBI-Logistics-main/DemoApp/app/src/main/res/layout/activity_splash_screen.xml" value="0.21510416666666668" />
+        <entry key="..\:/Dowloads/Compressed/FBI-Logistics-main/FBI-Logistics-main/DemoApp/app/src/main/res/layout/fragment_dialog_dom_export_detail.xml" value="0.21510416666666668" />
+        <entry key="..\:/Dowloads/Compressed/FBI-Logistics-main/FBI-Logistics-main/DemoApp/app/src/main/res/layout/fragment_dialog_dom_export_sale_detail.xml" value="0.21510416666666668" />
+        <entry key="..\:/Dowloads/Compressed/FBI-Logistics-main/FBI-Logistics-main/DemoApp/app/src/main/res/layout/fragment_dialog_dom_export_update.xml" value="0.21510416666666668" />
+        <entry key="..\:/Dowloads/Compressed/FBI-Logistics-main/FBI-Logistics-main/DemoApp/app/src/main/res/layout/fragment_dialog_dom_import_sale_detail.xml" value="0.21510416666666668" />
+        <entry key="..\:/Dowloads/Compressed/FBI-Logistics-main/FBI-Logistics-main/DemoApp/app/src/main/res/layout/fragment_dialog_insert_fcl.xml" value="0.21510416666666668" />
+        <entry key="..\:/Dowloads/Compressed/FBI-Logistics-main/FBI-Logistics-main/DemoApp/app/src/main/res/layout/fragment_dom_export.xml" value="0.21510416666666668" />
+        <entry key="..\:/Dowloads/Compressed/FBI-Logistics-main/FBI-Logistics-main/DemoApp/app/src/main/res/layout/fragment_home_pro.xml" value="0.21510416666666668" />
+        <entry key="..\:/Dowloads/Compressed/FBI-Logistics-main/FBI-Logistics-main/DemoApp/app/src/main/res/layout/fragment_homesale.xml" value="0.21510416666666668" />
+        <entry key="..\:/Dowloads/Compressed/FBI-Logistics-main/FBI-Logistics-main/DemoApp/app/src/main/res/layout/item_price_list_log.xml" value="0.21510416666666668" />
+        <entry key="..\:/Dowloads/Compressed/FBI-Logistics-main/FBI-Logistics-main/DemoApp/app/src/main/res/layout/layout_headersale_navigation.xml" value="0.2988679352838745" />
         <entry key="..\:/Users/Dell/AndroidStudioProjects/DemoApp/app/src/main/res/drawable-v24/background_login_btn.xml" value="0.146875" />
         <entry key="..\:/Users/Dell/AndroidStudioProjects/DemoApp/app/src/main/res/drawable-v24/ic_baseline_menu_home_24.xml" value="0.10277777777777777" />
         <entry key="..\:/Users/Dell/AndroidStudioProjects/DemoApp/app/src/main/res/drawable/background.xml" value="0.146875" />
@@ -229,7 +255,7 @@
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">

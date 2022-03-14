@@ -1,11 +1,21 @@
 package com.example.demoapp.view.activity.sale;
 
+
+
+import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
@@ -14,6 +24,8 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
 import com.example.demoapp.R;
+import com.example.demoapp.view.activity.LoginActivity;
+import com.example.demoapp.view.activity.air.AirActivity;
 import com.example.demoapp.view.fragment.sales.AirlinesSaleFragment;
 import com.example.demoapp.view.fragment.sales.HomeSaleFragment;
 import com.example.demoapp.view.fragment.sales.InlandFragment;
@@ -35,18 +47,32 @@ public class SaleActivity extends AppCompatActivity implements NavigationView.On
     private static final int FRAGMENT_NVOCC = 10;
     private static final  int FRAGMENT_DEPOT = 11;
     private int mCurrentFragmet = FRAGMENT_HOME;
+    public static String nameu,posi;
 
     DrawerLayout mDrawerLayout;
     Toolbar toolbar;
-
+    TextView tvUsername,tvposition;
+    Button btnLogoutt;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sale);
 
         anhxa();
-        Actionbar();
+        if(nameu==null && posi == null) {
+            Intent intent = getIntent ();
+            nameu = intent.getStringExtra ( "Keyusername" );
+            posi = intent.getStringExtra ( "Keyposition" );
+            Log.d ( "BB", posi + "  " + nameu );
 
+
+        }
+        Actionbar();
+        SharedPreferences sharedPreferences = getSharedPreferences ( "UserInfo", MODE_PRIVATE );
+        SharedPreferences.Editor editor = sharedPreferences.edit ();
+        editor.putString ( "posi", posi );
+        editor.putString ( "uname",nameu );
+        editor.commit ();
 
     }
 
@@ -54,10 +80,44 @@ public class SaleActivity extends AppCompatActivity implements NavigationView.On
     private void anhxa() {
         toolbar = findViewById(R.id.tb_menu);
         mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
+        tvUsername = findViewById ( R.id.tvUsername );
+        tvposition = findViewById ( R.id.tvposition );
+        btnLogoutt =  findViewById ( R.id.btnLogoutt );
+    }
+    void dangxuat(){
+        AlertDialog.Builder builder = new AlertDialog.Builder(SaleActivity.this);
+        builder.setTitle(R.string.app_name);
+        builder.setIcon(R.mipmap.ic_launcher);
+        builder.setMessage("Do you want to logout")
+                .setCancelable(false)
+                .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                        SharedPreferences sharedPreferences = getSharedPreferences("UserInfo", Context.MODE_PRIVATE);
+                SharedPreferences.Editor editor = sharedPreferences.edit();
+                editor.remove("posi");
+                editor.remove ( "uname" );
+                editor.apply();
+                        Intent intent3 = new Intent(SaleActivity.this, LoginActivity.class);
+                        startActivity(intent3);
+                        finish();
+                    }
+                })
+                .setNegativeButton("No", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                        dialog.cancel();
+                    }
+                });
+        AlertDialog alert = builder.create();
+        alert.show();
+
+
     }
 
     private void Actionbar() {
         setSupportActionBar(toolbar);
+//        tvUsername.setText ( nameu );
+//        tvposition.setText ( posi );
+
 
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, mDrawerLayout, toolbar
                 , R.string.nav_drawer_open, R.string.nav_drawer_close);
@@ -69,6 +129,7 @@ public class SaleActivity extends AppCompatActivity implements NavigationView.On
         // xử lí mặc định vào trang home
         replaceFragment(new HomeSaleFragment());
         navigationView.getMenu().findItem(R.id.nav_home).setCheckable(true);
+
     }
 
     @Override

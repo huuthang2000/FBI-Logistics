@@ -1,6 +1,9 @@
 package com.example.demoapp.view.activity.dom;
 
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -19,14 +22,27 @@ public class DomActivity extends AppCompatActivity {
 
     private AppBarConfiguration mAppBarConfiguration;
     private ActivityDomBinding binding;
-
+    public static String nameu,posi;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         binding = ActivityDomBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+        if(nameu==null && posi == null) {
+            Intent intent = getIntent ();
+            nameu = intent.getStringExtra ( "Keyusername" );
+            posi = intent.getStringExtra ( "Keyposition" );
+            Log.d ( "BB", posi + "  " + nameu );
+
+
+        }
+        SharedPreferences sharedPreferences = getSharedPreferences ( "UserInfo", MODE_PRIVATE );
+        SharedPreferences.Editor editor = sharedPreferences.edit ();
+        editor.putString ( "posi", posi );
+        editor.commit ();
         initView();
+
     }
 
     public void initView() {
