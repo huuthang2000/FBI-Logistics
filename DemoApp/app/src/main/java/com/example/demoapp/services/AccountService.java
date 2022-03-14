@@ -11,10 +11,10 @@ import retrofit2.converter.gson.GsonConverterFactory;
 import retrofit2.http.GET;
 
 public interface AccountService {
-    AccountService apiAccountService = new Retrofit.Builder().
-            baseUrl(Constants.URL_API)
+    AccountService apiAccountService = new Retrofit.Builder()
+            .baseUrl(Constants.URL_API)
             .addConverterFactory(GsonConverterFactory.create())
             .build().create(AccountService.class);
-    @GET("GetDataAccount.php")
+    @GET("GetDataAccount.php/")
     Call<List<Account>> getAccount();
 }

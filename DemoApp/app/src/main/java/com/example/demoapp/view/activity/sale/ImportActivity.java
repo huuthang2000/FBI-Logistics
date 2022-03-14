@@ -3,7 +3,10 @@ package com.example.demoapp.view.activity.sale;
 import android.annotation.SuppressLint;
 import android.app.SearchManager;
 import android.content.Context;
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.View;
 import android.widget.AdapterView;
@@ -39,7 +42,7 @@ public class ImportActivity extends AppCompatActivity implements View.OnClickLis
     private ImportViewModel mImportViewModel;
     private ActivityImportBinding mImportBinding;
     private SearchView searchView;
-
+    public static String nameu,posi;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -57,7 +60,18 @@ public class ImportActivity extends AppCompatActivity implements View.OnClickLis
                 onResume();
             }
         });
+        if(nameu==null && posi == null) {
+            Intent intent = getIntent ();
+            nameu = intent.getStringExtra ( "Keyusername" );
+            posi = intent.getStringExtra ( "Keyposition" );
+            Log.d ( "BB", posi + "  " + nameu );
 
+
+        }
+        SharedPreferences sharedPreferences = getSharedPreferences ( "UserInfo", MODE_PRIVATE );
+        SharedPreferences.Editor editor = sharedPreferences.edit ();
+        editor.putString ( "posi", posi );
+        editor.commit ();
         setAdapterItems();
         setUpButtons();
         getAllData();

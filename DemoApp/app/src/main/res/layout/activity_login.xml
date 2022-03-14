@@ -7,63 +7,147 @@
     android:background="#fff"
     tools:context=".view.activity.LoginActivity"
     android:id="@+id/main_professional">
-    <ImageView
-        android:layout_marginTop="10dp"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:id="@+id/imageViewFBI"
-        android:src="@drawable/logofbi"
-        android:scaleType="centerCrop"
-        android:layout_marginLeft="130dp"
-        android:layout_marginBottom="30dp"
-        />
 
-    <EditText
-        android:id="@+id/username"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/imageViewFBI"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginBottom="10dp"
-        android:background="#064d83"
-        android:drawableLeft="@drawable/ic_baseline_person_outline_24"
-        android:drawablePadding="20dp"
-        android:hint="Username"
-        android:padding="20dp"
-        android:textColor="@color/white"
-        android:textColorHint="@color/white" />
-
-    <EditText
-        android:id="@+id/password"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/username"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginBottom="10dp"
-        android:background="#064d83"
-        android:drawableLeft="@drawable/ic_baseline_info_24"
-        android:drawablePadding="20dp"
-        android:hint="Password"
-        android:inputType="textPassword"
-        android:padding="20dp"
-        android:textColor="@color/white"
-        android:textColorHint="@color/white" />
-
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/loginbtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/password"
-        android:layout_centerHorizontal="true"
-        android:layout_marginStart="20dp"
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardview"
+        android:layout_width="350dp"
+        android:layout_height="420dp"
+        android:layout_below="@id/layoutImage"
+        android:layout_alignParentLeft="true"
+        android:layout_marginStart="30dp"
         android:layout_marginTop="20dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginBottom="20dp"
-        android:backgroundTint="#064d83"
-        android:text="LOGIN" />
+        android:layout_marginEnd="30dp"
+        android:background="#ffffff"
+        app:cardElevation="10dp"
+        android:elevation="10dp"
+        app:cardCornerRadius="25dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+        <EditText
+            android:id="@+id/username"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/cardview"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="40dp"
+            android:shadowRadius="@integer/material_motion_duration_medium_2"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/botron_button"
+            android:drawableLeft="@drawable/ic_baseline_account_circle_24"
+            android:drawablePadding="10dp"
+            android:elevation="3dp"
+            android:hint="Tài khoản"
+            android:padding="20dp"
+            android:textColor="@color/black"
+            android:textColorHint="#BAB6BF" />
 
+        <TextView
+            android:id="@+id/tk"
+            android:layout_width="wrap_content"
+            android:layout_height="11dp"
+            android:layout_below="@id/username"
+            android:layout_marginLeft="25dp"
+            android:textColor="#EC0808"
+            android:textSize="10sp">
+
+        </TextView>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layoutpassword"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:layout_below="@id/tk"
+            android:layout_margin="10dp"
+            app:hintEnabled="false"
+            app:startIconDrawable="@drawable/ic_baseline_lock_24"
+            android:background="@drawable/botron_button"
+            android:elevation="3dp"
+            app:passwordToggleEnabled="true"
+            >
+
+            <EditText
+                android:id="@+id/password"
+                android:layout_width="match_parent"
+                android:layout_height="67dp"
+                android:layout_gravity="center"
+                android:background="@color/Transparent"
+                android:hint="Mật khẩu"
+                app:startIconDrawable="@drawable/ic_baseline_lock_24"
+                android:inputType="textPassword"
+                android:textSize="18sp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/mk"
+            android:layout_width="wrap_content"
+            android:layout_height="11dp"
+            android:layout_below="@id/layoutpassword"
+            android:layout_marginLeft="25dp"
+
+            android:elevation="4dp"
+            android:textColor="#EC0808"
+            android:textSize="10sp">
+
+        </TextView>
+
+        <Button
+            android:id="@+id/loginbtn"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/layoutpassword"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:elevation="4dp"
+            android:shadowRadius="@integer/material_motion_duration_medium_2"
+            android:backgroundTint="#ffffff"
+            android:textColor="@color/btn_color"
+            android:textStyle="bold"
+            android:padding="15dp"
+            android:text="Đăng Nhập" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+    <LinearLayout
+        android:id="@+id/layoutImage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="30dp"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/imageViewFBI"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center"
+            android:elevation="20dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/logofbi" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/cardview"
+        android:layout_marginTop="30dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvTrangchu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="Trang chủ"
+            android:textColor="@color/btn_color"
+            android:textSize="20sp"
+            android:textStyle="bold">
+
+        </TextView>
+    </LinearLayout>
 </RelativeLayout>
