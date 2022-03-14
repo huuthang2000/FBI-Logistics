@@ -17,6 +17,7 @@
         <entry key="..\:/.FBILogistics/Github/FBILogistics/DemoApp/app/src/main/res/layout/fragment_pricelist_europe.xml" value="0.1" />
         <entry key="..\:/.FBILogistics/Github/FBILogistics/DemoApp/app/src/main/res/layout/fragment_pricelist_table.xml" value="0.1597222222222222" />
         <entry key="..\:/.FBILogistics/Github/FBILogistics/DemoApp/app/src/main/res/layout/row_pricelist_asia.xml" value="0.22" />
+        <entry key="..\:/Documents/GitHub/FBI-Logistics/DemoApp/app/src/main/res/layout/activity_login.xml" value="0.21510416666666668" />
         <entry key="..\:/Dowloads/Compressed/FBI-Logistics-main/FBI-Logistics-main/DemoApp/app/src/main/res/drawable/botron_button.xml" value="0.176" />
         <entry key="..\:/Dowloads/Compressed/FBI-Logistics-main/FBI-Logistics-main/DemoApp/app/src/main/res/drawable/layout_banel.xml" value="0.176" />
         <entry key="..\:/Dowloads/Compressed/FBI-Logistics-main/FBI-Logistics-main/DemoApp/app/src/main/res/layout/activity_air.xml" value="0.309375" />
@@ -255,7 +256,7 @@
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">

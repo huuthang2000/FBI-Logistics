@@ -61,6 +61,7 @@
             android:layout_height="65dp"
             android:layout_below="@id/tk"
             android:layout_margin="10dp"
+            android:paddingLeft="8dp"
             app:hintEnabled="false"
             app:startIconDrawable="@drawable/ic_baseline_lock_24"
             android:background="@drawable/botron_button"
@@ -73,6 +74,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="67dp"
                 android:layout_gravity="center"
+                android:paddingTop="1dp"
                 android:background="@color/Transparent"
                 android:hint="Mật khẩu"
                 app:startIconDrawable="@drawable/ic_baseline_lock_24"
@@ -87,7 +89,6 @@
             android:layout_height="11dp"
             android:layout_below="@id/layoutpassword"
             android:layout_marginLeft="25dp"
-
             android:elevation="4dp"
             android:textColor="#EC0808"
             android:textSize="10sp">
