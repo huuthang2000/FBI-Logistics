@@ -11,7 +11,7 @@ import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
 import com.example.demoapp.R;
-import com.example.demoapp.adapter.ImportDomAdapter;
+import com.example.demoapp.adapter.dom.ImportDomAdapter;
 import com.example.demoapp.databinding.ActivityDomImportSaleBinding;
 import com.example.demoapp.model.DomImport;
 import com.example.demoapp.utilities.Constants;

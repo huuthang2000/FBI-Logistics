@@ -54,7 +54,10 @@ public class LogProActivity extends AppCompatActivity {
                     case R.id.navigation_log:
                         binding.viewPagerLog.setCurrentItem(1);
                         break;
-
+                    case R.id.nav_message:
+                        binding.viewPagerLog.setCurrentItem(2);
+                    case R.id.nav_logout:
+                        logout();
                 }
                 return true;
             }
@@ -73,12 +76,19 @@ public class LogProActivity extends AppCompatActivity {
                     case 1:
                         binding.botomNavLog.getMenu().findItem(R.id.navigation_log).setChecked(true);
                         binding.viewPagerLog.setPageTransformer(new ZoomOutPageTransformer());
+                    case 2:
+                        binding.botomNavLog.getMenu().findItem(R.id.nav_message).setChecked(true);
+                        binding.viewPagerLog.setPageTransformer(new ZoomOutPageTransformer());
 
                         break;
 
                 }
             }
         });
+    }
+
+    private void logout() {
+
     }
 
 

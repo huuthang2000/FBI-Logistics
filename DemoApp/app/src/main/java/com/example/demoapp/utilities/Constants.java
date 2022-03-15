@@ -1,9 +1,11 @@
 package com.example.demoapp.utilities;
 
+import java.util.HashMap;
+
 public class Constants {
 
 
-    public static final String URL_API = "http://192.168.1.83/database/";
+    public static final String URL_API = "http://192.168.1.44/database/";
 
 
     public static final String FCL_UPDATE = "update_fcl";
@@ -107,5 +109,59 @@ public class Constants {
 
     public static final String INSERT_FAILED = "Insert Failed!!!";
     public static final String UPDATE_FAILED = "Update Failed!!!";
+
+    // message
+
+    public static final String KEY_COLLECTION_USERS = "users";
+    public static final String KEY_NAME = "name";
+    public static final String KEY_EMAIL = "email";
+    public static final String KEY_PASSWORD = "password";
+    public static final String KEY_PREFERENCE_NAME = "chatAppPreference";
+    public static final String KEY_IS_SIGNED_IN = "isSignedIn";
+    public static final String KEY_USER_ID = "userID";
+    public static final String KEY_IMAGE = "image";
+    public static final String KEY_POSITION = "position";
+    public static final String KEY_FCM_TOKEN = "fcmToken";
+    public static final String KEY_USER = "user";
+    public static final String KEY_COLLECTION_CHAT = "chat";
+    public static final String KEY_SENDER_ID = "senderId";
+    public static final String KEY_RECEIVER_ID = "receiverId";
+    public static final String KEY_MESSAGE = "message";
+    public static final String KEY_TIMESTAMP = "timestamp";
+    public static final String KEY_COLLECTION_CONVERSATIONS = "conversations";
+    public static final String KEY_SENDER_NAME = "senderName";
+    public static final String KEY_RECEIVER_NAME = "receiverName";
+    public static final String KEY_SENDER_IMAGE = "senderImage";
+    public static final String KEY_RECEIVER_IMAGE = "receiverImage";
+    public static final String KEY_LAST_MESSAGE = "lastMessage";
+    public static final String KEY_AVAILABILITY = "availability";
+    public static final String REMOTE_MSG_AUTHORIZATION = "Authorization";
+    public static final String REMOTE_MSG_CONTENT_TYPE = "content-Type";
+    public static final String REMOTE_MSG_DATA = "data";
+    public static final String REMOTE_MSG_REGISTRATION_IDS = "registration_ids";
+    public static final String KEY_SALE = "Sale";
+    public static final String KEY_AIR = "Air";
+    public static final String KEY_DOM = "Dom";
+    public static final String KEY_LOG = "Log";
+    public static final String KEY_IMPORT= "Import";
+    public static final String KEY_FCL = "Fcl";
+
+
+    public static HashMap<String, String> remoteMsgHeaders = null;
+
+    public static HashMap<String, String> getRomoteMsgHeaders(){
+        if(remoteMsgHeaders == null){
+            remoteMsgHeaders.put(
+                    REMOTE_MSG_AUTHORIZATION,
+                    "key=AAAAJSoIPuo:APA91bHYgT-Uj4-w7I0K9ky11Vii9qNHubbZo6m9bZfJSXOjhiqIzwKBh5xANmDkeGgdrJ0U-waIzxyZobHRWbVc0oVZ6pYhgXY5JS0JCrZNOS3PuJ02-wCqnqdhoLYp_34j5ZCXejFf"
+            );
+            remoteMsgHeaders.put(
+                    REMOTE_MSG_CONTENT_TYPE,
+                    "application/json"
+            );
+        }
+        return remoteMsgHeaders;
+    }
+
 
 }

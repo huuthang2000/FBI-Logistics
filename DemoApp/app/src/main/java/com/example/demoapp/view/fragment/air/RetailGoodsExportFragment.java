@@ -20,7 +20,7 @@ import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
 import com.example.demoapp.R;
-import com.example.demoapp.adapter.PriceListRetailGoddsAdapter;
+import com.example.demoapp.adapter.air.PriceListRetailGoddsAdapter;
 import com.example.demoapp.databinding.FragmentRetailGoodsExportBinding;
 import com.example.demoapp.model.RetailGoods;
 import com.example.demoapp.utilities.Constants;

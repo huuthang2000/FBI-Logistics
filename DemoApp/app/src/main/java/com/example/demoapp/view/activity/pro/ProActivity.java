@@ -18,7 +18,7 @@ import com.example.demoapp.R;
 
 import com.example.demoapp.view.activity.dom.DomActivity;
 
-import com.example.demoapp.adapter.PriceListAIRAdapter;
+import com.example.demoapp.adapter.air.PriceListAIRAdapter;
 
 import com.example.demoapp.view.activity.imp.ProImportActivity;
 import com.example.demoapp.view.fragment.air.AirExportFragment;

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item android:id="@+id/tab_home_fcl"
+            android:icon="@drawable/ic_baseline_home_24"
+            android:title="@string/nav_home"/>
+        <item android:id="@+id/tab_fcl"
+            android:icon="@drawable/ic_dashboard_black_24dp"
+            android:title="@string/label_fcl"/>
+        <item android:id="@+id/tab_chat_fcl"
+            android:icon="@drawable/ic_baseline_mark_chat_unread_24"
+            android:title="@string/Mesenger"/>
+        <item android:id="@+id/tab_logout_fcl"
+            android:icon="@drawable/ic_logout"
+            android:title="@string/log_out"/>
+    </group>
+
+</menu>

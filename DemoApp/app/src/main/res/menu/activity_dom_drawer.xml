@@ -43,6 +43,14 @@
             android:id="@+id/nav_dom_door_sea"
             android:icon="@drawable/ic_baseline_baohiem_24"
             android:title="@string/nav_dom_door_sea" />
+        <item
+            android:id="@+id/nav_message"
+            android:icon="@drawable/ic_message"
+            android:title="Tin nhấn"/>
+        <item
+            android:id="@+id/nav_logout"
+            android:icon="@drawable/ic_logout"
+            android:title="Đăng xuất"/>
 
     </group>
 </menu>

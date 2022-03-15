@@ -50,6 +50,10 @@
         android:id="@+id/nav_dom_door_sea"
         android:name="com.example.demoapp.view.fragment.dom.DomDoorSeaFragment"
         android:label="@string/nav_dom_door_sea" />
+    <activity
+        android:id="@+id/nav_message"
+        android:name="com.example.demoapp.view.activity.message.MainMessageActivity"
+        android:label="Tin Nhắn"/>
 
 
 </navigation>

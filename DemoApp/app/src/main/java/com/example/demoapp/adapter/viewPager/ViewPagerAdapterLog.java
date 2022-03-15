@@ -22,6 +22,7 @@ public class ViewPagerAdapterLog extends FragmentStateAdapter {
                 return new HomeFragment();
             case 1:
                 return new LogFragment();
+
             default:
                 return new HomeFragment();
         }

@@ -2,7 +2,7 @@
 
     <!--    Menu-->
     <string name="app_name">DemoApp</string>
-    <string name="welcome">Welcome To FBI</string>
+    <string name="welcome">Welcome To FBI Logistics</string>
     <string name="nav_home">Home</string>
     <string name="nav_fcl">Phòng FCL</string>
     <string name="nav_lcl">Phòng AIR</string>
@@ -264,11 +264,20 @@
     <string name="name">Nguyễn Văn A</string>
     <string name="gmail">NguyenVanA@fbilogistics.vn</string>
     <string name="nav_account">Account</string>
-    <string name="Mesenger">Mesenger</string>
+    <string name="Mesenger">Tin nhắn</string>
     <string name="nav_my_profile">Tài khoản</string>
     <string name="sign_up">Sign up</string>
     <string name="position">Position</string>
     <string name="confirm_password">confirm password</string>
+    <string name="login_to_continue">login to continue</string>
+    <string name="password">password</string>
+    <string name="sign_in">Sign in</string>
+    <string name="tin_nhan">Tin nhắn</string>
+    <string name="type_a_message">type a message</string>
+    <string name="online">online</string>
+    <string name="select_user">select user</string>
+    <string name="title_activity_log">LogActivity</string>
+    <string name="log_out">Đăng xuất</string>
 
 
 </resources>

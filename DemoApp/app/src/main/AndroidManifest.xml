@@ -13,10 +13,25 @@
         android:theme="@style/Theme.DemoApp"
         android:usesCleartextTraffic="true">
         <activity
-            android:name=".view.activity.login_register.SignUpActivity"
+            android:name=".view.activity.imp.ImportPageActivity"
             android:exported="false" />
         <activity
-            android:name=".view.activity.air.AirPageActivity"
+            android:name=".view.activity.log.LogPageActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.activity.fcl.FclPageActivity"
+            android:exported="true" />
+        <activity
+            android:name=".view.activity.message.UsersActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.activity.message.ChatActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.activity.message.MainMessageActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.activity.login_register.SignInActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -25,14 +40,20 @@
             </intent-filter>
         </activity>
         <activity
+            android:name=".view.activity.login_register.SignUpActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.activity.air.AirPageActivity"
+            android:exported="true" />
+        <activity
             android:name=".view.activity.sale.waterway.WaterWayActivity"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".view.activity.sale.road.RoadSaleActivity"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".view.activity.sale.ImportLclSaleActivity"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".view.activity.sale.DomImportSaleActivity"
             android:exported="false" />
@@ -40,18 +61,18 @@
             android:name=".view.activity.imp.ProImportActivity"
             android:exported="true"
             android:label="@string/title_activity_dom"
-            android:theme="@style/Theme.DemoApp.NoActionBar"></activity>
+            android:theme="@style/Theme.DemoApp.NoActionBar" />
         <activity
             android:name=".view.activity.dom.DomActivity"
             android:exported="true"
-            android:label="@string/title_activity_dom"></activity>
+            android:label="@string/title_activity_dom" />
         <activity
             android:name=".view.activity.pro.ProActivity"
             android:exported="true"
-            android:label="@string/title_activity_pro_import"></activity>
+            android:label="@string/title_activity_pro_import" />
         <activity
             android:name=".view.activity.sale.rail.RailSaleActivity"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".view.activity.sale.air.AirImportSaleActivity"
             android:exported="false" />
@@ -60,10 +81,10 @@
             android:exported="false" />
         <activity
             android:name=".view.activity.log.LogProActivity"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".view.activity.air.AirActivity"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".view.activity.sale.ImportActivity"
             android:exported="false" />
@@ -76,16 +97,16 @@
         <activity
             android:name=".view.activity.fcl.FclActivity"
             android:exported="true"
-            android:theme="@style/Theme.DemoApp.NoActionBar"></activity>
+            android:theme="@style/Theme.DemoApp.NoActionBar" />
         <activity
             android:name=".view.activity.sale.SaleActivity"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".view.activity.sale.TablePriceAirActivity"
             android:exported="true" />
         <activity
             android:name=".view.activity.LoginActivity"
-            android:exported="true"></activity>
+            android:exported="true" />
 
         <service
             android:name=".firebase.MessagingService"

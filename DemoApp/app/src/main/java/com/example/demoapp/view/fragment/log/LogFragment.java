@@ -20,7 +20,7 @@ import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
 import com.example.demoapp.R;
-import com.example.demoapp.adapter.PriceListLogAdapter;
+import com.example.demoapp.adapter.log.PriceListLogAdapter;
 import com.example.demoapp.databinding.FragmentLogBinding;
 import com.example.demoapp.model.Log;
 import com.example.demoapp.utilities.Constants;

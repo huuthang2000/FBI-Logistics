@@ -16,12 +16,15 @@
         <item android:id="@+id/tab_chat"
             android:icon="@drawable/ic_baseline_mark_chat_unread_24"
             android:title="@string/Mesenger"/>
+        <item android:id="@+id/tab_logout_air"
+            android:icon="@drawable/ic_logout"
+            android:title="@string/log_out"/>
     </group>
-    <item android:title="@string/nav_account">
-        <menu>
-            <item android:id="@+id/nav_my_profile"
-                android:title="@string/nav_my_profile"
-                android:icon="@drawable/ic_baseline_manage_accounts_24"/>
-        </menu>
-    </item>
+<!--    <item android:title="@string/nav_account">-->
+<!--        <menu>-->
+<!--            <item android:id="@+id/nav_my_profile"-->
+<!--                android:title="@string/nav_my_profile"-->
+<!--                android:icon="@drawable/ic_baseline_manage_accounts_24"/>-->
+<!--        </menu>-->
+<!--    </item>-->
 </menu>

@@ -18,7 +18,7 @@ import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
 import com.example.demoapp.R;
-import com.example.demoapp.adapter.CyDomAdapter;
+import com.example.demoapp.adapter.dom.CyDomAdapter;
 import com.example.demoapp.databinding.FragmentDomCyBinding;
 import com.example.demoapp.model.DomCy;
 import com.example.demoapp.utilities.Constants;

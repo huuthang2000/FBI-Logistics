@@ -3,11 +3,12 @@
     android:layout_width="match_parent"
     android:layout_height="180dp"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="#09819F"
+    android:background="@color/btn_color"
     android:padding="20dp"
     android:gravity="bottom"
     android:orientation="vertical">
     <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/image_header_sale"
         android:layout_width="80dp"
         android:layout_height="80dp"
         android:src="@drawable/logo"
@@ -15,6 +16,7 @@
         app:riv_corner_radius="70dp"/>
 
     <TextView
+        android:id="@+id/tv_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
@@ -24,6 +26,7 @@
         android:textStyle="bold" />
 
     <TextView
+        android:id="@+id/tv_name_header_sale"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/nav_linkInfoSale"
