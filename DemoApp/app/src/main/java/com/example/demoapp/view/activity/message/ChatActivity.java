@@ -305,4 +305,5 @@ public class ChatActivity extends BaseActivity {
         super.onResume();
         listenAvailabilityOrReceiver();
     }
+
 }

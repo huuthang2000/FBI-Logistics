@@ -58,6 +58,7 @@ public class MainMessageActivity extends BaseActivity implements ConversionListe
     }
 
     private void setListteners() {
+        binding.imageBack.setOnClickListener(v -> onBackPressed());
         binding.imageSignOut.setOnClickListener(v -> signOut());
         binding.fabNewChat.setOnClickListener(v ->
                 startActivity(new Intent(getApplicationContext(), UsersActivity.class)));
