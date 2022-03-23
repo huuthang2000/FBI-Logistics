@@ -20,7 +20,7 @@ import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
 import com.example.demoapp.R;
-import com.example.demoapp.adapter.PriceListAirImportAdapter;
+import com.example.demoapp.adapter.air.PriceListAirImportAdapter;
 import com.example.demoapp.databinding.FragmentAirImportBinding;
 import com.example.demoapp.model.AirImport;
 import com.example.demoapp.utilities.Constants;

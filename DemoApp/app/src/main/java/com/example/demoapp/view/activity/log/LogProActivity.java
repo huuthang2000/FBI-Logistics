@@ -1,9 +1,6 @@
 package com.example.demoapp.view.activity.log;
 
-import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.MenuItem;
 
 import androidx.annotation.NonNull;
@@ -19,7 +16,7 @@ import com.google.android.material.navigation.NavigationBarView;
 public class LogProActivity extends AppCompatActivity {
 
     private ActivityLogProBinding binding;
-    public static String nameu,posi;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,18 +24,6 @@ public class LogProActivity extends AppCompatActivity {
         binding = ActivityLogProBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
         setSupportActionBar(binding.toolbar);
-        if(nameu==null && posi == null) {
-            Intent intent = getIntent ();
-            nameu = intent.getStringExtra ( "Keyusername" );
-            posi = intent.getStringExtra ( "Keyposition" );
-            Log.d ( "BB", posi + "  " + nameu );
-
-
-        }
-        SharedPreferences sharedPreferences = getSharedPreferences ( "UserInfo", MODE_PRIVATE );
-        SharedPreferences.Editor editor = sharedPreferences.edit ();
-        editor.putString ( "posi", posi );
-        editor.commit ();
         bottomMenu();
         setupViewPager();
 
@@ -69,7 +54,10 @@ public class LogProActivity extends AppCompatActivity {
                     case R.id.navigation_log:
                         binding.viewPagerLog.setCurrentItem(1);
                         break;
-
+                    case R.id.nav_message:
+                        binding.viewPagerLog.setCurrentItem(2);
+                    case R.id.nav_logout:
+                        logout();
                 }
                 return true;
             }
@@ -88,12 +76,19 @@ public class LogProActivity extends AppCompatActivity {
                     case 1:
                         binding.botomNavLog.getMenu().findItem(R.id.navigation_log).setChecked(true);
                         binding.viewPagerLog.setPageTransformer(new ZoomOutPageTransformer());
+                    case 2:
+                        binding.botomNavLog.getMenu().findItem(R.id.nav_message).setChecked(true);
+                        binding.viewPagerLog.setPageTransformer(new ZoomOutPageTransformer());
 
                         break;
 
                 }
             }
         });
+    }
+
+    private void logout() {
+
     }
 
 

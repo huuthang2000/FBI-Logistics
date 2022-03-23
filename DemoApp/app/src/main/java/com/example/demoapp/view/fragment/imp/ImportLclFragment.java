@@ -20,9 +20,8 @@ import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
 import com.example.demoapp.R;
-import com.example.demoapp.adapter.PriceListImportLclAdapter;
+import com.example.demoapp.adapter.Import.PriceListImportLclAdapter;
 import com.example.demoapp.databinding.FragmentImportLclBinding;
-import com.example.demoapp.model.Import;
 import com.example.demoapp.model.ImportLcl;
 import com.example.demoapp.utilities.Constants;
 import com.example.demoapp.view.dialog.imp.InsertImportLclDialog;

@@ -37,6 +37,12 @@
             <item android:id="@+id/nav_depot"
                 android:title="@string/nav_depot"
                 android:icon="@drawable/ic_baseline_favorite_24"/>
+            <item android:id="@+id/nav_message"
+                android:title="@string/tin_nhan"
+                android:icon="@drawable/ic_message"/>
+            <item android:id="@+id/log_out"
+                android:title="Đăng xuất"
+                android:icon="@drawable/ic_logout"/>
         </menu>
     </item>
 </menu>

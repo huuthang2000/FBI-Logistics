@@ -20,7 +20,7 @@ import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
 import com.example.demoapp.R;
-import com.example.demoapp.adapter.PriceListFclAdapter;
+import com.example.demoapp.adapter.fcl.PriceListFclAdapter;
 import com.example.demoapp.databinding.FragmentFclBinding;
 import com.example.demoapp.model.Fcl;
 import com.example.demoapp.utilities.Constants;

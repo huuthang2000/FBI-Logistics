@@ -1,7 +1,15 @@
 package com.example.demoapp.view.activity.air;
 
+import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
+import android.util.Base64;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.ImageView;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
@@ -12,11 +20,20 @@ import androidx.fragment.app.FragmentTransaction;
 
 import com.example.demoapp.R;
 import com.example.demoapp.databinding.ActivityAirPageBinding;
+import com.example.demoapp.utilities.Constants;
+import com.example.demoapp.utilities.PreferenceManager;
+import com.example.demoapp.view.activity.login_register.SignInActivity;
+import com.example.demoapp.view.activity.message.MainMessageActivity;
 import com.example.demoapp.view.fragment.air.AirExportFragment;
 import com.example.demoapp.view.fragment.air.AirImportFragment;
 import com.example.demoapp.view.fragment.air.RetailGoodsExportFragment;
 import com.example.demoapp.view.fragment.home.HomeFragment;
 import com.google.android.material.navigation.NavigationView;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.FieldValue;
+import com.google.firebase.firestore.FirebaseFirestore;
+
+import java.util.HashMap;
 
 
 public class AirPageActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
@@ -26,7 +43,9 @@ public class AirPageActivity extends AppCompatActivity implements NavigationView
     private static final int FRAGMENT_AIR_IMPORT = 1;
     private static final int FRAGMENT_AIR_EXPORT = 2;
     private static final int FRAGMENT_AIR_RETAIL_GOODS = 3;
-    private static final int FRAGMENT_MY_PROFILE = 4;
+    private static final int ACTIVITY_MESSAGE = 4;
+    private static final int LOG_OUT = 5;
+    private PreferenceManager preferenceManager;
 
     private int mCurrentFragment = FRAGMENT_HOME;
 
@@ -44,47 +63,54 @@ public class AirPageActivity extends AppCompatActivity implements NavigationView
 
         replaceFragment(new HomeFragment());
         binding.navigationView.getMenu().findItem(R.id.tab_home_air).setChecked(true);
+        preferenceManager = new PreferenceManager(getApplicationContext());
+        initHearderView();
     }
 
-//    @Override
-//    public boolean onCreateOptionsMenu(Menu menu) {
-//        // Inflate the menu; this adds items to the action bar if it is present.
-//        getMenuInflater().inflate(R.menu.search, menu);
-//        return true;
-//    }
 
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-        switch (item.getItemId()) {
-            case R.id.tab_home_air:
-                if (mCurrentFragment != FRAGMENT_HOME) {
-                    replaceFragment(new HomeFragment());
-                    mCurrentFragment = FRAGMENT_HOME;
-                    binding.toolbar.setTitle("Home");
-                }
-                break;
-            case R.id.tab_import_air:
-                if (mCurrentFragment != FRAGMENT_AIR_IMPORT) {
-                    replaceFragment(new AirImportFragment());
-                    mCurrentFragment = FRAGMENT_AIR_IMPORT;
-                    binding.toolbar.setTitle("Air Import");
-                }
-                break;
-            case R.id.tab_export_air:
-                if (mCurrentFragment != FRAGMENT_AIR_EXPORT) {
-                    replaceFragment(new AirExportFragment());
-                    mCurrentFragment = FRAGMENT_AIR_EXPORT;
-                    binding.toolbar.setTitle("Air Export");
-                }
-                break;
-            case R.id.tab_retail_goods_air:
-                if (mCurrentFragment != FRAGMENT_AIR_RETAIL_GOODS) {
-                    replaceFragment(new RetailGoodsExportFragment());
-                    mCurrentFragment = FRAGMENT_AIR_RETAIL_GOODS;
-                    binding.toolbar.setTitle("Air Retail Goods");
-                }
-                break;
-        }
+           switch (item.getItemId()) {
+               case R.id.tab_home_air:
+                   if (mCurrentFragment != FRAGMENT_HOME) {
+                       replaceFragment(new HomeFragment());
+                       mCurrentFragment = FRAGMENT_HOME;
+                       binding.toolbar.setTitle("Home");
+                   }
+                   break;
+               case R.id.tab_import_air:
+                   if (mCurrentFragment != FRAGMENT_AIR_IMPORT) {
+                       replaceFragment(new AirImportFragment());
+                       mCurrentFragment = FRAGMENT_AIR_IMPORT;
+                       binding.toolbar.setTitle("Air Import");
+                   }
+                   break;
+               case R.id.tab_export_air:
+                   if (mCurrentFragment != FRAGMENT_AIR_EXPORT) {
+                       replaceFragment(new AirExportFragment());
+                       mCurrentFragment = FRAGMENT_AIR_EXPORT;
+                       binding.toolbar.setTitle("Air Export");
+                   }
+                   break;
+               case R.id.tab_retail_goods_air:
+                   if (mCurrentFragment != FRAGMENT_AIR_RETAIL_GOODS) {
+                       replaceFragment(new RetailGoodsExportFragment());
+                       mCurrentFragment = FRAGMENT_AIR_RETAIL_GOODS;
+                       binding.toolbar.setTitle("Air Retail Goods");
+                   }
+                   break;
+               case R.id.tab_chat:
+                   if (mCurrentFragment != ACTIVITY_MESSAGE) {
+                       Intent intent = new Intent(this, MainMessageActivity.class);
+                       startActivity(intent);
+                   }
+                   break;
+               case R.id.tab_logout_air:
+                   if (mCurrentFragment != LOG_OUT) {
+                       signOut();
+                   }
+                   finish();
+           }
         binding.drawerLayout.closeDrawer(GravityCompat.START);
         return true;
     }
@@ -103,5 +129,37 @@ public class AirPageActivity extends AppCompatActivity implements NavigationView
             super.onBackPressed();
         }
 
+    }
+    private void signOut() {
+        showToast("Sign out...");
+        FirebaseFirestore database = FirebaseFirestore.getInstance();
+        DocumentReference documentReference =
+                database.collection(Constants.KEY_COLLECTION_USERS).document(
+                        preferenceManager.getString(Constants.KEY_USER_ID)
+                );
+        HashMap<String, Object> update = new HashMap<>();
+        update.put(Constants.KEY_FCM_TOKEN, FieldValue.delete());
+        documentReference.update(update)
+                .addOnSuccessListener(undates -> {
+                    preferenceManager.clear();
+                    startActivity(new Intent(getApplicationContext(), SignInActivity.class));
+                    finish();
+                })
+                .addOnFailureListener(e -> showToast("Unable to sign out"));
+    }
+    private void showToast(String message) {
+        Toast.makeText(getApplicationContext(), message, Toast.LENGTH_SHORT).show();
+    }
+
+
+
+    private void initHearderView(){
+        View header = binding.navigationView.getHeaderView(0);
+        TextView tvName = header.findViewById(R.id.tv_name_header);
+        ImageView imageView = header.findViewById(R.id.image_header);
+        tvName.setText(preferenceManager.getString(Constants.KEY_NAME));
+        byte[] bytes = Base64.decode(preferenceManager.getString(Constants.KEY_IMAGE), Base64.DEFAULT);
+        Bitmap bitmap = BitmapFactory.decodeByteArray(bytes, 0, bytes.length);
+        imageView.setImageBitmap(bitmap);
     }
 }

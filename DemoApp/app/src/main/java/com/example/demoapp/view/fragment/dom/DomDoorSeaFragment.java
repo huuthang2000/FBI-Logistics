@@ -18,7 +18,7 @@ import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
 import com.example.demoapp.R;
-import com.example.demoapp.adapter.DoorSeaDomAdapter;
+import com.example.demoapp.adapter.dom.DoorSeaDomAdapter;
 import com.example.demoapp.databinding.FragmentDomDoorSeaBinding;
 import com.example.demoapp.model.DomDoorSea;
 import com.example.demoapp.utilities.Constants;

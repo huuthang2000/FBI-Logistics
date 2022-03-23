@@ -18,7 +18,7 @@ import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
 import com.example.demoapp.R;
-import com.example.demoapp.adapter.DryDomAdapter;
+import com.example.demoapp.adapter.dom.DryDomAdapter;
 import com.example.demoapp.databinding.FragmentDomDryBinding;
 import com.example.demoapp.model.DomDry;
 import com.example.demoapp.utilities.Constants;

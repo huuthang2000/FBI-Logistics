@@ -1,8 +1,8 @@
 <resources>
 
     <!--    Menu-->
-    <string name="app_name">DemoApp</string>
-    <string name="welcome">Welcome To FBI</string>
+    <string name="app_name">FBI LOGISTICS</string>
+    <string name="welcome">Welcome To FBI Logistics</string>
     <string name="nav_home">Home</string>
     <string name="nav_fcl">Phòng FCL</string>
     <string name="nav_lcl">Phòng AIR</string>
@@ -264,8 +264,26 @@
     <string name="name">Nguyễn Văn A</string>
     <string name="gmail">NguyenVanA@fbilogistics.vn</string>
     <string name="nav_account">Account</string>
-    <string name="Mesenger">Mesenger</string>
+    <string name="Mesenger">Tin nhắn</string>
     <string name="nav_my_profile">Tài khoản</string>
+    <string name="sign_up">Sign up</string>
+    <string name="position">Position</string>
+    <string name="confirm_password">confirm password</string>
+    <string name="login_to_continue">login to continue</string>
+    <string name="password">password</string>
+    <string name="sign_in">Sign in</string>
+    <string name="tin_nhan">Tin nhắn</string>
+    <string name="type_a_message">type a message</string>
+    <string name="online">online</string>
+    <string name="select_user">select user</string>
+    <string name="title_activity_log">LogActivity</string>
+    <string name="log_out">Đăng xuất</string>
+    <string name="Please_install_the_Google_Map_application">Vui lòng cài đặt google map</string>
+    <string name="Copied_to_Clipboard">copied to clipboard</string>
+    <string name="API_GOOGLE_MAP"><![CDATA["    <string name=\"API_GOOGLE_MAP\" translatable=\"false\">AIzaSyBG18JA4wPlhzN8VTPETdHo0RQr5yfbCY8</string>"]]></string>
+    <string name="permissionLocation">Yêu cầu quyền truy cập vị trí</string>
+    <string name="whotoOnGPS">Mở GPS</string>
+    <string name="Cancel">Cancel</string>
 
 
 </resources>

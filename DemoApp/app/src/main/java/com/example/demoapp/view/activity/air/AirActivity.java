@@ -1,9 +1,6 @@
 package com.example.demoapp.view.activity.air;
 
-import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
@@ -21,26 +18,13 @@ import com.google.android.material.navigation.NavigationBarView;
 public class AirActivity extends AppCompatActivity {
 
     private ActivityAirBinding mAirBinding;
-    public static String nameu,posi;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         mAirBinding = ActivityAirBinding.inflate(getLayoutInflater());
         View view = mAirBinding.getRoot();
         setContentView(view);
-        if(nameu==null && posi == null) {
-            Intent intent = getIntent ();
-            nameu = intent.getStringExtra ( "Keyusername" );
-            posi = intent.getStringExtra ( "Keyposition" );
-            Log.d ( "BB", posi + "  " + nameu );
-
-
-        }
-        SharedPreferences sharedPreferences = getSharedPreferences ( "UserInfo", MODE_PRIVATE );
-        SharedPreferences.Editor editor = sharedPreferences.edit ();
-        editor.putString ( "posi", posi );
-        editor.commit ();
-
         bottomMenu();
         setupViewPager();
 

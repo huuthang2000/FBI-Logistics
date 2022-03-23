@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~  Date created: 01/06/2020
+  ~  Last updated: 12/21/2019
+  ~  Name project: life24h
+  ~  Description:
+  ~  Auth: lucas@1byte.com
+  -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginLeft="15dp"
+    android:layout_marginRight="15dp"
+    android:layout_gravity="center"
+    android:layout_marginTop="50dp"
+    android:layout_marginBottom="50dp"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:layout_height="500dp"
+    android:background="@drawable/bg_button_pink"
+    android:backgroundTint="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_marginTop="30dp"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal"
+        android:layout_height="wrap_content">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="100dp"
+            app:civ_border_width="2dp"
+            app:civ_border_color="#B6B9BE"
+            android:id="@+id/profile_image_marker"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="100dp"
+            android:src="@drawable/no_avatar"
+            android:layout_marginLeft="5dp"
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:gravity="center_vertical"
+            android:paddingLeft="15dp"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_width="match_parent"
+                android:text="Username"
+                android:id="@+id/txt_NameMarker"
+                android:textSize="20sp"
+                android:textColor="#000"
+                android:textStyle="bold"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="WIFI: turned on"
+                android:textColor="#000"
+                android:id="@+id/txt_WIFIStatus"
+                android:layout_gravity="center_vertical"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="GPS: turned on"
+                android:textColor="#000"
+                android:id="@+id/txt_GPSStatus"
+                android:layout_gravity="center_vertical"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:text="Since 5:33 pm yesterday"
+                android:textSize="13sp"
+                android:id="@+id/txt_LastSinceMarker"
+
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"
+        android:orientation="horizontal">
+
+
+        <TextView
+            android:drawablePadding="5dp"
+            android:layout_width="wrap_content"
+            android:text=""
+            android:textColor="#000"
+            android:id="@+id/txt_locationMarkerDetail"
+            android:layout_gravity="center_vertical"
+            android:layout_height="wrap_content"/>
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginStart="10dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:rotation="90"
+            android:id="@+id/imvBatter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:text="Battery: 100%"
+            android:textColor="#000"
+            android:id="@+id/txt_BatteryMarker"
+            android:layout_gravity="center_vertical"
+            android:paddingLeft="5dp"
+            android:layout_height="wrap_content"/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginStart="10dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_margin="2dp"
+            android:text="Lấy GPS"
+            android:textColor="#fff"
+            android:id="@+id/btn_GetGPSNow"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:textAllCaps="false"
+            android:textSize="13sp"
+            android:background="@drawable/bg_button_pink"
+            android:layout_height="24dp"/>
+
+        <Button
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:text="Chat now"
+            android:textColor="#fff"
+            android:id="@+id/btnChatNow"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="2dp"
+            android:layout_marginEnd="2dp"
+            android:paddingStart="10dp"
+            android:textAllCaps="false"
+            android:textSize="13sp"
+            android:paddingEnd="10dp"
+
+            android:layout_height="24dp"/>
+
+    </LinearLayout>
+
+
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="5dp"
+        android:layout_height="0.5dp"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/lnl_Daily_History_Location_Marker"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="60dp"
+            android:id="@+id/pr"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="60dp"
+            android:src="@drawable/ic_destination"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="10dp"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="match_parent"
+
+                android:textSize="20sp"
+                android:textColor="#000"
+                android:textStyle="bold"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:layout_width="match_parent"
+
+                android:textSize="16sp"
+                android:id="@+id/txt_Daily_Location"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="5dp"
+
+        android:layout_height="0.5dp"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:id="@+id/lnl_Daily_History_Speed_Marker"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="60dp"
+            android:id="@+id/profil"
+            android:layout_gravity="center_horizontal"
+            android:scaleType="centerCrop"
+            android:layout_height="60dp"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="match_parent"
+
+                android:textSize="20sp"
+                android:textColor="#000"
+                android:textStyle="bold"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:layout_width="match_parent"
+
+                android:textSize="16sp"
+                android:id="@+id/txt_Daily_Driver"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="5dp"
+
+        android:layout_height="0.5dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:gravity="bottom"
+        android:layout_height="match_parent">
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_gravity="center_horizontal"
+
+            android:id="@+id/btn_CloseMarker"
+            android:textColor="#fff"
+            android:textSize="17sp"
+            android:layout_height="40dp"
+            android:layout_marginBottom="15dp"/>
+    </LinearLayout>
+
+
+
+</LinearLayout>

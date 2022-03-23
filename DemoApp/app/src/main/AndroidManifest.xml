@@ -2,7 +2,28 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.demoapp">
 
+
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="oppo.permission.OPPO_COMPONENT_SAFE" />
+    <uses-permission android:name="com.huawei.permission.external_app_settings.USE_COMPONENT" />
+    <uses-permission android:name="android.permission.RECEIVE_LAUNCH_BROADCASTS" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="com.google.android.gms.permission.ACTIVITY_RECOGNITION" />
+    <uses-permission android:name="android.permission.ACTIVITY_RECOGNITION" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
 
     <application
         android:allowBackup="true"
@@ -13,16 +34,38 @@
         android:theme="@style/Theme.DemoApp"
         android:usesCleartextTraffic="true">
         <activity
-            android:name=".view.activity.SplashScreen"
-            android:exported="true"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+            android:name=".view.driver.DriverActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.activity.imp.ImportPageActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.activity.log.LogPageActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.activity.fcl.FclPageActivity"
+            android:exported="true" />
+        <activity
+            android:name=".view.activity.message.UsersActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.activity.message.ChatActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.activity.message.MainMessageActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.activity.login_register.SignInActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
+        <activity
+            android:name=".view.activity.login_register.SignUpActivity"
+            android:exported="false" />
         <activity
             android:name=".view.activity.air.AirPageActivity"
             android:exported="true" />
@@ -87,13 +130,30 @@
             android:exported="true" />
         <activity
             android:name=".view.activity.LoginActivity"
-            android:exported="true">
+            android:exported="true" />
 
-        </activity>
+        <service
+            android:name=".firebase.MessagingService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
 
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/API_GOOGLE_MAP" />
+
+        <service
+            android:name=".firebase.MessagingService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
     </application>
 
 </manifest>
