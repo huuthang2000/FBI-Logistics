@@ -1,0 +1,13 @@
+<!--
+  ~  Date created: 01/02/2020
+  ~  Last updated: 01/02/2020
+  ~  Name project: life24h
+  ~  Description:
+  ~  Auth: James Ryan
+  -->
+
+<vector android:height="18dp" android:tint="#303030"
+    android:viewportHeight="24.0" android:viewportWidth="24.0"
+    android:width="18dp" xmlns:android="http://schemas.android.com/apk/res/android">
+    <path android:fillColor="#FF000000" android:pathData="M12,5.83L15.17,9l1.41,-1.41L12,3 7.41,7.59 8.83,9 12,5.83zM12,18.17L8.83,15l-1.41,1.41L12,21l4.59,-4.59L15.17,15 12,18.17z"/>
+</vector>

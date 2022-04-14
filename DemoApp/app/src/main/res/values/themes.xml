@@ -22,4 +22,15 @@
     <style name="Theme.DemoApp.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
     <style name="Theme.DemoApp.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+    <style name="history_marker_theme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/blue</item>
+        <item name="colorPrimaryDark">@color/blue</item>
+    </style>
+    <style name="SplashScreenTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowBackground">@drawable/bg_splashscreen</item>
+
+    </style>
+    <style name="welcome" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:statusBarColor">#EFF5ED</item>
+    </style>
 </resources>

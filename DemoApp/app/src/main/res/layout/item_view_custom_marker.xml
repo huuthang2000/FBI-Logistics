@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/custom_marker_view"
+    android:layout_width="50dp"
+    android:layout_height="50dp"
+    >
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:background="@android:color/transparent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="35dp"
+                android:src="@drawable/location_marker"
+                android:layout_height="35dp"
+                android:layout_gravity="center"
+                android:contentDescription="@null"
+                />
+        </LinearLayout>
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="24dp"
+            android:id="@+id/profile_image"
+
+            android:layout_height="24dp"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/no_avatar"
+            />
+       <!-- <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="75dp"
+            android:id="@+id/profile_image_foggy"
+            android:layout_marginTop="1dp"
+            android:layout_marginLeft="12dp"
+            android:layout_height="80dp"
+            android:background="@drawable/bg_button_icon_marker"
+            />-->
+
+
+    </FrameLayout>
+
+
+</LinearLayout>

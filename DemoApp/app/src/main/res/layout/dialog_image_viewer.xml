@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~  Date created: 12/13/2019
+  ~  Last updated: 10/03/2019
+  ~  Name project: Life24h
+  ~  Description:
+  ~  Auth: James Ryan
+  -->
+
+<FrameLayout
+    android:background="@color/black"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+
+    <com.github.chrisbanes.photoview.PhotoView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <ImageView
+        android:padding="10dp"
+        android:layout_gravity="top|end"
+        android:src="@drawable/ic_close_grey_24dp"
+        android:id="@+id/imvClose"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</FrameLayout>

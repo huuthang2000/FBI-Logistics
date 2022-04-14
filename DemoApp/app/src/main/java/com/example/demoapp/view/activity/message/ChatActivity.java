@@ -10,7 +10,7 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 
 import com.example.demoapp.adapter.message.ChatAdapter;
-import com.example.demoapp.databinding.ActivityChatBinding;
+import com.example.demoapp.databinding.ActivityChat2Binding;
 import com.example.demoapp.model.ChatMessage;
 import com.example.demoapp.model.User;
 import com.example.demoapp.network.ApiClient;
@@ -44,7 +44,7 @@ import retrofit2.Response;
 
 public class ChatActivity extends BaseActivity {
 
-    private ActivityChatBinding binding;
+    private ActivityChat2Binding binding;
     private User receiverUser;
     private List<ChatMessage> chatMessages;
     private ChatAdapter chatAdapter;
@@ -56,7 +56,7 @@ public class ChatActivity extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        binding = ActivityChatBinding.inflate(getLayoutInflater());
+        binding = ActivityChat2Binding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
         setListeners();

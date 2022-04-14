@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout
+    android:layout_margin="2dp"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <ImageView
+        android:scaleType="fitXY"
+        android:id="@+id/imvImageMsg"
+        android:src="@drawable/no_image"
+        android:layout_width="100dp"
+        android:layout_height="100dp"/>
+</LinearLayout>

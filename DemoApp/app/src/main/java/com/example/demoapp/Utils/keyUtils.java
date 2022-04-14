@@ -22,8 +22,6 @@ public class keyUtils {
     public static final int MAXBYTE = 2000000;
     public static final String DEFAULT_DATETIME_FORMAT = "ddMMyyyy";
 
-//    public static final String LINK_DATABASE = "https://life24h-79106.firebaseio.com/";
-//    public static final String LINK_STORAGE = "gs://life24h-1f235.appspot.com";
     public static final String REF_STORAGE_AVATAR = "avatar";
     public static final String REF_STORAGE_MESSAGE = "message";
     public static final String message = "message";
@@ -172,7 +170,7 @@ public class keyUtils {
     public static final String NETWORK = "network";
     public static final String TYPE = "type";
     //Folder save avatar
-    public static final String avatarLife24h = "avatarLife24h";
+    public static final String avatarfbi = "avatarFBILOGISTICS";
 
     //Type message
     public static final String GROUP = "group";
@@ -183,10 +181,10 @@ public class keyUtils {
 
     public static final long DETECTION_INTERVAL_IN_MILLISECONDS = 10 * 1000;
 
-    public static final int CONFIDENCE = 70;
+    public static final int CONFIDENCE = 30;
     public static final String CHECK_WELCOME = "check_welcome";
 
-    public static final String RESTART_INTENT = "com.family.life24h.restarter";
+    public static final String RESTART_INTENT = "com.example.demoapp.restarter";
 
 
 }

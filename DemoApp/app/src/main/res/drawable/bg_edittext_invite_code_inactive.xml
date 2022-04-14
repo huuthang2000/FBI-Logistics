@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+  ~  Date created: 01/06/2020
+  ~  Last updated: 01/06/2020
+  ~  Name project: life24h
+  ~  Description:
+  ~  Auth: James Ryan
+  -->
+
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <stroke android:color="#FAB7A3"
+        android:width="1dp"/>
+    <solid android:color="#FA815C"/>
+    <corners android:radius="5dp"/>
+</shape>

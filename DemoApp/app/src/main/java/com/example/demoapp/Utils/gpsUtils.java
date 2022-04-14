@@ -1,13 +1,5 @@
 package com.example.demoapp.Utils;
 
-/*
- *  Date created: 12/05/2019
- *  Last updated: 12/05/2019
- *  Name project: Life24h
- *  Description:
- *  Auth: James Ryan
- */
-
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.location.Location;

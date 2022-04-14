@@ -7,4 +7,9 @@
     <dimen name="nav_header_height">176dp</dimen>
     <dimen name="fab_margin">16dp</dimen>
 
+        <dimen name="margin_status_bar">20dp</dimen>
+        <dimen name="margin_start_chat_left">30dp</dimen>
+        <dimen name="margin_end_chat_left">50dp</dimen>
+        <dimen name="margin_end_chat_right">30dp</dimen>
+
 </resources>

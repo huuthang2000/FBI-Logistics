@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+
+
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <item
+        android:drawable="@drawable/bg_edittext_radius_white"
+
+        android:gravity="center"
+
+        />
+    <item
+        android:drawable="@drawable/logofbi"
+        android:gravity="center"
+        android:height="120dp"
+        android:width="120dp"
+        > </item>
+
+</layer-list>

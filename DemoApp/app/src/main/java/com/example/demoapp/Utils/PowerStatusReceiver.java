@@ -1,9 +1,9 @@
 package com.example.demoapp.Utils;
 
+import static com.example.demoapp.Models.objApplication.objAccount.getCurrentUser;
 import static com.example.demoapp.Utils.keyUtils.NETWORK;
 import static com.example.demoapp.Utils.keyUtils.accountList;
 import static com.example.demoapp.Utils.keyUtils.batteryPercent;
-import static com.example.demoapp.model.objAccount.getCurrentUser;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;
@@ -12,9 +12,9 @@ import android.content.IntentFilter;
 import android.os.BatteryManager;
 import android.util.Log;
 
+import com.example.demoapp.Models.objApplication.objAccount;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-
 
 
 public class PowerStatusReceiver  extends BroadcastReceiver {
@@ -23,9 +23,9 @@ public class PowerStatusReceiver  extends BroadcastReceiver {
     private FirebaseDatabase mFirebaseInstance;
     @Override
     public void onReceive(Context context, Intent intent) {
-        if(getCurrentUser() != null)
+        if(objAccount.getCurrentUser() != null)
         {
-
+            if(objAccount.getAccountFromSQLite(context, objAccount.getCurrentUser().getUid()) != null){
 
                 //Global.mLog = Log4jHelper.getLogger("PowerStatusReceiver");
                 mFirebaseInstance = FirebaseDatabase.getInstance();
@@ -62,7 +62,7 @@ public class PowerStatusReceiver  extends BroadcastReceiver {
                 }
             }
         }
-
+    }
     public static int batteryLevel(Context context)
     {
         Intent intent  = context.registerReceiver(null, new IntentFilter(Intent.ACTION_BATTERY_CHANGED));

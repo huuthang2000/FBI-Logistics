@@ -24,6 +24,7 @@ import com.example.demoapp.utilities.Constants;
 import com.example.demoapp.utilities.PreferenceManager;
 import com.example.demoapp.view.activity.login_register.SignInActivity;
 import com.example.demoapp.view.activity.message.MainMessageActivity;
+import com.example.demoapp.view.driver.UISplashScreen;
 import com.example.demoapp.view.fragment.dom.DomColdFragment;
 import com.example.demoapp.view.fragment.dom.DomCyFragment;
 import com.example.demoapp.view.fragment.dom.DomCySeaFragment;
@@ -54,7 +55,8 @@ public class DomActivity extends AppCompatActivity implements NavigationView.OnN
     private static final int FRAGMENT_DOM_DOOR= 7;
     private static final int FRAGMENT_DOM_DOOR_SEA = 8;
     private static final int ACTIVITY_MESSAGE = 9;
-    private static final int LOG_OUT = 10;
+    private static final int ACTIVITY_DRIVER = 10;
+    private static final int LOG_OUT = 11;
     private PreferenceManager preferenceManager;
 
     private int mCurrentFragment = FRAGMENT_HOME;
@@ -146,6 +148,12 @@ public class DomActivity extends AppCompatActivity implements NavigationView.OnN
             case R.id.nav_message:
                 if (mCurrentFragment != ACTIVITY_MESSAGE) {
                     Intent intent = new Intent(this, MainMessageActivity.class);
+                    startActivity(intent);
+                }
+                break;
+            case R.id.nav_Trucktracking:
+                if (mCurrentFragment != ACTIVITY_DRIVER) {
+                    Intent intent = new Intent(this, UISplashScreen.class);
                     startActivity(intent);
                 }
                 break;

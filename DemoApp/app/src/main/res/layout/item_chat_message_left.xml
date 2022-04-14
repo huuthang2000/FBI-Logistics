@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~  Date created: 12/09/2019
+  ~  Last updated: 10/13/2019
+  ~  Name project: Life24h
+  ~  Description:
+  ~  Auth: James Ryan
+  -->
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:id="@+id/rltlTimeGroup"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <View
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_toStartOf="@id/tvTimeGroup"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorLine"/>
+
+        <TextView
+            android:id="@+id/tvTimeGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Time"
+            android:layout_centerHorizontal="true"/>
+
+        <View
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_toEndOf="@id/tvTimeGroup"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorLine"/>
+
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/frameMain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:minWidth="150dp"
+            android:id="@+id/lnlMain"
+            android:background="@drawable/bg_chat_left"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:paddingEnd="5dp"
+            android:layout_marginStart="@dimen/margin_start_chat_left"
+            android:layout_marginEnd="@dimen/margin_end_chat_left"
+            android:paddingStart="35dp"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:id="@+id/lnlName"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <com.elyeproj.loaderviewlibrary.LoaderTextView
+                    android:id="@+id/tvUsername"
+                    android:text="@string/Unknown"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <com.elyeproj.loaderviewlibrary.LoaderTextView
+                    android:id="@+id/tvTime"
+                    android:text="time"
+                    android:layout_marginStart="10dp"
+                    android:textColor="@color/colorTextLight"
+                    android:textSize="12sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lnlMessage"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.elyeproj.loaderviewlibrary.LoaderTextView
+                    android:paddingBottom="2dp"
+                    android:paddingTop="2dp"
+                    android:layout_marginEnd="5dp"
+                    android:id="@+id/tvMessage"
+                    android:textColor="@color/black"
+                    android:text="content"
+                    android:textSize="15sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_margin="5dp"
+                android:id="@+id/lnlPicture"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_gravity="center"
+                    android:minWidth="220dp"
+                    android:src="@color/colorLine"
+                    android:id="@+id/imvResultPicture"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:minHeight="280dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_margin="5dp"
+                android:id="@+id/lnlMultiPicture"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.example.demoapp.CustomView.NonScrollGridView
+                    android:id="@+id/gvMultiPicture"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:horizontalSpacing="4dp"
+                    android:numColumns="2"
+                    android:stretchMode="columnWidth"
+                    android:verticalSpacing="4dp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            app:civ_border_color="@color/white"
+            app:civ_border_width="4dp"
+            android:id="@+id/imvAvatar"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/no_avatar"/>
+
+    </FrameLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rclvMembersSeen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:layout_marginStart="@dimen/margin_start_chat_left"
+        android:layout_marginEnd="@dimen/margin_end_chat_left"/>
+</LinearLayout>

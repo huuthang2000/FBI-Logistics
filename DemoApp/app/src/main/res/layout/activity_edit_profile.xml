@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~  Date created: 12/04/2019
+  ~  Last updated: 12/04/2019
+  ~  Name project: Life24h
+  ~  Description:
+  ~  Auth: James Ryan
+  -->
+
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Views.UISettings.UIEditProfile">
+    <ScrollView
+        android:fillViewport="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_alignParentTop="true"
+                android:background="@color/colorStartGradientBlue"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:id="@+id/lnlTop"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_marginTop="5dp"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentStart="true"
+                        android:id="@+id/imvBack"
+                        android:padding="10dp"
+                        android:layout_gravity="center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_arrow_back_white_24dp"/>
+
+
+                </RelativeLayout>
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    app:civ_border_color="@color/colorLine"
+                    app:civ_border_width="1dp"
+                    android:id="@+id/imvAvatar"
+                    android:src="@drawable/no_avatar"
+                    android:layout_gravity="center"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp" />
+
+                <Button
+                    android:visibility="invisible"
+                    android:id="@+id/btnRemoveCurrentAvatar"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_gravity="center"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="10dp"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:background="@drawable/bg_button_tranparent_border_white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:text="@string/Remove_current_avatar"/>
+
+                <LinearLayout
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/bg_profile"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:paddingTop="30dp"
+                        android:paddingStart="20dp"
+                        android:paddingEnd="20dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginEnd="10dp"
+                            android:layout_marginBottom="4dp"
+                            android:background="@drawable/bg_edittext_radius_white"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <EditText
+                                android:id="@+id/edtUsername"
+                                android:inputType="text"
+                                android:paddingStart="15dp"
+                                android:paddingEnd="15dp"
+                                android:paddingTop="10dp"
+                                android:paddingBottom="10dp"
+                                android:hint="@string/User_name"
+                                android:textSize="15sp"
+                                android:drawablePadding="10dp"
+                                android:drawableStart="@drawable/ic_person_black_24dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@null"/>
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:visibility="gone"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginEnd="20dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Error"
+                            android:id="@+id/tvErrorUsername"
+                            android:textSize="13sp"
+                            android:layout_gravity="start"
+                            android:textColor="@color/red" />
+
+                        <LinearLayout
+                            android:layout_margin="10dp"
+                            android:paddingTop="3dp"
+                            android:paddingBottom="3dp"
+                            android:background="@drawable/bg_edittext_radius_white"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:gravity="center|start"
+                                android:drawablePadding="10dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginBottom="5dp"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginEnd="10dp"
+                                android:drawableStart="@drawable/ic_worldwide"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:text="@string/choose_a_country"
+                                android:id="@+id/tvChooseCountry"
+                                android:textSize="15sp"
+                                android:textColor="@color/black" />
+
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginEnd="10dp"
+                            android:layout_marginBottom="4dp"
+                            android:background="@drawable/bg_edittext_radius_white"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_gravity="center"
+                                android:scaleType="center"
+                                android:layout_marginStart="10dp"
+                                android:src="@drawable/ic_phone_black_24dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent" />
+
+                            <TextView
+                                android:layout_marginStart="10dp"
+                                android:layout_gravity="center"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="+1"
+                                android:id="@+id/tvAreaCode"
+                                android:textSize="15sp"
+                                android:textColor="@color/black" />
+
+                            <EditText
+                                android:textColor="@color/black"
+                                android:id="@+id/edtPhoneNumber"
+                                android:inputType="numberSigned"
+                                android:paddingStart="5dp"
+                                android:paddingEnd="15dp"
+                                android:paddingTop="11dp"
+                                android:paddingBottom="11dp"
+                                android:hint="@string/Phone_number"
+                                android:textSize="15sp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@null" />
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:visibility="gone"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginEnd="20dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Error"
+                            android:id="@+id/tvErrorPhoneNumber"
+                            android:textSize="13sp"
+                            android:layout_gravity="start"
+                            android:textColor="@color/red" />
+
+                        <LinearLayout
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginEnd="10dp"
+                            android:layout_marginBottom="4dp"
+                            android:background="@drawable/bg_edittext_radius_white"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <EditText
+                                android:id="@+id/edtFamilyName"
+                                android:inputType="text"
+                                android:paddingStart="15dp"
+                                android:paddingEnd="15dp"
+                                android:paddingTop="10dp"
+                                android:paddingBottom="10dp"
+                                android:hint="@string/Family_name"
+                                android:textSize="15sp"
+                                android:drawablePadding="10dp"
+                                android:drawableStart="@drawable/ic_home_black_24dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/colorTransparent"/>
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:visibility="gone"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginEnd="20dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Error"
+                            android:id="@+id/tvErrorFamilyName"
+                            android:textSize="13sp"
+                            android:layout_gravity="start"
+                            android:textColor="@color/red" />
+
+                        <LinearLayout
+                            android:layout_marginTop="10dp"
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:layout_marginStart="15dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/Gender1"
+                                android:textSize="16sp"
+                                android:textColor="@color/black" />
+
+                            <RadioGroup
+                                android:layout_marginStart="5dp"
+                                android:orientation="horizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <RadioButton
+                                    android:id="@+id/rdoMale"
+                                    android:layout_weight="1"
+                                    android:text="@string/Male"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent" />
+
+                                <RadioButton
+                                    android:id="@+id/rdoFemale"
+                                    android:layout_weight="1"
+                                    android:text="@string/Female"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent" />
+
+                                <RadioButton
+                                    android:id="@+id/rdoOther"
+                                    android:checked="true"
+                                    android:layout_weight="1"
+                                    android:text="@string/Other"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent" />
+                            </RadioGroup>
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                    <Button
+                        android:layout_marginTop="25dp"
+                        android:layout_gravity="end"
+                        android:id="@+id/btnSave"
+                        android:background="@drawable/bg_button_save"
+                        android:text="@string/Save"
+                        android:textColor="@color/white"
+                        android:textAllCaps="false"
+                        android:textSize="16sp"
+                        android:paddingStart="15dp"
+                        android:paddingEnd="15dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</LinearLayout>

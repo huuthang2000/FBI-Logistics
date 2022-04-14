@@ -2,9 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.demoapp">
 
-
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.CALL_PHONE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
@@ -21,6 +19,7 @@
     <uses-permission android:name="com.google.android.gms.permission.ACTIVITY_RECOGNITION" />
     <uses-permission android:name="android.permission.ACTIVITY_RECOGNITION" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />
+
     <uses-feature
         android:name="android.hardware.camera"
         android:required="true" />
@@ -34,7 +33,10 @@
         android:theme="@style/Theme.DemoApp"
         android:usesCleartextTraffic="true">
         <activity
-            android:name=".view.driver.DriverActivity"
+            android:name=".view.driver.UIDirect"
+            android:exported="false" />
+        <activity
+            android:name=".view.driver.UIMain"
             android:exported="false" />
         <activity
             android:name=".view.activity.imp.ImportPageActivity"
@@ -129,8 +131,130 @@
             android:name=".view.activity.sale.TablePriceAirActivity"
             android:exported="true" />
         <activity
-            android:name=".view.activity.LoginActivity"
+            android:name=".view.driver.UIWellcome.UITutorial"
+            android:screenOrientation="locked" />
+        <activity
+            android:name=".view.driver.UISelectCountries"
+            android:screenOrientation="locked" />
+        <activity
+            android:name=".view.driver.UISafety.UIDrivingDetailOfUser"
+            android:screenOrientation="locked" />
+        <activity
+            android:name=".view.driver.UIWellcome.UIWelcome_third"
+            android:screenOrientation="locked"
+            android:theme="@style/welcome" />
+        <activity
+            android:name=".view.driver.UIWellcome.UIWelcome_second"
+            android:screenOrientation="locked"
+            android:theme="@style/welcome" />
+        <activity
+            android:name=".view.driver.UIWellcome.UIWelcome_first"
+            android:screenOrientation="locked"
+            android:theme="@style/welcome" />
+        <activity
+            android:name=".view.driver.UISettings.UIJoinOtherFamilies"
+            android:screenOrientation="locked" />
+        <activity
+            android:name=".view.driver.UISettings.UIEditProfile"
+            android:screenOrientation="locked" />
+        <activity
+            android:name=".view.driver.UISettings.UIInviteFriends"
+            android:screenOrientation="locked" />
+        <activity
+            android:name=".view.driver.UISafety.UIAllDrivingInsights"
+            android:screenOrientation="locked" />
+        <activity
+            android:name=".view.driver.UILoadingData"
+            android:screenOrientation="locked" />
+        <activity
+            android:name=".view.driver.UIChat.UINewMessage"
+            android:screenOrientation="locked" />
+        <activity
+            android:name=".view.driver.PlaceAlertsDetail"
+            android:screenOrientation="locked" />
+        <activity
+            android:name=".view.driver.UICreateSafeArea"
+            android:screenOrientation="locked" />
+        <activity
+            android:name=".view.driver.UIChat.UIMessageGroupDetail"
+            android:screenOrientation="locked" />
+        <activity
+            android:name=".view.driver.UIChat.UIViewImageMessage"
+            android:screenOrientation="locked" />
+        <activity
+            android:name=".view.driver.UIChat.UIChooseImageFromGallery"
+            android:screenOrientation="locked" />
+        <activity
+            android:name=".view.driver.UIChat.UICamera"
+            android:screenOrientation="locked" />
+        <activity
+            android:name=".view.driver.UIChat.UIListChat"
+            android:screenOrientation="locked" />
+        <activity
+            android:name=".view.driver.UIChat.UIChat"
+            android:screenOrientation="locked"
+            android:windowSoftInputMode="adjustResize|stateAlwaysHidden" />
+        <activity
+            android:name=".view.driver.UISetupProfile"
+            android:screenOrientation="locked" />
+        <activity
+            android:name=".view.driver.UILogin"
+            android:screenOrientation="locked" />
+        <activity
+            android:name=".view.driver.UIHistoryLocations"
+            android:screenOrientation="locked" />
+        <activity
+            android:name=".view.driver.UISplashScreen"
+            android:exported="true"
+            android:screenOrientation="locked"
+            android:theme="@style/SplashScreenTheme">
+            <!-- <meta-data android:name="android.app.shortcuts" -->
+            <!-- android:resource="@xml/shortcuts" /> -->
+
+        </activity>
+
+        <service
+            android:name=".view.driver.autoStarService.GPSService"
+            android:enabled="true" />
+        <service
+            android:name=".view.driver.UISafety.SpeedService"
+            android:enabled="true" />
+
+        <receiver
+            android:name=".view.driver.autoStarService.UIBootReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <action android:name="android.intent.action.QUICKBOOT_POWERON" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".view.driver.notifications.directReplyReceiver" />
+
+        <service
+            android:name=".view.driver.DetectActivitys.DetectedActivitiesIntentService"
             android:exported="true" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/API_GOOGLE_MAP" />
+
+        <receiver
+            android:name=".view.driver.autoStarService.AlarmReceiver"
+            android:enabled="true" />
 
         <service
             android:name=".firebase.MessagingService"

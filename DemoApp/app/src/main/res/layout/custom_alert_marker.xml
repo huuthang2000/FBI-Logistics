@@ -1,11 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!--
-  ~  Date created: 01/06/2020
-  ~  Last updated: 12/21/2019
-  ~  Name project: life24h
-  ~  Description:
-  ~  Auth: lucas@1byte.com
-  -->
+
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
@@ -17,9 +11,8 @@
     android:layout_marginBottom="50dp"
     android:paddingLeft="10dp"
     android:paddingRight="10dp"
-    android:layout_height="500dp"
-    android:background="@drawable/bg_button_pink"
-    android:backgroundTint="@color/white"
+    android:layout_height="550dp"
+    android:background="@drawable/bg_button_people_marker"
     android:orientation="vertical">
 
     <LinearLayout
@@ -47,7 +40,7 @@
             android:layout_height="match_parent">
             <TextView
                 android:layout_width="match_parent"
-                android:text="Username"
+                android:text="@string/User_name"
                 android:id="@+id/txt_NameMarker"
                 android:textSize="20sp"
                 android:textColor="#000"
@@ -57,14 +50,14 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:text="WIFI: turned on"
-                android:textColor="#000"
+                android:textColor="#FF5722"
                 android:id="@+id/txt_WIFIStatus"
                 android:layout_gravity="center_vertical"
                 android:layout_height="wrap_content"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:text="GPS: turned on"
-                android:textColor="#000"
+                android:textColor="#FF5722"
                 android:id="@+id/txt_GPSStatus"
                 android:layout_gravity="center_vertical"
                 android:layout_height="wrap_content"/>
@@ -73,7 +66,7 @@
                 android:text="Since 5:33 pm yesterday"
                 android:textSize="13sp"
                 android:id="@+id/txt_LastSinceMarker"
-
+                android:textColor="@color/gray"
                 android:layout_height="wrap_content"/>
 
         </LinearLayout>
@@ -89,6 +82,7 @@
 
         <TextView
             android:drawablePadding="5dp"
+            android:drawableStart="@drawable/ic_location_on_blue_18dp"
             android:layout_width="wrap_content"
             android:text=""
             android:textColor="#000"
@@ -109,6 +103,7 @@
             android:id="@+id/imvBatter"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:src="@drawable/ic_battery_20_blue_20dp"
             android:layout_gravity="center" />
 
         <TextView
@@ -129,24 +124,24 @@
         android:layout_marginStart="10dp"
         android:orientation="horizontal">
 
-        <Button
+        <TextView
             android:layout_gravity="center"
             android:layout_width="wrap_content"
             android:layout_margin="2dp"
-            android:text="Lấy GPS"
-            android:textColor="#fff"
+            android:text="@string/get_gps_now"
             android:id="@+id/btn_GetGPSNow"
+            android:textColor="#fff"
             android:paddingStart="10dp"
             android:paddingEnd="10dp"
             android:textAllCaps="false"
             android:textSize="13sp"
-            android:background="@drawable/bg_button_pink"
+            android:background="@drawable/bg_button_blue"
             android:layout_height="24dp"/>
 
-        <Button
+        <TextView
             android:layout_gravity="center"
             android:layout_width="wrap_content"
-            android:text="Chat now"
+            android:text="@string/Chat_now"
             android:textColor="#fff"
             android:id="@+id/btnChatNow"
             android:layout_marginStart="5dp"
@@ -157,7 +152,7 @@
             android:textAllCaps="false"
             android:textSize="13sp"
             android:paddingEnd="10dp"
-
+            android:background="@drawable/bg_button_blue"
             android:layout_height="24dp"/>
 
     </LinearLayout>
@@ -170,6 +165,7 @@
         android:layout_marginStart="10dp"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="5dp"
+        android:background="@color/gray"
         android:layout_height="0.5dp"/>
     <LinearLayout
         android:layout_width="match_parent"
@@ -194,14 +190,14 @@
             android:layout_height="wrap_content">
             <TextView
                 android:layout_width="match_parent"
-
+                android:text="@string/daily_history_location"
                 android:textSize="20sp"
                 android:textColor="#000"
                 android:textStyle="bold"
                 android:layout_height="wrap_content"/>
             <TextView
                 android:layout_width="match_parent"
-
+                android:text="@string/see_where_today"
                 android:textSize="16sp"
                 android:id="@+id/txt_Daily_Location"
                 android:layout_height="wrap_content"/>
@@ -215,7 +211,7 @@
         android:layout_marginLeft="10dp"
         android:layout_marginTop="10dp"
         android:layout_marginRight="5dp"
-
+        android:background="@color/gray"
         android:layout_height="0.5dp"/>
     <LinearLayout
         android:layout_width="match_parent"
@@ -231,7 +227,7 @@
             android:layout_gravity="center_horizontal"
             android:scaleType="centerCrop"
             android:layout_height="60dp"
-            />
+            android:src="@drawable/ic_fast"/>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -241,18 +237,63 @@
             android:layout_height="wrap_content">
             <TextView
                 android:layout_width="match_parent"
-
+                android:text="@string/weekly_driver_report"
                 android:textSize="20sp"
                 android:textColor="#000"
                 android:textStyle="bold"
                 android:layout_height="wrap_content"/>
             <TextView
                 android:layout_width="match_parent"
-
+                android:text="@string/view_driving_summary"
                 android:textSize="16sp"
                 android:id="@+id/txt_Daily_Driver"
                 android:layout_height="wrap_content"/>
         </LinearLayout>
+
+
+
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:id="@+id/lnl_drirect"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="60dp"
+            android:id="@+id/profilew"
+            android:layout_gravity="center_horizontal"
+            android:scaleType="centerCrop"
+            android:layout_height="60dp"
+            android:src="@drawable/ic_destination"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="match_parent"
+                android:text="Chỉ đường tới điểm đánh dấu"
+                android:textSize="20sp"
+                android:textColor="#000"
+                android:textStyle="bold"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:text="@string/view_driving_summary"
+                android:textSize="16sp"
+                android:id="@+id/txt_Direct"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+
+
 
 
     </LinearLayout>
@@ -261,7 +302,7 @@
         android:layout_marginLeft="10dp"
         android:layout_marginTop="10dp"
         android:layout_marginRight="5dp"
-
+        android:background="@color/gray"
         android:layout_height="0.5dp"/>
 
     <LinearLayout
@@ -272,7 +313,8 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_gravity="center_horizontal"
-
+            android:background="@drawable/bg_button_orange"
+            android:text="@string/Close"
             android:id="@+id/btn_CloseMarker"
             android:textColor="#fff"
             android:textSize="17sp"

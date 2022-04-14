@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~  Date created: 01/14/2020
+  ~  Last updated: 12/26/2019
+  ~  Name project: life24h
+  ~  Description:
+  ~  Auth: James Ryan
+  -->
+
+<LinearLayout
+    android:foreground="?attr/selectableItemBackground"
+    android:clickable="true"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingTop="5dp"
+    android:paddingBottom="5dp"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:focusable="true">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        app:cardElevation="5dp"
+        app:cardCornerRadius="15dp"
+        android:layout_height="60dp">
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_alignParentStart="true"
+            android:layout_width="50dp"
+            android:id="@+id/img_avatar_member"
+            android:layout_marginStart="15dp"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/no_avatar"
+            android:layout_height="50dp"/>
+
+
+        <LinearLayout
+
+            android:layout_toEndOf="@id/img_avatar_member"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:layout_marginStart="65dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:textSize="16sp"
+                android:id="@+id/txt_name_member"
+                android:layout_gravity="center_vertical"
+                android:paddingStart="15dp"
+                android:textColor="#000"
+                android:maxLines="1"
+                android:textStyle="bold"
+                android:text="James Ryan"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:layout_marginTop="2dp"
+                android:layout_width="match_parent"
+                android:textSize="12sp"
+                android:id="@+id/tvPhoneNumber"
+                android:layout_gravity="center_vertical"
+                android:paddingStart="15dp"
+                android:textColor="@color/dark_gray"
+                android:text="+1 111111"
+                android:layout_height="wrap_content"/>
+
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>
+

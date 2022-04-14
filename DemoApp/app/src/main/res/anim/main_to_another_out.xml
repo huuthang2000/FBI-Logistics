@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+  ~  Date created: 01/03/2020
+  ~  Last updated: 01/03/2020
+  ~  Name project: life24h
+  ~  Description:
+  ~  Auth: James Ryan
+  -->
+<set xmlns:android="http://schemas.android.com/apk/res/android">
+
+<!--    android:interpolator="@android:anim/accelerate_interpolator"-->
+
+    <translate
+        android:fromYDelta="0%p"
+        android:toYDelta="-100%p"
+        android:duration="400"/>
+
+</set>

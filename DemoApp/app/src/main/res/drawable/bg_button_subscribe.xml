@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~  Date created: 10/31/2019
+  ~  Last updated: 10/31/2019
+  ~  Name project: SafeAreasForChildren
+  ~  Description:
+  ~  Auth: James Ryan
+  -->
+
+<!--
+  ~  Date created: 02/11/2020
+  ~  Last updated: 02/11/2020
+  ~  Name project: life24h
+  ~  Description:
+  ~  Auth: trong.le@1byte.com
+  -->
+
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <gradient
+        android:startColor="#663CB1"
+        android:centerColor="#3F2B64"
+        android:endColor="#482D79"
+        android:angle="-90"/>
+
+    <corners android:radius="50dp"/>
+
+</shape>

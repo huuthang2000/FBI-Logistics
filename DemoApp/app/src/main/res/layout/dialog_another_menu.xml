@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="#E6FFFFFF"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_above="@id/lnlControlBottom"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_marginBottom="10dp"
+            android:layout_marginEnd="20dp"
+            android:layout_alignParentEnd="true"
+            android:layout_above="@id/lnlAddPlace"
+            android:id="@+id/lnlAddFamily"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_favorite_border_white_24dp"
+                android:scaleType="center"
+                android:background="@drawable/circle_gradient_red"/>
+
+            <TextView
+                android:layout_gravity="center"
+                android:layout_marginStart="5dp"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Add_family"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginBottom="10dp"
+            android:layout_marginStart="20dp"
+            android:layout_alignParentStart="true"
+            android:layout_above="@id/lnlJoinOtherFamilies"
+            android:id="@+id/lnlAddPlace"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_add_location_white_24dp"
+                android:scaleType="center"
+                android:background="@drawable/circle_gradient_green"/>
+
+            <TextView
+                android:layout_gravity="center"
+                android:layout_marginStart="5dp"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Add_place"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginBottom="10dp"
+            android:layout_marginEnd="20dp"
+            android:layout_alignParentEnd="true"
+            android:layout_above="@id/lnlInviteFriends"
+            android:id="@+id/lnlJoinOtherFamilies"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_home_white_24dp"
+                android:scaleType="center"
+                android:background="@drawable/circle_gradient_blue"/>
+
+            <TextView
+                android:layout_gravity="center"
+                android:layout_marginStart="5dp"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Join_other_families"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginBottom="10dp"
+            android:layout_marginStart="20dp"
+            android:layout_above="@id/lnlEditProfile"
+            android:id="@+id/lnlInviteFriends"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_person_add_white_24dp"
+                android:scaleType="center"
+                android:background="@drawable/circle_gradient_purple"/>
+
+            <TextView
+                android:layout_gravity="center"
+                android:layout_marginStart="5dp"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Invite_friends"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginBottom="10dp"
+            android:layout_marginEnd="20dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:id="@+id/lnlEditProfile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_edit_white_24dp"
+                android:scaleType="center"
+                android:background="@drawable/circle_gradient_orange"/>
+
+            <TextView
+                android:layout_gravity="center"
+                android:layout_marginStart="5dp"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Edit_profile"/>
+
+        </LinearLayout>
+
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_marginBottom="4dp"
+        android:id="@+id/lnlControlBottom"
+        android:gravity="center"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize">
+
+        <ImageView
+            android:rotation="-45"
+            android:id="@+id/imvClose"
+            android:clickable="true"
+            android:padding="5dp"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:src="@drawable/ic_plus1"
+            android:layout_gravity="center"
+            android:focusable="true" />
+
+    </LinearLayout>
+</RelativeLayout>

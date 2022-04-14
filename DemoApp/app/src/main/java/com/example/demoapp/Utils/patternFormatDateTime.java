@@ -13,26 +13,18 @@ import android.annotation.SuppressLint;
 import java.text.SimpleDateFormat;
 import java.util.Locale;
 
-/*******************************************************************************
- *  Date created: 11/01/2019
- *  Last updated: 10/28/2019
- *  Name project: SafeAreasForChildren
- *  Description:
- *  Auth: James Ryan
- ******************************************************************************/
-
 public class patternFormatDateTime {
 
-    //format full time ex: web, Oct 23, 2019 - 10:30AM
+
     @SuppressLint("ConstantLocale")
     public static final SimpleDateFormat EEE_MMM_dd_yyyy_hh_mm_a = new SimpleDateFormat("EEE, MMM dd, yyyy - hh:mma", Locale.getDefault());
 
-    //format full time ex: Oct 23, 2019 - 10:30AM
+    //format full time ex: Oct 23, 2022 - 10:30AM
     @SuppressLint("ConstantLocale")
     public static final SimpleDateFormat MMM_dd_yyyy_hh_mm_a = new SimpleDateFormat("MMM dd, yyyy - hh:mma", Locale.getDefault());
 
 
-    //format time ex: Mon, Oct 28, 2019
+    //format time ex: Mon, Oct 28, 2022
     @SuppressLint("ConstantLocale")
     public static final SimpleDateFormat EEE_MMM_d_yyyy = new SimpleDateFormat("EEE, MMM d, yyyy", Locale.getDefault());
 
@@ -40,7 +32,7 @@ public class patternFormatDateTime {
     @SuppressLint("ConstantLocale")
     public static final SimpleDateFormat hh_mm_a = new SimpleDateFormat("hh:mm a", Locale.getDefault());
 
-    //format time ex: 27/09/2019
+    //format time ex: 27/09/2022
     @SuppressLint("ConstantLocale")
     public static final SimpleDateFormat dd_MM_yyyy = new SimpleDateFormat("dd/MM/yyyy", Locale.getDefault());
 
@@ -57,7 +49,7 @@ public class patternFormatDateTime {
     @SuppressLint("SimpleDateFormat")
     public static final SimpleDateFormat EEE_MMMM_dd = new SimpleDateFormat("EEE, MMMM dd");
 
-    //format date ex: Oct 25, 2019
+    //format date ex: Oct 25, 2022
     @SuppressLint("SimpleDateFormat")
     public static final SimpleDateFormat MMM_dd_yyyy = new SimpleDateFormat("MMM dd, yyyy");
 

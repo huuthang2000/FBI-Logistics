@@ -9,6 +9,6 @@
         android:width="32dp"
         android:height="32dp"/>
     <solid android:color="@color/white"/>
-    <stroke android:color="@color/black"
+    <stroke android:color="@color/ghost_white"
         android:width="1dp"/>
 </shape>

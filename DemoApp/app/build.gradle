@@ -29,8 +29,8 @@ android {
     }
 
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility sourceCompatibility
+        targetCompatibility targetCompatibility
     }
 
 }
@@ -49,13 +49,18 @@ dependencies {
     implementation 'com.google.android.gms:play-services-location:19.0.1'
     implementation 'com.google.firebase:firebase-database:20.0.4'
     implementation 'com.google.android.gms:play-services-maps:18.0.2'
-
+    implementation 'com.android.billingclient:billing:4.1.0'
+    implementation 'com.maksim88:PasswordEditText:v0.9'
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
-
+    implementation 'com.xw.repo:bubbleseekbar:3.20'
+    implementation 'com.wang.avi:library:2.1.3'
     implementation 'me.relex:circleindicator:2.1.6'
 
+    //dialog
+    implementation 'com.kongzue.dialog_v3:dialog:3.1.4'
+    implementation 'com.orhanobut:dialogplus:1.11@aar'
     implementation 'com.squareup.retrofit2:retrofit:2.5.0'
     implementation 'com.squareup.retrofit2:converter-gson:2.5.0'
     implementation "androidx.cardview:cardview:1.0.0"
@@ -74,7 +79,7 @@ dependencies {
 
     // log air
     implementation 'de.hdodenhof:circleimageview:3.1.0'
-
+    implementation 'com.github.chrisbanes:PhotoView:2.3.0'
     // image
     implementation 'gun0912.ted:tedbottompicker:1.2.6'
     // checkPermission
@@ -96,7 +101,7 @@ dependencies {
 
     // Declare the dependency for the Firebase SDK for Google Analytics
     implementation 'com.google.firebase:firebase-analytics'
-
+    implementation 'com.github.clans:fab:1.6.4'
     // Scalable
     implementation 'com.intuit.sdp:sdp-android:1.0.6'
     implementation 'com.intuit.ssp:ssp-android:1.0.6'
@@ -112,5 +117,12 @@ dependencies {
 
     implementation 'com.elyeproj.libraries:loaderviewlibrary:2.0.0'
 
+    implementation 'com.github.ybq:Android-SpinKit:1.4.0'
 
+    implementation 'com.firebaseui:firebase-ui-auth:4.3.1'
+    implementation 'com.firebaseui:firebase-ui-storage:4.3.1'
+
+    implementation 'com.aurelhubert:ahbottomnavigation:2.3.4'
+    implementation 'android.arch.work:work-runtime:1.0.0-beta01'
+    implementation 'pl.droidsonroids.gif:android-gif-drawable:1.2.17'
 }

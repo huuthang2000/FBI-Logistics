@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<RelativeLayout
+    android:id="@+id/rltlMain"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <LinearLayout
+        android:gravity="end"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/rltlTimeGroup"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <View
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_toStartOf="@id/tvTimeGroup"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorLine"/>
+
+            <TextView
+                android:id="@+id/tvTimeGroup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Time"
+                android:layout_centerHorizontal="true"/>
+
+            <View
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_toEndOf="@id/tvTimeGroup"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorLine"/>
+
+        </RelativeLayout>
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_gravity="end"
+                android:layout_marginStart="@dimen/margin_end_chat_left"
+                android:layout_marginEnd="@dimen/margin_end_chat_right"
+                android:layout_marginTop="2dp"
+                android:background="@drawable/bg_chat_right"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:paddingStart="5dp"
+                android:paddingEnd="5dp"
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:id="@+id/lnlName"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.elyeproj.loaderviewlibrary.LoaderTextView
+                        android:paddingEnd="10dp"
+                        android:paddingStart="0dp"
+                        android:layout_marginStart="5dp"
+                        android:layout_gravity="center"
+                        android:id="@+id/tvTime"
+                        android:text="time"
+                        android:textColor="@color/colorTextLight"
+                        android:textSize="12sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lnlMessage"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.elyeproj.loaderviewlibrary.LoaderTextView
+                        android:paddingTop="2dp"
+                        android:paddingBottom="2dp"
+                        android:layout_marginEnd="2dp"
+                        android:layout_marginStart="5dp"
+                        android:gravity="start"
+                        android:id="@+id/tvMessage"
+                        android:text="Content"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_margin="5dp"
+                    android:id="@+id/lnlPicture"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_gravity="center"
+                        android:minWidth="220dp"
+                        android:src="@color/colorLine"
+                        android:id="@+id/imvResultPicture"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:minHeight="280dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_margin="5dp"
+                    android:id="@+id/lnlMultiPicture"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.example.demoapp.CustomView.NonScrollGridView
+                        android:id="@+id/gvMultiPicture"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:horizontalSpacing="4dp"
+                        android:numColumns="2"
+                        android:stretchMode="columnWidth"
+                        android:verticalSpacing="4dp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </FrameLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rclvMembersSeen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:layout_marginStart="@dimen/margin_start_chat_left"
+            android:layout_marginEnd="@dimen/margin_end_chat_right"/>
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>
+

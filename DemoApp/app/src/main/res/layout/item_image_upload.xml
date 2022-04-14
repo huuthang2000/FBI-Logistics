@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~  Date created: 12/16/2019
+  ~  Last updated: 12/16/2019
+  ~  Name project: Life24h
+  ~  Description:
+  ~  Auth: James Ryan
+  -->
+
+<FrameLayout
+    android:layout_margin="2dp"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/imvImageUpload"
+        android:src="@drawable/no_image"
+        android:layout_width="100dp"
+        android:layout_height="100dp"/>
+
+    <ImageView
+        android:id="@+id/imvDone"
+        android:visibility="visible"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_gravity="center"
+        android:src="@drawable/ic_check_circle_green_18dp"/>
+
+    <com.github.ybq.android.spinkit.SpinKitView
+        android:layout_gravity="center"
+        android:id="@+id/SpinKitLoading"
+        style="@style/SpinKitView.Circle"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        app:SpinKit_Color="@color/colorThemeGreen" />
+
+</FrameLayout>

@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:fillViewport="true"
+    android:orientation="vertical"
+    android:background="#F4F8F4"
+    android:layout_height="match_parent"
+    tools:context=".view.driver.PlaceAlertsDetail">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:weightSum="10"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            app:title="@string/Add_place"
+            android:background="@color/colorThemeBlue"
+            android:id="@+id/toolbar_Place_Alerts"
+            android:layout_height="wrap_content"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <FrameLayout
+                android:layout_alignParentTop="true"
+                android:layout_above="@id/cvControlBottom"
+                android:layout_width="match_parent"
+                android:layout_height="500dp">
+                <fragment
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:id="@+id/mapPlaceAlerts"
+                    android:name="com.google.android.gms.maps.SupportMapFragment" />
+                <ImageView
+                    android:layout_width="120dp"
+                    android:id="@+id/img_place"
+                    android:background="@drawable/bg_button_icon_place"
+                    android:layout_gravity="center_horizontal|center_vertical"
+                    android:layout_height="120dp"
+                    />
+                <ImageView
+                    android:layout_width="30dp"
+                    android:scaleType="center"
+                    android:background="@drawable/circle_white"
+                    android:src="@drawable/ic_location_on_blue_24dp"
+                    android:layout_gravity="center_horizontal|center_vertical"
+                    android:layout_height="30dp" />
+
+                <ImageView
+                    android:scaleType="center"
+                    android:layout_width="40dp"
+                    android:layout_gravity="right|bottom"
+                    android:layout_marginEnd="10dp"
+                    android:background="@drawable/circle_white_border_grey"
+                    android:src="@drawable/ic_map_purble_28dp"
+                    android:id="@+id/cimg_SelectAddMap"
+                    android:layout_marginBottom="100dp"
+                    android:layout_height="40dp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:layout_gravity="bottom"
+                    android:id="@+id/ln_Map_Type_Add_Select"
+                    android:background="@color/mapselect"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:orientation="horizontal"
+                        android:weightSum="2"
+                        android:layout_height="30dp">
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:paddingStart="10dp"
+                            android:paddingEnd="5dp"
+                            android:paddingTop="5dp"
+                            android:text="@string/map_type"
+                            android:textSize="18sp" />
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:paddingStart="10dp"
+                            android:paddingEnd="15dp"
+                            android:paddingTop="5dp"
+                            android:textColor="#E91E63"
+                            android:id="@+id/txt_Close_Add_SelectMap"
+                            android:gravity="end"
+                            android:text="@string/Close"
+                            android:textSize="18sp" />
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="130dp"
+                        android:orientation="horizontal"
+                        android:paddingBottom="15dp"
+                        android:weightSum="3">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:weightSum="6"
+                            android:orientation="vertical"
+                            android:layout_height="match_parent">
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_marginBottom="5dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginRight="20dp"
+                                android:layout_weight="5"
+                                android:scaleType="fitXY"
+                                android:id="@+id/img_Map_Add_Street_Map"
+                                android:padding="1.5dp"
+                                android:background="@drawable/custom_background_select_map"
+                                android:src="@drawable/street_map"
+                                android:layout_height="0dp"/>
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:textStyle="bold"
+                                android:id="@+id/txt_Normal_Add_Map"
+                                android:textColor="@color/borderMap"
+                                android:gravity="center_horizontal"
+                                android:layout_weight="1"
+                                android:text="@string/normal"/>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:weightSum="6"
+                            android:orientation="vertical"
+                            android:layout_height="match_parent">
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:scaleType="fitXY"
+                                android:layout_weight="5"
+                                android:layout_marginBottom="5dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginRight="20dp"
+                                android:padding="1.5dp"
+                                android:id="@+id/img_Map_Add_Terrain"
+                                android:src="@drawable/terrain"
+                                android:layout_height="0dp"/>
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:textStyle="bold"
+                                android:textColor="#000"
+                                android:id="@+id/txt_Terrain_Add_Map"
+                                android:gravity="center_horizontal"
+                                android:layout_weight="1"
+                                android:text="@string/terrain"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:weightSum="6"
+                            android:orientation="vertical"
+                            android:layout_height="match_parent">
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_weight="5"
+                                android:scaleType="fitXY"
+                                android:padding="1.5dp"
+                                android:layout_marginBottom="5dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginRight="20dp"
+                                android:id="@+id/img_Map_Add_Satellite"
+                                android:src="@drawable/satellite"
+                                android:layout_height="0dp"/>
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:textStyle="bold"
+                                android:id="@+id/txt_Satellite_Map_Add"
+                                android:textColor="#000"
+                                android:gravity="center_horizontal"
+                                android:layout_weight="1"
+                                android:text="@string/satellite"/>
+                        </LinearLayout>
+
+
+
+                    </LinearLayout>
+                </LinearLayout>
+            </FrameLayout>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_alignParentBottom="true"
+                android:id="@+id/cvControlBottom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/place_detail"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:textColor="@color/dark"/>
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_marginTop="2dp"
+                        android:layout_marginBottom="2dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:id="@+id/ti_NamePlace"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:inputType="textEmailAddress"
+                            android:text="@string/Home"
+                            android:maxLines="1"
+                            android:drawablePadding="5dp"
+                            android:drawableStart="@drawable/ic_address"
+                            android:textSize="15sp"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_marginTop="2dp"
+                        android:layout_marginBottom="2dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:clickable="true"
+                        android:id="@+id/ti_DetailPlace"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:inputType="textEmailAddress"
+                            android:text="@string/move_place"
+                            android:textSize="15sp"
+                            android:focusable="false"
+                            android:focusableInTouchMode="false"
+                            android:drawablePadding="5dp"
+                            android:drawableStart="@drawable/ic_map_locator_place"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+                    <LinearLayout
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="2dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_width="match_parent"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:weightSum="4"
+                        android:layout_height="45dp">
+
+
+                        <com.xw.repo.BubbleSeekBar
+                            android:id="@+id/sb_Place"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:bsb_bubble_color="@color/colorStartGradientBlue"
+                            app:bsb_bubble_text_color="@color/white"
+                            app:bsb_max="2000"
+                            app:bsb_min="200"
+                            app:bsb_progress="200"
+                            app:bsb_second_track_color="@color/colorThemeTextBlue"
+                            app:bsb_section_count="18"
+                            app:bsb_seek_step_section="true"
+                            app:bsb_section_text_position="sides"
+                            app:bsb_show_progress_in_float="false"
+                            app:bsb_show_section_mark="true"
+                            app:bsb_show_section_text="true"
+                            app:bsb_show_thumb_text="true"
+                            app:bsb_track_color="@color/colorThemeBlue"/>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="20dp"
+                        android:gravity="center_horizontal"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_weight="2"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginLeft="10dp"
+                            android:id="@+id/ln_Add_Delete"
+                            android:layout_gravity="center_horizontal"
+                            android:orientation="horizontal"
+                            android:layout_height="wrap_content">
+                            <Button
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:text="@string/Save_place"
+                                android:id="@+id/btn_Edit_PlaceAlert"
+                                android:textColor="#fff"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="10dp"
+                                android:background="@drawable/bg_button_login"
+                                android:textAllCaps="false"
+                                android:layout_height="40dp"/>
+                            <Button
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:text="@string/delete_place"
+                                android:id="@+id/btn_Delete_PlaceAlert"
+                                android:textColor="#fff"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="10dp"
+                                android:background="@drawable/bg_button_delete_place"
+                                android:textAllCaps="false"
+                                android:layout_height="40dp"/>
+                        </LinearLayout>
+
+                        <Button
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:text="@string/add_place1"
+                            android:layout_marginEnd="40dp"
+                            android:layout_marginStart="40dp"
+                            android:id="@+id/btn_AddPlaceAlert"
+                            android:textColor="#fff"
+                            android:background="@drawable/bg_button_login"
+                            android:textAllCaps="false"
+                            android:layout_height="40dp"/>
+                    </LinearLayout>
+
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+</ScrollView>

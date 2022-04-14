@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~  Date created: 10/31/2019
+  ~  Last updated: 10/31/2019
+  ~  Name project: SafeAreasForChildren
+  ~  Description:
+  ~  Auth: James Ryan
+  -->
+
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <gradient
+        android:startColor="#dda52e"
+        android:centerColor="#dda52e"
+        android:endColor="#F3C667"
+        android:angle="-90"/>
+
+    <corners android:radius="70dp"/>
+
+</shape>

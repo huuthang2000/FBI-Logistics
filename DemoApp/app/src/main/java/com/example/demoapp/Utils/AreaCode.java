@@ -1,12 +1,5 @@
 package com.example.demoapp.Utils;
 
-/*
- *  Date created: 12/04/2019
- *  Last updated: 12/04/2019
- *  Name project: Life24h
- *  Description:
- *  Auth: James Ryan
- */
 
 public class AreaCode {
     public static final String[] countryNames = {"Afghanistan", "Albania",

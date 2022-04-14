@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".view.driver.UIHistoryLocations">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_History_Location"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/blue"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/blue">
+
+        <ImageView
+            android:id="@+id/img_back_History_Location"
+            android:layout_width="62dp"
+            android:layout_height="32dp"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="10dp"
+            android:src="@drawable/ic_chevron_left_white_32dp" />
+
+        <TextView
+            android:id="@+id/txt_Time_History_Location"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="5dp"
+            android:layout_toStartOf="@+id/img_next_History_Location"
+            android:layout_toEndOf="@+id/img_back_History_Location"
+            android:background="@drawable/bg_txt_date_history_alert"
+            android:gravity="center"
+            android:text="January 12,2020"
+            android:textColor="#fff"
+            android:textSize="17sp" />
+
+        <ImageView
+            android:id="@+id/img_next_History_Location"
+            android:layout_width="62dp"
+            android:layout_height="32dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginEnd="10dp"
+            android:src="@drawable/ic_chevron_right_white_32dp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <FrameLayout
+            android:layout_alignParentTop="true"
+            android:layout_above="@+id/lnlControlBottom"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <fragment
+                android:id="@+id/map_History_Location"
+                android:name="com.google.android.gms.maps.SupportMapFragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/cimg_SelectMapHistory"
+                android:layout_width="40dp"
+                android:layout_height="31dp"
+                android:layout_gravity="end|bottom"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="70dp"
+                android:src="@drawable/selectmap1" />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:orientation="vertical"
+                android:id="@+id/ln_Loadmore"
+                android:layout_gravity="end"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="80dp"
+                android:layout_marginEnd="15dp"
+                android:layout_height="wrap_content">
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="40dp"
+                    android:layout_height="31dp"
+                    android:src="@drawable/ic_download" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:textColor="@color/borderMap"
+                    android:textAlignment="center"
+                    android:text="@string/download_more"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ln_Map_Type_History_Select"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:background="@color/mapselect"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:paddingStart="10dp"
+                        android:paddingTop="5dp"
+                        android:paddingEnd="5dp"
+                        android:textStyle="bold"
+                        android:text="@string/map_type"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/txt_Close_History_SelectMap"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="end"
+                        android:paddingStart="10dp"
+                        android:paddingTop="5dp"
+                        android:paddingEnd="15dp"
+                        android:text="@string/Close"
+                        android:textColor="#E91E63"
+                        android:textSize="18sp" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="130dp"
+                    android:orientation="horizontal"
+                    android:paddingBottom="15dp"
+                    android:weightSum="3">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:weightSum="6">
+
+                        <ImageView
+                            android:id="@+id/img_Map_History_Street_Map"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginRight="20dp"
+                            android:layout_marginBottom="5dp"
+                            android:layout_weight="5"
+                            android:background="@drawable/custom_background_select_map"
+                            android:padding="1.5dp"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/street_map" />
+
+                        <TextView
+                            android:id="@+id/txt_Normal_History_Map"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:gravity="center_horizontal"
+                            android:text="@string/normal"
+                            android:textColor="@color/borderMap"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:weightSum="6">
+
+                        <ImageView
+                            android:id="@+id/img_Map_History_Terrain"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginRight="20dp"
+                            android:layout_marginBottom="5dp"
+                            android:layout_weight="5"
+                            android:padding="1.5dp"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/terrain" />
+
+                        <TextView
+                            android:id="@+id/txt_Terrain_History_Map"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:gravity="center_horizontal"
+                            android:text="@string/terrain"
+                            android:textColor="#000"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:weightSum="6">
+
+                        <ImageView
+                            android:id="@+id/img_Map_History_Satellite"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginRight="20dp"
+                            android:layout_marginBottom="5dp"
+                            android:layout_weight="5"
+                            android:padding="1.5dp"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/satellite" />
+
+                        <TextView
+                            android:id="@+id/txt_Satellite_History_Add"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:gravity="center_horizontal"
+                            android:text="@string/satellite"
+                            android:textColor="#000"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </FrameLayout>
+
+        <LinearLayout
+            android:paddingTop="15dp"
+            android:paddingBottom="5dp"
+            android:id="@+id/lnlControlBottom"
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <com.xw.repo.BubbleSeekBar
+                android:id="@+id/sb_History_Location_Marker"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="5dp"
+                app:bsb_bubble_color="@color/colorStartGradientBlue"
+                app:bsb_bubble_text_color="@color/white"
+                app:bsb_second_track_color="@color/colorThemeTextBlue"
+                app:bsb_section_count="9"
+                app:bsb_max="200"
+                app:bsb_section_text_position="sides"
+                app:bsb_seek_step_section="true"
+                app:bsb_show_progress_in_float="false"
+                app:bsb_show_section_mark="true"
+                app:bsb_show_section_text="true"
+                app:bsb_show_thumb_text="true"
+                app:bsb_track_color="@color/colorThemeBlue" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+</LinearLayout>

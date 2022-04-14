@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.driver.UIChat.UIListChat">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/lnlTop"
+            android:background="@drawable/gradient_radar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <ImageView
+                android:id="@+id/imvBack"
+                android:padding="10dp"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_arrow_back_white_24dp"/>
+            <LinearLayout
+                android:layout_marginStart="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_marginTop="5dp"
+                    android:textStyle="bold"
+                    android:layout_marginEnd="15dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/Message"
+                    android:textSize="20sp"
+                    android:textColor="@color/white" />
+                <TextView
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Group"
+                    android:id="@+id/tvFamilyName"
+                    android:textSize="14sp"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/no_data_to_display"
+                android:id="@+id/tvNoDataToDisplay"
+                android:textSize="15sp"
+                android:textColor="@color/colorTextLight"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"/>
+
+            <com.github.ybq.android.spinkit.SpinKitView
+                android:layout_centerInParent="true"
+                android:id="@+id/SpinKitLoading"
+                style="@style/SpinKitView.Circle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                app:SpinKit_Color="@color/colorAccent" />
+
+            <FrameLayout
+                android:visibility="gone"
+                android:id="@+id/frlMainChat"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rclvListChat"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+
+                <com.github.clans.fab.FloatingActionMenu
+                    android:id="@+id/fabMenuNewMessage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|end"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginEnd="8dp"
+                    app:fab_colorNormal="@color/red"
+                    app:fab_colorPressed="@color/red"
+                    app:fab_colorRipple="@color/orange_red"
+                    app:menu_animationDelayPerItem="0"
+                    app:menu_shadowColor="#444">
+
+                    <com.github.clans.fab.FloatingActionButton
+                        app:fab_size="mini"
+                        app:fab_colorNormal="@color/colorThemeBlue"
+                        app:fab_colorPressed="@color/colorStartGradientBlue"
+                        android:id="@+id/fabNewMessage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_chat_white"
+                        app:fab_label="@string/New_message" />
+
+                    <com.github.clans.fab.FloatingActionButton
+                        app:fab_size="mini"
+                        app:fab_colorPressed="@color/green"
+                        app:fab_colorNormal="@color/colorThemeGreen"
+                        android:id="@+id/fabNewGroupMessage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_group_chat_white"
+                        app:fab_label="@string/New_group" />
+
+                </com.github.clans.fab.FloatingActionMenu>
+
+
+            </FrameLayout>
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>
