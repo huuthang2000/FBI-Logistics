@@ -278,6 +278,7 @@
     <string name="select_user">select user</string>
     <string name="title_activity_log">LogActivity</string>
     <string name="log_out">Đăng xuất</string>
+    <string name="register">Register</string>
 
 
 </resources>

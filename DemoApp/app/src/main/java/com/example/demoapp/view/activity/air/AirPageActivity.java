@@ -1,6 +1,5 @@
 package com.example.demoapp.view.activity.air;
 
-import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
@@ -22,18 +21,11 @@ import com.example.demoapp.R;
 import com.example.demoapp.databinding.ActivityAirPageBinding;
 import com.example.demoapp.utilities.Constants;
 import com.example.demoapp.utilities.PreferenceManager;
-import com.example.demoapp.view.activity.login_register.SignInActivity;
-import com.example.demoapp.view.activity.message.MainMessageActivity;
 import com.example.demoapp.view.fragment.air.AirExportFragment;
 import com.example.demoapp.view.fragment.air.AirImportFragment;
 import com.example.demoapp.view.fragment.air.RetailGoodsExportFragment;
 import com.example.demoapp.view.fragment.home.HomeFragment;
 import com.google.android.material.navigation.NavigationView;
-import com.google.firebase.firestore.DocumentReference;
-import com.google.firebase.firestore.FieldValue;
-import com.google.firebase.firestore.FirebaseFirestore;
-
-import java.util.HashMap;
 
 
 public class AirPageActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
@@ -101,13 +93,13 @@ public class AirPageActivity extends AppCompatActivity implements NavigationView
                    break;
                case R.id.tab_chat:
                    if (mCurrentFragment != ACTIVITY_MESSAGE) {
-                       Intent intent = new Intent(this, MainMessageActivity.class);
-                       startActivity(intent);
+//                       Intent intent = new Intent(this, MainMessageActivity.class);
+//                       startActivity(intent);
                    }
                    break;
                case R.id.tab_logout_air:
                    if (mCurrentFragment != LOG_OUT) {
-                       signOut();
+//                       signOut();
                    }
                    finish();
            }
@@ -130,23 +122,23 @@ public class AirPageActivity extends AppCompatActivity implements NavigationView
         }
 
     }
-    private void signOut() {
-        showToast("Sign out...");
-        FirebaseFirestore database = FirebaseFirestore.getInstance();
-        DocumentReference documentReference =
-                database.collection(Constants.KEY_COLLECTION_USERS).document(
-                        preferenceManager.getString(Constants.KEY_USER_ID)
-                );
-        HashMap<String, Object> update = new HashMap<>();
-        update.put(Constants.KEY_FCM_TOKEN, FieldValue.delete());
-        documentReference.update(update)
-                .addOnSuccessListener(undates -> {
-                    preferenceManager.clear();
-                    startActivity(new Intent(getApplicationContext(), SignInActivity.class));
-                    finish();
-                })
-                .addOnFailureListener(e -> showToast("Unable to sign out"));
-    }
+//    private void signOut() {
+//        showToast("Sign out...");
+//        FirebaseFirestore database = FirebaseFirestore.getInstance();
+//        DocumentReference documentReference =
+//                database.collection(Constants.KEY_COLLECTION_USERS).document(
+//                        preferenceManager.getString(Constants.KEY_USER_ID)
+//                );
+//        HashMap<String, Object> update = new HashMap<>();
+//        update.put(Constants.KEY_FCM_TOKEN, FieldValue.delete());
+//        documentReference.update(update)
+//                .addOnSuccessListener(undates -> {
+//                    preferenceManager.clear();
+//                    startActivity(new Intent(getApplicationContext(), SignInActivity.class));
+//                    finish();
+//                })
+//                .addOnFailureListener(e -> showToast("Unable to sign out"));
+//    }
     private void showToast(String message) {
         Toast.makeText(getApplicationContext(), message, Toast.LENGTH_SHORT).show();
     }

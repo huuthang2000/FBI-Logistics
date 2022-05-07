@@ -24,19 +24,12 @@ import com.example.demoapp.R;
 import com.example.demoapp.databinding.ActivitySaleBinding;
 import com.example.demoapp.utilities.Constants;
 import com.example.demoapp.utilities.PreferenceManager;
-import com.example.demoapp.view.activity.login_register.SignInActivity;
-import com.example.demoapp.view.activity.message.MainMessageActivity;
 import com.example.demoapp.view.fragment.sales.AirlinesSaleFragment;
 import com.example.demoapp.view.fragment.sales.HomeSaleFragment;
 import com.example.demoapp.view.fragment.sales.InlandFragment;
 import com.example.demoapp.view.fragment.sales.RoadFragment;
 import com.example.demoapp.view.fragment.sales.SeawayFragment;
 import com.google.android.material.navigation.NavigationView;
-import com.google.firebase.firestore.DocumentReference;
-import com.google.firebase.firestore.FieldValue;
-import com.google.firebase.firestore.FirebaseFirestore;
-
-import java.util.HashMap;
 
 public class SaleActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
     private static final int FRAGMENT_HOME = 0;
@@ -133,13 +126,13 @@ public class SaleActivity extends AppCompatActivity implements NavigationView.On
             finish();
         }else if(id == R.id.nav_message){
             if(mCurrentFragmet != ACTIVITY_MESSAGE){
-                Intent intent = new Intent(this, MainMessageActivity.class);
-                startActivity(intent);
+//                Intent intent = new Intent(this, MainMessageActivity.class);
+//                startActivity(intent);
             }
             finish();
         }else if(id == R.id.log_out){
             if(mCurrentFragmet != LOGOUT){
-                signOut();
+//                signOut();
             }
             finish();
         }
@@ -163,23 +156,23 @@ public class SaleActivity extends AppCompatActivity implements NavigationView.On
         transaction.commit();
     }
 
-    private void signOut() {
-        showToast("Sign out...");
-        FirebaseFirestore database = FirebaseFirestore.getInstance();
-        DocumentReference documentReference =
-                database.collection(Constants.KEY_COLLECTION_USERS).document(
-                        preferenceManager.getString(Constants.KEY_USER_ID)
-                );
-        HashMap<String, Object> update = new HashMap<>();
-        update.put(Constants.KEY_FCM_TOKEN, FieldValue.delete());
-        documentReference.update(update)
-                .addOnSuccessListener(undates -> {
-                    preferenceManager.clear();
-                    startActivity(new Intent(getApplicationContext(), SignInActivity.class));
-                    finish();
-                })
-                .addOnFailureListener(e -> showToast("Unable to sign out"));
-    }
+//    private void signOut() {
+//        showToast("Sign out...");
+//        FirebaseFirestore database = FirebaseFirestore.getInstance();
+//        DocumentReference documentReference =
+//                database.collection(Constants.KEY_COLLECTION_USERS).document(
+//                        preferenceManager.getString(Constants.KEY_USER_ID)
+//                );
+//        HashMap<String, Object> update = new HashMap<>();
+//        update.put(Constants.KEY_FCM_TOKEN, FieldValue.delete());
+//        documentReference.update(update)
+//                .addOnSuccessListener(undates -> {
+//                    preferenceManager.clear();
+//                    startActivity(new Intent(getApplicationContext(), SignInActivity.class));
+//                    finish();
+//                })
+//                .addOnFailureListener(e -> showToast("Unable to sign out"));
+//    }
 
     private void showToast(String message) {
         Toast.makeText(getApplicationContext(), message, Toast.LENGTH_SHORT).show();
