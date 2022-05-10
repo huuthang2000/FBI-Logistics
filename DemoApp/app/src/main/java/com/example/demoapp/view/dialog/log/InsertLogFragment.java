@@ -1,7 +1,10 @@
 package com.example.demoapp.view.dialog.log;
 
+import android.content.Intent;
 import android.graphics.Bitmap;
+import android.net.Uri;
 import android.os.Bundle;
+import android.provider.MediaStore;
 import android.text.TextUtils;
 import android.util.Base64;
 import android.view.LayoutInflater;
@@ -9,34 +12,59 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.Toast;
 
+import androidx.activity.result.ActivityResult;
+import androidx.activity.result.ActivityResultCallback;
+import androidx.activity.result.ActivityResultLauncher;
+import androidx.activity.result.contract.ActivityResultContracts;
+import androidx.cardview.widget.CardView;
 import androidx.fragment.app.DialogFragment;
 import androidx.lifecycle.ViewModelProvider;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.demoapp.R;
+import com.example.demoapp.adapter.log.ImageAdapter;
 import com.example.demoapp.databinding.FragmentInsertLogBinding;
-import com.example.demoapp.model.Log;
+import com.example.demoapp.model.ImageModel;
 import com.example.demoapp.utilities.Constants;
+import com.example.demoapp.view.activity.log.ImagesActivity;
 import com.example.demoapp.viewmodel.CommunicateViewModel;
 import com.example.demoapp.viewmodel.LogViewModel;
 
 import java.io.ByteArrayOutputStream;
+import java.io.File;
+import java.io.IOException;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+import java.util.ArrayList;
 
-import retrofit2.Call;
-import retrofit2.Callback;
-import retrofit2.Response;
+import gun0912.tedbottompicker.util.RealPathUtil;
+import okhttp3.MediaType;
+import okhttp3.MultipartBody;
+import okhttp3.RequestBody;
 
 public class InsertLogFragment extends DialogFragment implements View.OnClickListener{
 
     private static final int MY_REQUEST_CODE = 10;
+    public static final int REQUEST_IMAGE_CAPTURE = 1;
+    public static final int PICK_IMAGES = 2;
+    public static final int STORAGE_PERMISSION = 100;
 
+    ArrayList<ImageModel> imageList;
+    ArrayList<String> selectedImageList;
+    RecyclerView imageRecyclerView, selectedImageRecyclerView;
     private final String[] itemsImportOrExport = {"Nhập Khẩu", "Xuất Khẩu"};
-
+    ImageAdapter imageAdapter;
+    String[] projection = {MediaStore.MediaColumns.DATA};
+    File image;
     private final String[] listStr = new String[3];
-
+    private CardView cardView;
+    private ImageView imageView;
+    private Button button;
+    private CharSequence[] options= {"Camera","Gallery","Cancel"};
     private String type = "";
 
     public static InsertLogFragment insertDiaLogLog(){
@@ -55,26 +83,28 @@ public class InsertLogFragment extends DialogFragment implements View.OnClickLis
 
     public static final String TAG = InsertLogFragment.class.getName();
 
-//    ActivityResultLauncher<Intent> mActivityResultLauncher = registerForActivityResult(
-//            new ActivityResultContracts.StartActivityForResult(), new ActivityResultCallback<ActivityResult>() {
-//                @Override
-//                public void onActivityResult(ActivityResult result) {
-//                    android.util.Log.e(TAG, "onActivityResult");
-//                    if(result.getResultCode() == getActivity().RESULT_OK){
-//                        Intent data = result.getData();
-//                        if(data == null){
-//                            return;
-//                        }
-//                        Uri uri = data.getData();
-//                        try {
-//                            bitmap = MediaStore.Images.Media.getBitmap(getActivity().getContentResolver(), uri);
-//                            logBinding.ivAddLog.setImageBitmap(bitmap);
-//                        } catch (IOException e) {
-//                            e.printStackTrace();
-//                        }
-//                    }
-//                }
-//            });
+    private Uri mUri;
+    ActivityResultLauncher<Intent> mActivityResultLauncher = registerForActivityResult(
+            new ActivityResultContracts.StartActivityForResult(), new ActivityResultCallback<ActivityResult>() {
+                @Override
+                public void onActivityResult(ActivityResult result) {
+                    android.util.Log.e(TAG, "onActivityResult");
+                    if(result.getResultCode() == getActivity().RESULT_OK){
+                        Intent data = result.getData();
+                        if(data == null){
+                            return;
+                        }
+                        Uri uri = data.getData();
+                        mUri = uri;
+                        try {
+                            bitmap = MediaStore.Images.Media.getBitmap(getActivity().getContentResolver(), uri);
+                            logBinding.imageview.setImageBitmap(bitmap);
+                        } catch (IOException e) {
+                            e.printStackTrace();
+                        }
+                    }
+                }
+            });
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -82,6 +112,9 @@ public class InsertLogFragment extends DialogFragment implements View.OnClickLis
         logBinding = FragmentInsertLogBinding.inflate(inflater,container, false);
         View view = logBinding.getRoot();
 
+
+        selectedImageList = new ArrayList<>();
+        imageList = new ArrayList<>();
         mLogViewModel = new ViewModelProvider(this).get(LogViewModel.class);
         mCommunicateViewModel = new ViewModelProvider(getActivity()).get(CommunicateViewModel.class);
         initView();
@@ -92,14 +125,15 @@ public class InsertLogFragment extends DialogFragment implements View.OnClickLis
         adapterItemsMonth = new ArrayAdapter<String>(getContext(), R.layout.dropdown_item, Constants.ITEMS_MONTH);
         adapterItemsImportAndExport = new ArrayAdapter<String>(getContext(), R.layout.dropdown_item, itemsImportOrExport);
         adapterItemsType = new ArrayAdapter<String>(getContext(), R.layout.dropdown_item, Constants.ITEMS_TYPE);
-
+        selectedImageList = new ArrayList<>();
+        imageList = new ArrayList<>();
         logBinding.insertAutoMonth.setAdapter(adapterItemsMonth);
         logBinding.insertAutoShippingType.setAdapter(adapterItemsImportAndExport);
         logBinding.insertAutoLoaihinh.setAdapter(adapterItemsType);
-
+        logBinding.imageview.setOnClickListener(this);
         logBinding.btnFunctionAdd.setOnClickListener(this);
         logBinding.btnFunctionCancel.setOnClickListener(this);
-//        logBinding.btnDinhkemhinhanh.setOnClickListener(this);
+
 
         logBinding.insertAutoMonth.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -126,6 +160,8 @@ public class InsertLogFragment extends DialogFragment implements View.OnClickLis
 
     }
 
+
+
     @Override
     public void onClick(View v) {
         switch (v.getId()){
@@ -140,7 +176,10 @@ public class InsertLogFragment extends DialogFragment implements View.OnClickLis
             case R.id.btn_function_cancel:
                 dismiss();
                 break;
-//            case R.id.btn_dinhkemhinhanh:
+            case R.id.imageview:
+                Intent gallery = new Intent(getActivity(), ImagesActivity.class);
+                gallery.setType("image/*"); //allow any image file type.
+               startActivity(gallery);
 //                onClickRequestPermission();
         }
     }
@@ -177,6 +216,7 @@ public class InsertLogFragment extends DialogFragment implements View.OnClickLis
 //        mActivityResultLauncher.launch(Intent.createChooser(intent,"Select Picture"));
 //    }
 
+
     private String getCreatedDate() {
         return LocalDateTime.now().format(DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm:ss"));
     }
@@ -206,7 +246,7 @@ public class InsertLogFragment extends DialogFragment implements View.OnClickLis
         String strTenHang = logBinding.tfTenhang.getEditText().getText().toString();
         String strhscode = logBinding.tfHscode.getEditText().getText().toString();
         String strcongdung = logBinding.tfCongdung.getEditText().getText().toString();
-        String strhinhanh = logBinding.tfHinhanh.getEditText().getText().toString();
+
         String strcangdi = logBinding.tfCangdi.getEditText().getText().toString();
         String strcangden = logBinding.tfCangden.getEditText().getText().toString();
         String strloaihang = logBinding.tfLoaihang.getEditText().getText().toString();
@@ -215,23 +255,27 @@ public class InsertLogFragment extends DialogFragment implements View.OnClickLis
         String strPrice = logBinding.tfPrice.getEditText().getText().toString();
 
         mCommunicateViewModel.makeChanges();
-        Call<Log> call = mLogViewModel.insertLog(strTenHang, strhscode, strcongdung, strhinhanh,
-                strcangdi, strcangden, strloaihang, strsoluongcuthe, stryeucaudacbiet, strPrice,
-                listStr[0], listStr[1], listStr[2], getCreatedDate());
-        call.enqueue(new Callback<Log>() {
-            @Override
-            public void onResponse(Call<Log> call, Response<Log> response) {
-                if(response.isSuccessful()){
-                    Toast.makeText(getContext(), "Created Successful!!", Toast.LENGTH_LONG).show();
-                }
+        String strRealPath = RealPathUtil.getRealPath(getContext(),mUri);
+        File file = new File(strRealPath);
+        RequestBody requestBody = RequestBody.create(MediaType.parse("multipart/form-data"),file);
+        MultipartBody.Part multPartbodyimage = MultipartBody.Part.createFormData(Constants.KEY_IMG,file.getName(),requestBody);
+//        Call<Log> call = mLogViewModel.insertLog(strTenHang, strhscode, strcongdung, String.valueOf(multPartbodyimage),
+//                strcangdi, strcangden, strloaihang, strsoluongcuthe, stryeucaudacbiet, strPrice,
+//                listStr[0], listStr[1], listStr[2], getCreatedDate());
+//        call.enqueue(new Callback<Log>() {
+//            @Override
+//            public void onResponse(Call<Log> call, Response<Log> response) {
+//                if(response.isSuccessful()){
+//                    Toast.makeText(getContext(), "Created Successful!!", Toast.LENGTH_LONG).show();
+//                }
+//
+//            }
 
-            }
-
-            @Override
-            public void onFailure(Call<Log> call, Throwable t) {
-
-            }
-        });
+//            @Override
+//            public void onFailure(Call<Log> call, Throwable t) {
+//
+//            }
+//        });
 
     }
 //    public void resetEditText(){

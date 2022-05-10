@@ -105,7 +105,124 @@
             android:name=".view.activity.sale.TablePriceAirActivity"
             android:exported="true" />
         <activity
+<<<<<<< Updated upstream
             android:name=".view.activity.LoginActivity"
+=======
+            android:name=".view.driver.UIWellcome.UITutorial"
+            android:screenOrientation="locked" />
+        <activity
+            android:name=".view.driver.UISelectCountries"
+            android:screenOrientation="locked" />
+        <activity
+            android:name=".view.driver.UISafety.UIDrivingDetailOfUser"
+            android:screenOrientation="locked" />
+        <activity
+            android:name=".view.driver.UIWellcome.UIWelcome_third"
+            android:screenOrientation="locked"
+            android:theme="@style/welcome" />
+        <activity
+            android:name=".view.driver.UIWellcome.UIWelcome_second"
+            android:screenOrientation="locked"
+            android:theme="@style/welcome" />
+        <activity
+            android:name=".view.driver.UIWellcome.UIWelcome_first"
+            android:screenOrientation="locked"
+            android:theme="@style/welcome" />
+        <activity
+            android:name=".view.driver.UISettings.UIJoinOtherFamilies"
+            android:screenOrientation="locked" />
+        <activity
+            android:name=".view.driver.UISettings.UIEditProfile"
+            android:screenOrientation="locked" />
+        <activity
+            android:name=".view.driver.UISettings.UIInviteFriends"
+            android:screenOrientation="locked" />
+        <activity
+            android:name=".view.driver.UISafety.UIAllDrivingInsights"
+            android:screenOrientation="locked" />
+        <activity
+            android:name=".view.driver.UILoadingData"
+            android:screenOrientation="locked" />
+        <activity
+            android:name=".view.driver.UIChat.UINewMessage"
+            android:screenOrientation="locked" />
+        <activity
+            android:name=".view.driver.PlaceAlertsDetail"
+            android:screenOrientation="locked" />
+        <activity
+            android:name=".view.driver.UICreateSafeArea"
+            android:screenOrientation="locked" />
+        <activity
+            android:name=".view.driver.UIChat.UIMessageGroupDetail"
+            android:screenOrientation="locked" />
+        <activity
+            android:name=".view.driver.UIChat.UIViewImageMessage"
+            android:screenOrientation="locked" />
+        <activity
+            android:name=".view.driver.UIChat.UIChooseImageFromGallery"
+            android:screenOrientation="locked" />
+        <activity
+            android:name=".view.driver.UIChat.UICamera"
+            android:screenOrientation="locked" />
+        <activity
+            android:name=".view.driver.UIChat.UIListChat"
+            android:screenOrientation="locked" />
+        <activity
+            android:name=".view.driver.UIChat.UIChat"
+            android:screenOrientation="locked"
+            android:windowSoftInputMode="adjustResize|stateAlwaysHidden" />
+        <activity
+            android:name=".view.driver.UISetupProfile"
+            android:screenOrientation="locked" />
+        <activity
+            android:name=".view.driver.UILogin"
+            android:screenOrientation="locked" />
+        <activity
+            android:name="com.example.demoapp.view.activity.log.ImagesActivity"
+            android:configChanges="orientation|screenSize">
+
+        </activity>
+
+        <activity
+            android:name="com.example.demoapp.view.activity.log.FullImageActivity"
+            android:theme="@style/Theme.AppCompat.NoActionBar"/>
+        <activity
+            android:name=".view.driver.UIHistoryLocations"
+            android:screenOrientation="locked" />
+        <activity
+            android:name=".view.driver.UISplashScreen"
+            android:exported="true"
+            android:screenOrientation="locked"
+            android:theme="@style/SplashScreenTheme">
+            <!-- <meta-data android:name="android.app.shortcuts" -->
+            <!-- android:resource="@xml/shortcuts" /> -->
+
+        </activity>
+
+        <service
+            android:name=".view.driver.autoStarService.GPSService"
+            android:enabled="true" />
+        <service
+            android:name=".view.driver.UISafety.SpeedService"
+            android:enabled="true" />
+
+        <receiver
+            android:name=".view.driver.autoStarService.UIBootReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <action android:name="android.intent.action.QUICKBOOT_POWERON" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".view.driver.notifications.directReplyReceiver" />
+
+        <service
+            android:name=".view.driver.DetectActivitys.DetectedActivitiesIntentService"
+>>>>>>> Stashed changes
             android:exported="true" />
 
         <service
