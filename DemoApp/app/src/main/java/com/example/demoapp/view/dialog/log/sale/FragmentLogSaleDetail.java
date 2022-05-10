@@ -40,7 +40,7 @@ public class FragmentLogSaleDetail extends DialogFragment {
         mDetailBinding.tvRowPriceLogTenhang.setText(log.getTenhang());
         mDetailBinding.tvRowPriceLogHscode.setText(log.getHscode());
         mDetailBinding.tvRowPriceLogCongdung.setText(log.getCongdung());
-        mDetailBinding.tvRowPriceLogHinhanh.setText(log.getHinhanh());
+        //mDetailBinding.tvRowPriceLogHinhanh.setText(log.getHinhanh());
         mDetailBinding.tvRowPriceLogCangdi.setText(log.getCangdi());
         mDetailBinding.tvRowPriceLogCangden.setText(log.getCangden());
         mDetailBinding.tvRowPriceLogLoaihang.setText(log.getLoaihang());

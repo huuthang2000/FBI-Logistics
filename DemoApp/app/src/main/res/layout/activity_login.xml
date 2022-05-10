@@ -21,6 +21,7 @@
     <EditText
         android:id="@+id/username"
         android:layout_width="match_parent"
+<<<<<<< Updated upstream
         android:layout_height="wrap_content"
         android:layout_below="@id/imageViewFBI"
         android:layout_marginStart="10dp"
@@ -67,3 +68,157 @@
         android:text="LOGIN" />
 
 </RelativeLayout>
+=======
+        android:layout_height="match_parent">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <RelativeLayout
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/top_login"
+                android:backgroundTint="#eceefa"
+                android:layout_width="match_parent"
+                android:layout_height="240dp">
+
+                <ImageView
+                    android:layout_width="140dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/logofbi" />
+
+            </RelativeLayout>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardview"
+                android:layout_width="350dp"
+                android:layout_height="450dp"
+                android:layout_gravity="center"
+                android:layout_below="@id/layoutImage"
+                android:layout_alignParentLeft="true"
+                android:layout_marginStart="30dp"
+
+                android:layout_marginEnd="30dp"
+                android:background="#ffffff"
+                app:cardElevation="10dp"
+                android:elevation="10dp"
+                app:cardCornerRadius="25dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="65dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                app:hintEnabled="false"
+                android:background="@drawable/botron_button"
+                android:elevation="3dp"
+                android:id="@+id/tilEmail"
+                >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="68dp"
+                    android:layout_below="@id/cardview"
+                    android:shadowRadius="@integer/material_motion_duration_medium_2"
+                    android:background="@drawable/botron_button"
+                    android:drawableLeft="@drawable/ic_baseline_account_circle_24"
+                    android:drawablePadding="15dp"
+                    android:elevation="3dp"
+                    android:hint="Tài khoản"
+                    android:padding="22dp"
+                    android:textSize="18sp"
+                    android:textColor="@color/black"
+                    android:textColorHint="#BAB6BF"  />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="65dp"
+                android:layout_margin="20dp"
+                android:paddingLeft="8dp"
+                app:hintEnabled="false"
+                app:startIconDrawable="@drawable/ic_lock"
+                android:background="@drawable/botron_button"
+                android:elevation="3dp"
+                app:passwordToggleEnabled="true"
+                android:id="@+id/tilPassword"
+               >
+
+                <EditText
+                    android:id="@+id/password"
+                    android:layout_width="match_parent"
+                    android:layout_height="68dp"
+                    android:layout_gravity="center"
+                    android:padding="22dp"
+                    android:background="@color/Transparent"
+                    android:hint="Mật khẩu"
+                    app:startIconDrawable="@drawable/ic_lock"
+                    android:inputType="textPassword"
+                    android:textSize="18sp"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:visibility="gone"
+                android:drawablePadding="5dp"
+                android:drawableStart="@drawable/ic_error_red_18dp"
+                android:layout_marginStart="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Error login"
+                android:id="@+id/tvError"
+                android:textSize="12sp"
+                android:textColor="@color/red" />
+
+                    <Button
+
+                        android:id="@+id/btnLogin"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="20dp"
+                        android:elevation="4dp"
+                        android:shadowRadius="@integer/material_motion_duration_medium_2"
+                        android:backgroundTint="#eceefa"
+                        android:textColor="@color/btn_color"
+                        android:textStyle="bold"
+                        android:padding="15dp"
+                        android:text="Đăng Nhập" />
+
+            <TextView
+                android:id="@+id/tvForgotPassword"
+                android:layout_marginTop="10dp"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Forgot_password"
+                android:textStyle="bold"
+                android:textColor="@color/colorThemeBlue"/>
+
+            <LinearLayout
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+
+
+</LinearLayout>
+>>>>>>> Stashed changes

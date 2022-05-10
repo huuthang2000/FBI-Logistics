@@ -23,22 +23,23 @@
     </com.google.android.material.appbar.AppBarLayout>
 
     <LinearLayout
-        android:layout_below="@id/top_log"
         android:id="@+id/auto_complete_log"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
+        android:layout_below="@id/top_log"
         android:layout_marginStart="5dp"
         android:layout_marginBottom="5dp"
-        tools:ignore="UselessParent"
-        android:gravity="center">
+        android:gravity="center"
+        android:orientation="horizontal"
+        tools:ignore="UselessParent">
 
         <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
-            android:hint="@string/select_month"
-            android:layout_margin="10dp">
+            android:layout_margin="10dp"
+            android:hint="@string/select_month">
+
             <AutoCompleteTextView
                 android:id="@+id/auto_complete_month_log"
                 android:layout_width="match_parent"
@@ -46,16 +47,16 @@
                 android:inputType="none"
                 android:text="@string/select_month"
                 android:textSize="16sp"
-                tools:ignore="LabelFor">
-            </AutoCompleteTextView>
+                tools:ignore="LabelFor"></AutoCompleteTextView>
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
-            android:hint="@string/select_ExportAndImport"
-            android:layout_margin="10dp">
+            android:layout_margin="10dp"
+            android:hint="@string/select_ExportAndImport">
+
             <AutoCompleteTextView
                 android:id="@+id/auto_complete_continent_log"
                 android:layout_width="match_parent"
@@ -63,8 +64,7 @@
                 android:inputType="none"
                 android:text="@string/select_ExportAndImport"
                 android:textSize="16sp"
-                tools:ignore="LabelFor">
-            </AutoCompleteTextView>
+                tools:ignore="LabelFor"></AutoCompleteTextView>
         </com.google.android.material.textfield.TextInputLayout>
 
     </LinearLayout>

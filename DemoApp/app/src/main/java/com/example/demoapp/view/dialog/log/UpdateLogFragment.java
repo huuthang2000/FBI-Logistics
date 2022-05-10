@@ -133,7 +133,7 @@ public class UpdateLogFragment extends DialogFragment implements View.OnClickLis
             Objects.requireNonNull(mLogBinding.tfTenhang.getEditText()).setText(mLog.getTenhang());
             Objects.requireNonNull(mLogBinding.tfHscode.getEditText()).setText(mLog.getHscode());
             Objects.requireNonNull(mLogBinding.tfCongdung.getEditText()).setText(mLog.getCongdung());
-            Objects.requireNonNull(mLogBinding.tfHinhanh.getEditText()).setText(mLog.getHinhanh());
+            Objects.requireNonNull(null);
             Objects.requireNonNull(mLogBinding.tfCangdi.getEditText()).setText(mLog.getCangdi());
             Objects.requireNonNull(mLogBinding.tfCangden.getEditText()).setText(mLog.getCangden());
             Objects.requireNonNull(mLogBinding.tfLoaihang.getEditText()).setText(mLog.getLoaihang());
@@ -167,7 +167,7 @@ public class UpdateLogFragment extends DialogFragment implements View.OnClickLis
         String strTenHang = Objects.requireNonNull(mLogBinding.tfTenhang.getEditText()).getText().toString();
         String strHSCode = Objects.requireNonNull(mLogBinding.tfHscode.getEditText()).getText().toString();
         String strCondung = Objects.requireNonNull(mLogBinding.tfCongdung.getEditText()).getText().toString();
-        String strHinhAnh = Objects.requireNonNull(mLogBinding.tfHinhanh.getEditText()).getText().toString();
+        String strHinhAnh = Objects.requireNonNull(null);
         String strCangDi = Objects.requireNonNull(mLogBinding.tfCangdi.getEditText()).getText().toString();
         String strHSCangDen = Objects.requireNonNull(mLogBinding.tfCangden.getEditText()).getText().toString();
         String strLoaiHang = Objects.requireNonNull(mLogBinding.tfLoaihang.getEditText()).getText().toString();
@@ -197,7 +197,7 @@ public class UpdateLogFragment extends DialogFragment implements View.OnClickLis
         String strTenHang = mLogBinding.tfTenhang.getEditText().getText().toString();
         String strHSCode = mLogBinding.tfHscode.getEditText().getText().toString();
         String strCondung = mLogBinding.tfCongdung.getEditText().getText().toString();
-        String strHinhAnh = mLogBinding.tfHinhanh.getEditText().getText().toString();
+        String strHinhAnh =null;
         String strCangDi = mLogBinding.tfCangdi.getEditText().getText().toString();
         String strHSCangDen = mLogBinding.tfCangden.getEditText().getText().toString();
         String strLoaiHang = mLogBinding.tfLoaihang.getEditText().getText().toString();
@@ -206,21 +206,21 @@ public class UpdateLogFragment extends DialogFragment implements View.OnClickLis
         String strPrice = mLogBinding.tfPrice.getEditText().getText().toString();
 
 
-        mCommunicateViewModel.makeChanges();
-        Call<Log> call = mLogViewModel.insertLog(strTenHang, strHSCode, strCondung, strHinhAnh, strCangDi, strHSCangDen, strLoaiHang, strSoLuongCuThe, strYeuCauDacBiet,
-                strPrice, listPriceLog[0], listPriceLog[1], listPriceLog[2], getCreatedDate());
-        call.enqueue(new Callback<Log>() {
-            @Override
-            public void onResponse(Call<Log> call, Response<Log> response) {
-                if(response.isSuccessful()){
-                    Toast.makeText(getContext(), "Insert Successful!!", Toast.LENGTH_LONG).show();
-                }
-            }
-
-            @Override
-            public void onFailure(Call<Log> call, Throwable t) {
-
-            }
-        });
+//        mCommunicateViewModel.makeChanges();
+//        Call<Log> call = mLogViewModel.insertLog(strTenHang, strHSCode, strCondung, strHinhAnh, strCangDi, strHSCangDen, strLoaiHang, strSoLuongCuThe, strYeuCauDacBiet,
+//                strPrice, listPriceLog[0], listPriceLog[1], listPriceLog[2], getCreatedDate());
+//        call.enqueue(new Callback<Log>() {
+//            @Override
+//            public void onResponse(Call<Log> call, Response<Log> response) {
+//                if(response.isSuccessful()){
+//                    Toast.makeText(getContext(), "Insert Successful!!", Toast.LENGTH_LONG).show();
+//                }
+//            }
+//
+//            @Override
+//            public void onFailure(Call<Log> call, Throwable t) {
+//
+//            }
+//        });
     }
 }

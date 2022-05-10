@@ -53,7 +53,15 @@ dependencies {
 
     implementation 'me.relex:circleindicator:2.1.6'
 
+<<<<<<< Updated upstream
     implementation 'com.squareup.retrofit2:retrofit:2.5.0'
+=======
+    //dialog ios/marterial
+    implementation 'com.kongzue.dialog_v3:dialog:3.0.7.2'
+    //DIALOG POPUP holder
+    implementation 'com.orhanobut:dialogplus:1.11@aar'
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+>>>>>>> Stashed changes
     implementation 'com.squareup.retrofit2:converter-gson:2.5.0'
     implementation "androidx.cardview:cardview:1.0.0"
     implementation 'com.makeramen:roundedimageview:2.3.0'
