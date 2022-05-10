@@ -86,7 +86,7 @@ public class SettingsFragment extends Fragment implements view_Account {
             @Override
             public void onClick(View v) {
                 MessageDialog.build((AppCompatActivity) getActivity())
-                        .setStyle(DialogSettings.STYLE.STYLE_MATERIAL)
+                        .setStyle(DialogSettings.STYLE.STYLE_IOS)
                         .setTheme(DialogSettings.THEME.LIGHT)
                         .setTitle(R.string.app_name)
                         .setMessage(R.string.You_want_to_sign_out)

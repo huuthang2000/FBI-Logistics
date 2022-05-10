@@ -34,6 +34,39 @@
                 android:layout_above="@id/cvControlBottom"
                 android:layout_width="match_parent"
                 android:layout_height="500dp">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:elevation="10dp"
+                    android:background="@color/white"
+                    android:id="@+id/relLayout1">
+
+
+                    <ImageView
+                        android:id="@+id/ic_btnMicro"
+                        android:layout_width="40dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:onClick="getSpeech"
+                        android:src="@drawable/ic_baseline_mic_24" />
+
+                    <EditText
+                        android:id="@+id/input_search"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="8dp"
+                        android:layout_toRightOf="@+id/ic_btnMicro"
+                        android:background="@null"
+                        android:hint="Nhập địa điểm"
+                        android:imeOptions="actionSearch"
+                        android:maxLines="1"
+                        android:singleLine="true"
+                        android:textColor="#000"
+                        android:textSize="18sp" />
+                </RelativeLayout>
                 <fragment
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"

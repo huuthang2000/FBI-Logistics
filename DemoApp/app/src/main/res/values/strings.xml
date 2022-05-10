@@ -372,12 +372,12 @@
     <string name="Enter_the_name_of_the_chat">Enter the name of the chat</string>
     <string name="Common_name">Common name</string>
     <string name="Invite_code">Invite code</string>
-    <string name="you_want_exit_app">You want to exit the application?</string>
+    <string name="you_want_exit_app">Bạn có muốn thoát khỏi trình quản lý xe?</string>
     <string name="you_want_edit_place_app">Do you want to save the changes?</string>
     <string name="Remove_members">Remove members</string>
     <string name="Do_you_want_to_leave_the_group">Do you want to leave the group?</string>
     <string name="You_want_to_remove_members">You want to remove members?</string>
-    <string name="You_want_to_sign_out">You want to sign out?</string>
+    <string name="You_want_to_sign_out">Bạn có muốn đăng xuất khỏi trình quản lý xe?</string>
     <string name="YES">YES</string>
     <string name="NO">NO</string>
     <string name="People">People</string>

@@ -461,7 +461,7 @@ public class UIMain extends AppCompatActivity implements view_Family, view_Chat,
     @Override
     public void onBackPressed() {
         MessageDialog.build(this)
-                .setStyle(DialogSettings.STYLE.STYLE_MATERIAL)
+                .setStyle(DialogSettings.STYLE.STYLE_IOS)
                 .setTheme(DialogSettings.THEME.LIGHT)
                 .setTitle(R.string.app_name)
                 .setMessage(R.string.you_want_exit_app)

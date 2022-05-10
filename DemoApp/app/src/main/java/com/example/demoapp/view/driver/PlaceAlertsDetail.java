@@ -13,9 +13,13 @@ import android.location.Geocoder;
 import android.location.Location;
 import android.location.LocationManager;
 import android.os.Bundle;
+import android.speech.RecognizerIntent;
 import android.util.Log;
+import android.view.KeyEvent;
 import android.view.View;
+import android.view.inputmethod.EditorInfo;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -25,6 +29,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 
 import com.example.demoapp.Models.objApplication.objArea;
 import com.example.demoapp.Models.objectFirebase.family.fb_area;
@@ -34,11 +39,13 @@ import com.example.demoapp.SQLite.tb_CurrentFamilyID;
 import com.example.demoapp.Utils.keyUtils;
 import com.example.demoapp.Utils.viewUtils;
 import com.example.demoapp.view.driver.autoStarService.GPSService;
+import com.google.android.gms.location.FusedLocationProviderClient;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -48,6 +55,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.xw.repo.BubbleSeekBar;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 import java.util.Objects;
@@ -56,6 +64,13 @@ import java.util.Objects;
 public class PlaceAlertsDetail extends AppCompatActivity implements OnMapReadyCallback {
     private final Context context = this;
 
+
+    private Boolean locationPermission = false;
+    final private int LOCATION_REQUEST_CODE = 1;
+    private static final String TAG = "MapActivity";
+    private FusedLocationProviderClient userLocation;
+    private EditText searchField;
+    private Marker markerName;
 
     private MarkerOptions markerOptions;
     private GoogleMap mMap;
@@ -99,7 +114,8 @@ public class PlaceAlertsDetail extends AppCompatActivity implements OnMapReadyCa
         editor.apply();
         setID();
         setEvent();
-
+        getPermission();
+        loadInputField();
         // Tăng bố cục cho phân đoạn này
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.mapPlaceAlerts);
@@ -108,7 +124,82 @@ public class PlaceAlertsDetail extends AppCompatActivity implements OnMapReadyCa
 
     }
 
+    private void loadInputField() {
+        searchField = (EditText) findViewById(R.id.input_search);
+        searchField.setOnEditorActionListener(new TextView.OnEditorActionListener() {
+            @Override
+            public boolean onEditorAction(TextView textView, int actionId, KeyEvent keyEvent) {
+                if (actionId == EditorInfo.IME_ACTION_SEARCH || actionId == EditorInfo.IME_ACTION_DONE || keyEvent.getAction() == KeyEvent.ACTION_DOWN || keyEvent.getAction() == KeyEvent.KEYCODE_ENTER) {
+                    findPlace();
+                }
+                return false;
+            }
+        });
+    }
+    private void findPlace() {
+        String search = searchField.getText().toString();
 
+        Geocoder geocoder = new Geocoder(this);
+        List<Address> list = new ArrayList<>();
+        try {
+            list = geocoder.getFromLocationName(search, 1);
+        } catch (IOException e) {
+            Log.e(TAG, e.getMessage());
+        }
+
+        if (list.size() > 0) {
+            Address address = list.get(0);
+            moveToPoint(new LatLng(address.getLatitude(), address.getLongitude()),
+                    12f, address.getAddressLine(0));
+        }
+        else {
+            Toast.makeText(this, "Can't find searched place", Toast.LENGTH_LONG).show();
+        }
+    }
+
+    private void getPermission() {
+        String[] permission = {Manifest.permission.ACCESS_FINE_LOCATION};
+        if (ContextCompat.checkSelfPermission(this.getApplicationContext(), Manifest.permission.ACCESS_FINE_LOCATION)
+                == PackageManager.PERMISSION_GRANTED) {
+            locationPermission = true;
+        } else {
+            ActivityCompat.requestPermissions(this, permission, LOCATION_REQUEST_CODE);
+        }
+    }
+
+
+    private void moveToPoint(LatLng latLng, float zoom, String name) {
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(latLng, zoom));
+        if (markerName!=null) markerName.remove();
+
+        if (name != "Me") {
+            MarkerOptions options = new MarkerOptions().position(latLng).title(name);
+            markerName = mMap.addMarker(options);
+        }
+    }
+    // lay giong nói
+    public void getSpeech(View view) {
+        Intent intent = new Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH);
+        intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE_MODEL, RecognizerIntent.LANGUAGE_MODEL_FREE_FORM);
+        intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE, Locale.getDefault());
+
+        if (intent.resolveActivity(getPackageManager()) != null) {
+            startActivityForResult(intent, 2);
+        } else {
+            Toast.makeText(this, "Nhận dạng giọng nói không được hỗ trợ trong thiết bị này", Toast.LENGTH_SHORT).show();
+        }
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        if (requestCode == 2 && data != null) {
+            ArrayList<String> result = data.getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS);
+            searchField.setText(result.get(0));
+            findPlace();
+        }
+    }
     @SuppressLint("SetTextI18n")
     private void setID() {
         toolbar = findViewById(R.id.toolbar_Place_Alerts);

@@ -59,7 +59,7 @@ dependencies {
     implementation 'me.relex:circleindicator:2.1.6'
 
     //dialog
-    implementation 'com.kongzue.dialog_v3:dialog:3.1.4'
+    implementation 'com.kongzue.dialog_v3:dialog:3.0.5'
     implementation 'com.orhanobut:dialogplus:1.11@aar'
     implementation 'com.squareup.retrofit2:retrofit:2.5.0'
     implementation 'com.squareup.retrofit2:converter-gson:2.5.0'
