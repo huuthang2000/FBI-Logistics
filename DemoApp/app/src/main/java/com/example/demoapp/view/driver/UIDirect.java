@@ -1,9 +1,11 @@
 package com.example.demoapp.view.driver;
 
+import android.content.ActivityNotFoundException;
 import android.content.Context;
 import android.content.Intent;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
+import android.net.Uri;
 import android.os.Bundle;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
@@ -23,14 +25,31 @@ public class UIDirect extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_uidirect);
-        Intent intent = getIntent();
-        String to = "";
-        String from =intent.getStringExtra("location1");
-        map = findViewById(R.id.webview);
-        map.setWebViewClient(new WebViewClient());
-        map.getSettings().setJavaScriptEnabled(true);
-        map.loadUrl("http://www.google.co.in/maps/dir/"+from+"/"+to+"?hl=vi");
+        try {
+            Intent intent = getIntent();
+            String to = "";
+            String from = intent.getStringExtra("location1");
+           Uri uri = Uri.parse("http://www.google.co.in/maps/dir/" + from + "/" + to + "?hl=vi");
+            map = findViewById(R.id.webview);
+            map.getSettings().setJavaScriptCanOpenWindowsAutomatically(true);
+            map.getSettings().setBuiltInZoomControls(true);
+            map.setWebViewClient(new WebViewClient());
+            // Below required for geolocation
+            map.getSettings().setJavaScriptEnabled(true);
+            map.getSettings().setGeolocationEnabled(true);
+            map.loadUrl("http://www.google.co.in/maps/dir/" + from + "/" + to + "?hl=vi");
+            
+            intent = new Intent(Intent.ACTION_VIEW,uri);
+            intent.setPackage("com.google.android.apps.maps");
+            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            startActivity(intent);
 
+        }catch (ActivityNotFoundException e ){
+            Uri uri = Uri.parse("https://play.google.com/store/apps/details?id=com.google.android.apps.maps");
+            Intent intent = new Intent(Intent.ACTION_VIEW,uri);
+            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            startActivity(intent);
+        }
 
 
     }

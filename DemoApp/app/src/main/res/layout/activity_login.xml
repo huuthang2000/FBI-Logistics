@@ -23,6 +23,7 @@
                 android:layout_marginBottom="20dp"
                 android:background="@drawable/top_login"
                 android:layout_width="match_parent"
+                android:backgroundTint="#eceefa"
                 android:layout_height="240dp">
 
                 <ImageView

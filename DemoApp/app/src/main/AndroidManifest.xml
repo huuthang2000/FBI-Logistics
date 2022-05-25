@@ -12,6 +12,8 @@
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
     <uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS" />
     <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.ACCESS_GPS" />
+    <uses-permission android:name="android.permission.ACCESS_ASSISTED_GPS" />
     <uses-permission android:name="oppo.permission.OPPO_COMPONENT_SAFE" />
     <uses-permission android:name="com.huawei.permission.external_app_settings.USE_COMPONENT" />
     <uses-permission android:name="android.permission.RECEIVE_LAUNCH_BROADCASTS" />
@@ -64,10 +66,14 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
         </activity>
         <activity
             android:name=".view.activity.login_register.SignUpActivity"
-            android:exported="false" />
+            android:exported="true" >
+
+        </activity>
+
         <activity
             android:name=".view.activity.air.AirPageActivity"
             android:exported="true" />
@@ -267,9 +273,6 @@
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
-        <meta-data
-            android:name="com.google.android.geo.API_KEY"
-            android:value="@string/API_GOOGLE_MAP" />
 
         <service
             android:name=".firebase.MessagingService"
