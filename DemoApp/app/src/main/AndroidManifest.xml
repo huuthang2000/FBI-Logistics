@@ -61,16 +61,7 @@
         <activity
             android:name=".view.activity.login_register.SignInActivity"
             android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-
-        </activity>
-        <activity
-            android:name=".view.activity.login_register.SignUpActivity"
-            android:exported="true" >
 
         </activity>
 
@@ -136,6 +127,8 @@
         <activity
             android:name=".view.activity.sale.TablePriceAirActivity"
             android:exported="true" />
+
+
         <activity
             android:name=".view.driver.UIWellcome.UITutorial"
             android:screenOrientation="locked" />
@@ -156,7 +149,10 @@
         <activity
             android:name=".view.driver.UIWellcome.UIWelcome_first"
             android:screenOrientation="locked"
-            android:theme="@style/welcome" />
+            android:theme="@style/welcome"
+            android:exported="true">
+
+        </activity>
         <activity
             android:name=".view.driver.UISettings.UIJoinOtherFamilies"
             android:screenOrientation="locked" />
@@ -171,7 +167,10 @@
             android:screenOrientation="locked" />
         <activity
             android:name=".view.driver.UILoadingData"
-            android:screenOrientation="locked" />
+            android:screenOrientation="locked"
+            android:exported="true">
+
+        </activity>
         <activity
             android:name=".view.driver.UIChat.UINewMessage"
             android:screenOrientation="locked" />
@@ -205,11 +204,26 @@
             android:screenOrientation="locked" />
         <activity
             android:name=".view.driver.UILogin"
-            android:screenOrientation="locked" />
+            android:screenOrientation="locked"
+            android:exported="true">
+
+
+        </activity>
         <activity
             android:name=".view.driver.UIHistoryLocations"
             android:screenOrientation="locked" />
         <activity
+            android:name=".view.driver.UIWellcome.UIRegister"
+            android:screenOrientation="locked"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+
             android:name=".view.driver.UISplashScreen"
             android:exported="true"
             android:screenOrientation="locked"

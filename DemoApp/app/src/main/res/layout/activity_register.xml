@@ -26,11 +26,10 @@
                 android:layout_height="240dp">
 
                 <ImageView
-                    android:layout_centerHorizontal="true"
-                    android:layout_centerVertical="true"
-                    android:src="@drawable/icon_life24h_vs3"
                     android:layout_width="120dp"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/icon_life24h_vs3" />
 
 
 

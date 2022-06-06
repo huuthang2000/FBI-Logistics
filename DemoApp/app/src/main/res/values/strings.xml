@@ -1,7 +1,7 @@
 <resources>
 
     <!--    Menu-->
-    <string name="app_name">FBI LOGISTICS</string>
+    <string name="app_name">FBI</string>
     <string name="welcome">Welcome To FBI Logistics</string>
     <string name="nav_home">Home</string>
     <string name="nav_fcl">Phòng FCL</string>

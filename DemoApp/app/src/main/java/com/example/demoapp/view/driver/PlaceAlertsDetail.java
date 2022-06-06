@@ -65,15 +65,15 @@ public class PlaceAlertsDetail extends AppCompatActivity implements OnMapReadyCa
     private final Context context = this;
 
 
-    private Boolean locationPermission = false;
-    final private int LOCATION_REQUEST_CODE = 1;
-    private static final String TAG = "MapActivity";
-    private FusedLocationProviderClient userLocation;
-    private EditText searchField;
-    private Marker markerName;
+        private Boolean locationPermission = false;
+        final private int LOCATION_REQUEST_CODE = 1;
+        private static final String TAG = "MapActivity";
+        private FusedLocationProviderClient userLocation;
+        private EditText searchField;
+        private Marker markerName;
 
-    private MarkerOptions markerOptions;
-    private GoogleMap mMap;
+        private MarkerOptions markerOptions;
+        private GoogleMap mMap;
     private TextInputLayout textInputLayout, textInputLayoutName;
     private Button btn_AddPlaceAlert, btn_Delete_PlaceAlert, btn_Edit_PlaceAlert;
     private LinearLayout ln_Add_Delete;

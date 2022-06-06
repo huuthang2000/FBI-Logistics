@@ -1,11 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!--
-  ~  Date created: 01/06/2020
-  ~  Last updated: 12/21/2019
-  ~  Name project: life24h
-  ~  Description:
-  ~  Auth: James Ryan
-  -->
 
 <LinearLayout
     android:paddingBottom="3dp"

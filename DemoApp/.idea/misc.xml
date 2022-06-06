@@ -350,8 +350,11 @@
         <entry key="..\:/Dowloads/FBI-Logistics-main/FBI-Logistics-main/DemoApp/app/src/main/res/menu/search.xml" value="0.25416666666666665" />
         <entry key="..\:/Dowloads/FBI-Logistics-main/FBI-Logistics-main/DemoApp/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.124" />
         <entry key="..\:/Dowloads/FBI-Logistics-main/FBI-Logistics-main/DemoApp/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.124" />
+        <entry key="..\:/Dowloads/FBI-Logistics/DemoApp/app/src/main/res/drawable/border_table.xml" value="0.192" />
         <entry key="..\:/Dowloads/FBI-Logistics/DemoApp/app/src/main/res/drawable/botron_button.xml" value="0.1635" />
-        <entry key="..\:/Dowloads/FBI-Logistics/DemoApp/app/src/main/res/layout/activity_dom.xml" value="0.25416666666666665" />
+        <entry key="..\:/Dowloads/FBI-Logistics/DemoApp/app/src/main/res/layout/activity_chat.xml" value="0.25416666666666665" />
+        <entry key="..\:/Dowloads/FBI-Logistics/DemoApp/app/src/main/res/layout/activity_chat2.xml" value="0.25416666666666665" />
+        <entry key="..\:/Dowloads/FBI-Logistics/DemoApp/app/src/main/res/layout/activity_dom.xml" value="0.20437956204379562" />
         <entry key="..\:/Dowloads/FBI-Logistics/DemoApp/app/src/main/res/layout/activity_driver.xml" value="0.25416666666666665" />
         <entry key="..\:/Dowloads/FBI-Logistics/DemoApp/app/src/main/res/layout/activity_import_lcl_sale.xml" value="0.25416666666666665" />
         <entry key="..\:/Dowloads/FBI-Logistics/DemoApp/app/src/main/res/layout/activity_import_page.xml" value="0.25416666666666665" />
@@ -364,7 +367,21 @@
         <entry key="..\:/Dowloads/FBI-Logistics/DemoApp/app/src/main/res/layout/activity_main_message.xml" value="0.25416666666666665" />
         <entry key="..\:/Dowloads/FBI-Logistics/DemoApp/app/src/main/res/layout/activity_message_group_detail.xml" value="0.25416666666666665" />
         <entry key="..\:/Dowloads/FBI-Logistics/DemoApp/app/src/main/res/layout/activity_place_alerts.xml" value="0.22777777777777777" />
+        <entry key="..\:/Dowloads/FBI-Logistics/DemoApp/app/src/main/res/layout/activity_register.xml" value="0.17447916666666666" />
         <entry key="..\:/Dowloads/FBI-Logistics/DemoApp/app/src/main/res/layout/activity_sign_in.xml" value="0.25416666666666665" />
+        <entry key="..\:/Dowloads/FBI-Logistics/DemoApp/app/src/main/res/layout/custom_dialog_list_member.xml" value="0.17447916666666666" />
+        <entry key="..\:/Dowloads/FBI-Logistics/DemoApp/app/src/main/res/layout/fragment_dom_door.xml" value="0.25416666666666665" />
+        <entry key="..\:/Dowloads/FBI-Logistics/DemoApp/app/src/main/res/layout/fragment_home_pro.xml" value="0.1890625" />
+        <entry key="..\:/Dowloads/FBI-Logistics/DemoApp/app/src/main/res/layout/item_chat_message_left.xml" value="0.17447916666666666" />
+        <entry key="..\:/Dowloads/FBI-Logistics/DemoApp/app/src/main/res/layout/item_chat_message_right.xml" value="0.17447916666666666" />
+        <entry key="..\:/Dowloads/FBI-Logistics/DemoApp/app/src/main/res/layout/layout_header_nav.xml" value="0.17447916666666666" />
+        <entry key="..\:/Dowloads/FBI-Logistics/DemoApp/app/src/main/res/layout/row_pricelist_import.xml" value="0.17447916666666666" />
+        <entry key="..\:/Dowloads/FBI-Logistics/DemoApp/app/src/main/res/menu/activity_dom_drawer.xml" value="0.17447916666666666" />
+        <entry key="..\:/Dowloads/FBI-Logistics/DemoApp/app/src/main/res/menu/bottom_nav_menu.xml" value="0.17447916666666666" />
+        <entry key="..\:/Dowloads/FBI-Logistics/DemoApp/app/src/main/res/menu/dom.xml" value="0.16041666666666668" />
+        <entry key="..\:/Dowloads/FBI-Logistics/DemoApp/app/src/main/res/menu/menu_chat.xml" value="0.17447916666666666" />
+        <entry key="..\:/Dowloads/FBI-Logistics/DemoApp/app/src/main/res/menu/menu_driver_page.xml" value="0.17447916666666666" />
+        <entry key="..\:/Dowloads/FBI-Logistics/DemoApp/app/src/main/res/menu/menu_waterway.xml" value="0.17447916666666666" />
         <entry key="..\:/Users/Dell/AndroidStudioProjects/DemoApp/app/src/main/res/drawable-v24/background_login_btn.xml" value="0.146875" />
         <entry key="..\:/Users/Dell/AndroidStudioProjects/DemoApp/app/src/main/res/drawable-v24/ic_baseline_menu_home_24.xml" value="0.10277777777777777" />
         <entry key="..\:/Users/Dell/AndroidStudioProjects/DemoApp/app/src/main/res/drawable/background.xml" value="0.146875" />

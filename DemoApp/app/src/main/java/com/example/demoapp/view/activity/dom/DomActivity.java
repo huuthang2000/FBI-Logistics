@@ -66,11 +66,12 @@ public class DomActivity extends AppCompatActivity implements NavigationView.OnN
         super.onCreate(savedInstanceState);
         binding = ActivityDomBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-        setSupportActionBar(binding.toolbar);
+
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, binding.drawerLayout, binding.toolbar,
                 R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         binding.drawerLayout.addDrawerListener(toggle);
         toggle.syncState();
+
         binding.navigationView.setNavigationItemSelectedListener(this);
 
         replaceFragment(new HomeFragment());
