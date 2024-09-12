@@ -1,9 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
+<<<<<<< Updated upstream
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+=======
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+>>>>>>> Stashed changes
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+<<<<<<< Updated upstream
     tools:context=".view.activity.MainActivity">
 
     <androidx.appcompat.widget.Toolbar
@@ -50,3 +57,84 @@
         app:layout_constraintTop_toBottomOf="@+id/toolbar"
         app:srcCompat="@drawable/logofbi" />
 </androidx.constraintlayout.widget.ConstraintLayout>
+=======
+    tools:context=".view.driver.UIMain">
+
+    <FrameLayout
+        android:id="@+id/frameMain"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/fl_control_bottom"
+        android:layout_alignParentTop="true" />
+
+
+    <RelativeLayout
+        android:id="@+id/rltlTopMain"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize">
+
+
+        <Button
+            android:id="@+id/btnSelectFamily"
+            android:layout_width="250dp"
+            android:layout_height="37dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:background="@drawable/bg_button_white_border"
+            android:drawableEnd="@drawable/ic_unfold_more_black_18dp"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:text="@string/My_family"
+            android:textAllCaps="false"
+            android:visibility="visible" />
+        <FrameLayout
+            android:id="@+id/frlChat"
+            android:layout_marginEnd="10dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_width="35dp"
+            android:layout_height="35dp">
+
+            <ImageView
+                android:id="@+id/imvChat"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:src="@drawable/ic_chat_white_1"
+                android:background="@drawable/circle_blue"
+                android:scaleType="center" />
+
+            <ImageView
+                android:id="@+id/imvNewChat"
+                android:layout_gravity="end|top"
+                android:layout_width="14dp"
+                android:layout_height="14dp"
+                android:background="@drawable/circle_red"/>
+
+        </FrameLayout>
+
+
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/fl_control_bottom"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize">
+
+        <include layout="@layout/menu_bottom"/>
+
+        <ImageView
+            android:id="@+id/imvAnotherMenu"
+            android:clickable="true"
+            android:padding="5dp"
+            android:layout_width="?attr/actionBarSize"
+            android:layout_height="?attr/actionBarSize"
+            android:src="@drawable/ic_plus"
+            android:background="@color/colorWhite"
+            android:layout_gravity="center"
+            android:focusable="true" />
+
+    </FrameLayout>
+
+</RelativeLayout>
+>>>>>>> Stashed changes

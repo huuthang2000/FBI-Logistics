@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<RelativeLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.fragment.Driver.HomeDriverFragment">
+
+    <FrameLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <fragment
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/map"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            />
+
+        <ImageView
+            android:id="@+id/cimg_SelectMap"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="right|bottom"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="40dp"
+            android:background="@drawable/circle_white_border_grey"
+            android:scaleType="center"
+            android:src="@drawable/ic_map_purble_28dp" />
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_gravity="right|bottom"
+            android:layout_marginEnd="10dp"
+            android:scaleType="center"
+            android:src="@drawable/ic_gps_fixed_purble_28dp"
+            android:background="@drawable/circle_white_border_grey"
+            android:id="@+id/cimg_myMapLocation"
+            android:layout_marginBottom="100dp"
+            android:layout_height="40dp"/>
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_gravity="right|bottom"
+            android:layout_marginEnd="10dp"
+            android:scaleType="center"
+            android:src="@drawable/ic_people_purple_28dp"
+            android:background="@drawable/circle_white_border_grey"
+            android:id="@+id/cimg_list_member"
+            android:layout_marginBottom="160dp"
+            android:layout_height="40dp"/>
+
+        <LinearLayout
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_gravity="bottom"
+            android:id="@+id/ln_Map_Type_Select"
+            android:background="@color/white"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:weightSum="2"
+                android:layout_height="40dp">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="5dp"
+                    android:paddingTop="5dp"
+                    android:text="Type Map"
+                    android:textSize="18sp" />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="15dp"
+                    android:paddingTop="5dp"
+                    android:textColor="#E91E63"
+                    android:id="@+id/txt_Close_SelectMap"
+                    android:gravity="end"
+                    android:text="Close "
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:orientation="horizontal"
+                android:paddingBottom="15dp"
+                android:weightSum="3">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:weightSum="6"
+                    android:orientation="vertical"
+                    android:layout_height="match_parent">
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_margin="10dp"
+                        android:layout_weight="5"
+                        android:scaleType="fitXY"
+                        android:id="@+id/img_Map_Street_Map"
+                        android:padding="1.5dp"
+                        android:background="@drawable/custom_background_select_map"
+                        android:src="@drawable/street_map"
+                        android:layout_height="0dp"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:textStyle="bold"
+                        android:id="@+id/txt_Normal_Map"
+                        android:textColor="@color/white"
+                        android:gravity="center_horizontal"
+                        android:layout_weight="1"
+                        android:text="Nomal"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:weightSum="6"
+                    android:orientation="vertical"
+                    android:layout_height="match_parent">
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:scaleType="fitXY"
+                        android:layout_weight="5"
+                        android:layout_margin="10dp"
+                        android:padding="1.5dp"
+                        android:id="@+id/img_Map_Terrain"
+                        android:src="@drawable/terrain"
+                        android:layout_height="0dp"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:textStyle="bold"
+                        android:textColor="#000"
+                        android:id="@+id/txt_Terrain_Map"
+                        android:gravity="center_horizontal"
+                        android:layout_weight="1"
+                        android:text="terrain"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:weightSum="6"
+                    android:orientation="vertical"
+                    android:layout_height="match_parent">
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_weight="5"
+                        android:scaleType="fitXY"
+                        android:padding="1.5dp"
+                        android:layout_margin="10dp"
+                        android:id="@+id/img_Map_Satellite"
+                        android:src="@drawable/satellite"
+                        android:layout_height="0dp"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:textStyle="bold"
+                        android:id="@+id/txt_Satellite_Map"
+                        android:textColor="#000"
+                        android:gravity="center_horizontal"
+                        android:layout_weight="1"
+                        android:text="satellite"/>
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </FrameLayout>
+
+
+</RelativeLayout>

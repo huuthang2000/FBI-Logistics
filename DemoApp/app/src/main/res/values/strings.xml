@@ -279,5 +279,266 @@
     <string name="title_activity_log">LogActivity</string>
     <string name="log_out">Đăng xuất</string>
 
+<<<<<<< Updated upstream
+=======
+    //driver
+    <string name="New_children">New children</string>
+    <string name="Last_updated">Last updated:</string>
+    <string name="Logout">Logout</string>
+    <string name="Hi">Hi!</string>
+    <string name="Do_you_want_to_log_out">Do you want to log out?</string>
+    <string name="Update_Error">Update error, try again later</string>
+    <string name="Update_successful">Update successful!</string>
+    <string name="Remove_successful">Remove successful!</string>
+    <string name="Remove_error">Remove error!</string>
+    <string name="Leaving_group_failed">Leaving group failed!</string>
+    <string name="Yes">Yes</string>
+    <string name="No">No</string>
+
+
+    <string name="Loading">Loading!</string>
+    <string name="Phone_number">Phone number</string>
+    <string name="Gender1">Gender:</string>
+    <string name="Female">Female</string>
+    <string name="Male">Male</string>
+    <string name="Other">Other</string>
+    <string name="Choose_avatar">Choose avatar</string>
+    <string name="permission_don_not_granted">Permission don\'t granted and don\'t show dialog again</string>
+    <string name="Continue">Continue</string>
+    <string name="Success">Success</string>
+    <string name="Failed">Failed</string>
+    <string name="The_value_is_not_valid">The value is not valid</string>
+    <string name="Password_incorrect">Password incorrect</string>
+
+    <string name="Confirm_password_is_not_empty">Confirm password is not empty</string>
+
+    <string name="Registration_failed">Registration failed!</string>
+    <string name="Email_already_exists">Email already exists!</string>
+
+    <string name="sent_photos">&#160;sent the photo</string>
+    <string name="Logged_out_successfully">Logged out successfully!</string>
+    <string name="Error_Please_restart_the_application">Error! Please restart the application</string>
+    <string name="Sign_in_with_google">Sign in with Google</string>
+    <string name="Details_of_the_chat">Details of the chat</string>
+    <string name="or">or</string>
+    <string name="Enter_the_message">Enter the message.</string>
+    <string name="You_are_in_this_family">You are in this family, cannot join!</string>
+    <string name="No_invitation_code_found">No invitation code found!</string>
+    <string name="Successfully_joined">Successfully joined!</string>
+    <string name="Uploaded_avatar_failed">Uploaded avatar failed!</string>
+    <string name="Successfully_updated">Successfully updated!</string>
+    <string name="Failed_to_update_family_name">Failed to update family name!</string>
+    <string name="Update_failed">Update failed!</string>
+
+
+    <string name="accessibility_title">Enable accessibility</string>
+    <string name="accessibility_message_settings">Prevent the application stopped When Reboot. And Accessibility is useful for several features of the application (instant messaging, application blocking and website history).</string>
+    <string name="accessibility_description">Accessibility Service</string>
+    <string name="accessibility_ok">GO</string>
+    <string name="accessibility_no">Cancel</string>
+    <string name="accessibility_message_settings_bis">"Instructions:"</string>
+    <string name="app_name_accessibility">SafeAreasForChildren</string>
+    <!-- Device Admin -->
+    <string name="securite_policy">Enabling device administrator to prevent the close of the application, to block the phone and erase all data remotely.</string>
+    <string name="Upload_a_photo">Upload a photo</string>
+    <string name="Take_a_photo">Take a photo</string>
+    <string name="Done">Done</string>
+    <string name="Close">Close</string>
+    <string name="Error_taking_photos">Error taking photos please try again later</string>
+    <string name="Chat_group_name">Chat group name</string>
+    <string name="selected">selected</string>
+    <string name="Other_pictures1">Other pictures:</string>
+    <string name="The_name_of_the_chat">The name of the chat</string>
+    <string name="Members_list">Members list</string>
+    <string name="Add_members">Add members</string>
+    <string name="Save">Save</string>
+    <string name="Select_members">Select members</string>
+    <string name="ok">OK</string>
+
+    <string name="Create_family">Tạo nhóm</string>
+    <string name="Confirm_password">Confirm password</string>
+    <string name="Edit_the_name_of_the_chat">Edit the name of the chat</string>
+    <string name="Enter_the_name_of_the_chat">Enter the name of the chat</string>
+    <string name="Common_name">Common name</string>
+    <string name="Invite_code">Invite code</string>
+    <string name="you_want_exit_app">Bạn có muốn thoát trình quản lý xe tải?</string>
+    <string name="you_want_edit_place_app">Do you want to save the changes?</string>
+    <string name="Remove_members">Remove members</string>
+    <string name="Do_you_want_to_leave_the_group">Do you want to leave the group?</string>
+    <string name="You_want_to_remove_members">You want to remove members?</string>
+    <string name="You_want_to_sign_out">Bạn có muốn đăng xuất trình quản lý xe tải?</string>
+    <string name="YES">YES</string>
+    <string name="NO">NO</string>
+    <string name="People">People</string>
+    <string name="Places">Places</string>
+    <string name="Safety">Safety</string>
+    <string name="Settings">Settings</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+
+    <string name="Sign_out">Sign out</string>
+    <string name="Message">Message</string>
+    <string name="place_detail">PLACE DETAIL</string>
+
+
+    <string name="Leave_group">Leave group</string>
+    <string name="New_chat">New chat</string>
+    <string name="Search_by_name">Search by name</string>
+    <string name="New_message">New message</string>
+    <string name="New_group">New group</string>
+    <string name="Chat">Chat</string>
+
+    <string name="move_place">  Move the map to select a place</string>
+    <string name="suggestion_invite">Invite more members to your family with the invitation code: %s </string>
+    <string name="This_is_my_family_invitation_code">This is my family invitation code:</string>
+
+    <string name="Weekly_Driver_Report">Weekly Driver Report</string>
+    <string name="Average_speed">Average speed</string>
+    <string name="Top_speed">Top speed</string>
+    <string name="See_more_driving_insights">See more driving insights</string>
+
+    <string name="family_places">Địa điểm</string>
+    <string name="add_place">+Add Place</string>
+    <string name="add_place1">Add Place</string>
+    <string name="delete_place">Delete Place</string>
+    <string name="Create_a_successful_family">Create a successful group!</string>
+    <string name="Failed_family_creation">Failed group creation!</string>
+    <string name="You_have_created_more_than_the_specified_number">You have created more than the specified number (Up to 5 families)!</string>
+
+    <string name="Successful_message_reply">Successful message reply!</string>
+    <string name="Reply_message_failed">Reply message failed!</string>
+    <string name="Could_not_find_the_invite_code">Could not find the invite code</string>
+    <string name="Invalid_invitation_code">Invalid invitation code! (Invitation code of 6 letters and numbers)</string>
+    <string name="You_have_been_removed_from_the_chat">You have been removed from the chat!</string>
+
+    <!--Tille Bar-->
+    <string name="title_bar_place_alert">Edit Place</string>
+    <string name="All_driving_insights">All driving insights</string>
+    <string name="no_data_to_display">No data to display</string>
+    <string name="Invite_code_optional">Invite code (optional)</string>
+    <string name="Edit_profile">Sửa thông tin</string>
+    <string name="Join_other_families">Tham gia nhóm mới</string>
+    <string name="Invite_friends">Mời thêm bạn</string>
+    <string name="Share_this_invitation_code_with_people_you_want_to_invite_to_join_your_family">Chia sẻ mã mời này với những người bạn muốn mời tham gia vào nhóm:</string>
+    <string name="Share_your_code_out_loud_or_send_it_in_a_message">Share your code out loud or send it in a message</string>
+    <string name="Send_Code">Send Code</string>
+    <string name="family_name">Group name</string>
+    <string name="Invalid_family_name">Invalid group name!</string>
+    <string name="Invalid_name">Invalid name!</string>
+    <string name="Invalid_phone_number">Invalid phone number!</string>
+    <string name="Add_place">Tạo điểm đến</string>
+    <string name="Edit_place">Edit place</string>
+    <string name="Save_place">Save Changes</string>
+    <string name="map_type">Map type</string>
+    <string name="normal">Thường</string>
+    <string name="terrain">Địa hình</string>
+    <string name="satellite">Vệ tinh</string>
+    <string name="Join_the_family">Join the group</string>
+    <string name="Enter_the_invite_code">Enter the invite code</string>
+    <string name="Get_the_code_from_the_person_setting_up_your_family_s">Nhận mã từ người lập nhóm:</string>
+    <string name="submit">Submit</string>
+    <string name="ft_zone">ft zone</string>
+    <string name="gps_turn_on">GPS Status: Turned On</string>
+    <string name="battery">Battery: </string>
+    <string name="last_since">Last Since: </string>
+    <string name="current_location">Current Location: </string>
+    <string name="gps_turn_off">GPS Status: Turned Off</string>
+    <string name="Family_name">Tên nhóm</string>
+    <string name="Remove_current_avatar">Remove current avatar</string>
+    <string name="My_family">My group</string>
+    <string name="Home">Home</string>
+    <string name="wifi_turn_on">Network status: Online</string>
+    <string name="wifi_away">Network status: Sleep</string>
+    <string name="wifi_turn_off">Network status: Offline</string>
+    <string name="accept_permission">- <b>Location:</b>
+Giúp có được vị trí hiện tại. \n- <b>Storage:</b>
+Giúp lưu trữ ảnh để có thể nhắn tin với nhóm. \n- <b>Battery Optimization:</b> Có thể chạy trong nền để nhận thông báo vị trí và tin nhắn của các thành viên trong nhóm mà bạn thêm vào.</string>
+    <string name="accept_permissions">Chấp nhận tất cả các quyền để làm cho ứng dụng chạy mượt mà hơn</string>
+    <string name="notification_place">Hello, Once you\'ve selected the location to create, you should enlarge it as much as possible so that the safe area can be most accurate.</string>
+    <string name="Add_family">Tạo nhóm mới</string>
+    <string name="Last_updated1">Last updated</string>
+    <string name="since">Since </string>
+    <string name="turn_on_location_gps">Turn on location/GPS</string>
+    <string name="go_to_settings">Go to Settings</string>
+    <string name="your_location_gps_setting">Your location/GPS setting must be turned on for FBI LOGISTICS APP to work. Please turn on location/GPS in the phone settings.</string>
+    <string name="choose_a_country">Choose a country</string>
+    <string name="daily_history_location">Lịch sử di chuyển tài xế hàng tuần</string>
+    <string name="weekly_driver_report">Thống kê đánh giá</string>
+    <string name="view_driving_summary">View driving summary</string>
+    <string name="see_where_today">See where today</string>
+    <string name="view_driving_summary_id">View %s driving summary</string>
+    <string name="see_where_today_id">See where %s  was today</string>
+    <string name="Emergency_assistance">Emergency assistance</string>
+    <string name="Successfully_informed_everyone_in_your_family">Successfully informed everyone in your family</string>
+    <string name="we_will_send_your_emergency_notice_to_family_members_once_the_countdown_is_over">We will send your emergency notice to family members once the countdown is over.</string>
+    <string name="_1">1</string>
+    <string name="Error_please_try_again_later">Error, please try again later!</string>
+    <string name="see_details"><u><b>See details</b></u></string>
+    <string name="all_of_the_members">All of the members</string>
+    <string name="Details_of">Details of</string>
+
+    <string name="List_watched">List watched</string>
+    <string name="download_more">Load\n more</string>
+    <string name="unlimited_location_history">Location history</string>
+    <string name="browse_all_days_and_times">Browse all days and times</string>
+    <string name="unlimited_family_members">Group members</string>
+    <string name="add_all_kids_within_few_minutes">Add all kids within few minutes</string>
+    <string name="unlimited_real_time_alerts">Real-time alerts</string>
+    <string name="unlock_all_access">Unlock All Access</string>
+    <string name="zone_alerts">Zone Alerts</string>
+    <string name="notify_every_time_your_child_enters_or_exits_the_area">Cảnh báo xe chuẩn bị di chuyển ra khỏi địa điểm.</string>
+    <string name="try_your_3_day_free_trial">Try your 3-day free trial.</string>
+    <string name="subscribe_now">Start Free Trial</string>
+    <string name="limited_time_promotion">Limited-time promotion 50% off on monthly subscriptions to Unlock FBI LOGISTICS APP. Standard price is $3.99. <b>Pay only $1.99 on Google Play today</b></string>
+    <string name="monthly_subscription">Monthly subscription</string>
+    <string name="turn_on_wifi_4g">Turn on Network </string>
+    <string name="your_internet_setting">Your WIFI/4G setting must be turned on for FBI LOGISTICS APP to work. Please turn on WIFI/4G in the phone settings.</string>
+    <string name="get_gps_now">Get GPS Now</string>
+    <string name="We_find_driving_speed_unusually_low">We find %s\'s driving speed unusually low. Please help %s!</string>
+    <string name="Emergency_notification_sent_successfully">Emergency notification sent successfully!</string>
+    <string name="announces_that_he_has_a_problem_to_help">%s announces that %s has a problem to help, please help %s!</string>
+    <string name="Notice_of_failure">Notice of failure!</string>
+    <string name="he">he</string>
+    <string name="she">she</string>
+    <string name="him">him</string>
+    <string name="her">her</string>
+    <string name="Forgot_password">Forgot password?</string>
+    <string name="We_have_emailed_you_please_check_your_email">We have emailed you, please check your email!</string>
+    <string name="Unable_to_recover_your_password">Unable to recover your password, please try again later!</string>
+    <string name="Password_update_failed">Password update failed!</string>
+    <string name="The_current_password_is_incorrect">The current password is incorrect!</string>
+    <string name="Confirm_password_does_not_match">Confirm password does not match!</string>
+    <string name="Successfully_updated_the_password">Successfully updated the password!</string>
+    <string name="Reset_Password">Reset Password</string>
+    <string name="Update_password">Update password</string>
+    <string name="Current_password">Current password</string>
+    <string name="Chat_now">Chat Now</string>
+    <string name="downloading">Downloading</string>
+
+    <string name="Confirm_close_dialog">Confirm close dialog</string>
+    <string name="You_can_still_upgrade_in_settings">You can still upgrade in settings</string>
+    <string name="Skip">Skip</string>
+    <string name="Previous">Previous</string>
+    <string name="Next">Next</string>
+    <string name="Start">Start</string>
+    <string name="send_invitation">Send a 6-letter invitation code to family or friends for them to join you.</string>
+    <string name="add_area_tutorial">Add the area you want to receive notifications every time group members enter or leave the area.</string>
+    <string name="driving_tutorial">This function displays the average weekly driving speed of each member of your group.</string>
+    <string name="menu_tutorial">All other functions are integrated into one menu for easy operation.</string>
+    <string name="allow_all_the_time">Cho phép quyền vị trí mọi lúc</string>
+    <string name="life24h_needs">Fbi Logistics app cần điều này để cung cấp cho bạn và tài xế nhóm của bạn thông tin vị trí chính xác trong thời gian thực</string>
+    <string name="life24h_collects_location">FBI logistics app thu thập và thông báo vị trí \nngay cả khi tài xế không mở app.</string>
+    <string name="allow_all_the_time_button">Allow all the time</string>
+    <string name="location">Location</string>
+    <string name="allowed">ALLOWED</string>
+    <string name="life24h_collects_location_app">FBI LOGISTICS APP collects location data to display \nyour location to your  group members, \neven when the application is closed or not in use.</string>
+    <string name="always_allow_option">For the application to work properly,you must \nallow access to the location by selecting \nthe always allow option.</string>
+    <string name="User_name">username</string>
+    <string name="Email">email</string>
+    <string name="Password">password</string>
+    <string name="login">login</string>
+    <string name="Don_not_have_an_account">khong tai khoan</string>
+    <string name="Register">dang ky di ne</string>
+>>>>>>> Stashed changes
 
 </resources>

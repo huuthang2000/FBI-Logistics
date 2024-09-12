@@ -1,13 +1,20 @@
 package com.example.demoapp.model;
 
+import com.google.gson.annotations.Expose;
+import com.google.gson.annotations.SerializedName;
+
 import java.io.Serializable;
 
 public class Log implements Serializable {
+    @SerializedName("stt")
     private String stt;
+    @Expose
     private String tenhang;
     private String hscode;
     private String congdung;
+    @SerializedName("hinhanh")
     private String hinhanh;
+    @Expose
     private String cangdi;
     private String cangden;
     private String loaihang;

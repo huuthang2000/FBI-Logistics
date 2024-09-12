@@ -1,5 +1,7 @@
 package com.example.demoapp.repository;
 
+import android.net.Uri;
+
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 
@@ -16,6 +18,7 @@ import retrofit2.Response;
 public class LogRepository {
     private MutableLiveData<List<Log>> mListLog;
     private LogService mLogService;
+    private Uri mUri;
 
     public LogRepository(String baseURL) {
         mLogService = APIClient.getClient(baseURL).create(LogService.class);
@@ -47,13 +50,17 @@ public class LogRepository {
         return mListLog;
     }
 
-    public Call<Log> insertLog(String tenhang, String hscode, String hinhanh, String congdung,
-                               String cangdi, String cangden, String loaihang, String soluongcuthe,
-                               String yeucaudacbiet, String price, String month, String importorExport,
-                               String type, String date_created) {
-       return mLogService.addData(tenhang, hscode, hinhanh, congdung, cangdi, cangden, loaihang, soluongcuthe,
-                yeucaudacbiet, price, month, importorExport, type, date_created);
-    }
+//    String strRealPath = RealPathUtil.getRealPath(getContext(), mUri);
+//    File file = new File(strRealPath);
+//    RequestBody requestBody = RequestBody.create(MediaType.parse("multipart/form-data"), file);
+//    MultipartBody.Part multPartbodyimage = MultipartBody.Part.createFormData(Constants.KEY_IMG, file.getName(), requestBody);
+//
+//    public Call<Log> insertLog(String tenhang, String hscode, String congdung, String hinhanh,
+//                               String cangdi, String cangden, String loaihang, String soluongcuthe,
+//                               String yeucaudacbiet, String price, String month, String importorExport,
+//                               String type, String date_created)
+//
+//}
 
     public Call<Log> updateLog(String stt, String tenhang, String hscode, String hinhanh, String congdung,
                                String cangdi, String cangden, String loaihang, String soluongcuthe,
@@ -61,6 +68,7 @@ public class LogRepository {
                                String type) {
         return mLogService.updateData(stt, tenhang, hscode, hinhanh, congdung, cangdi, cangden, loaihang, soluongcuthe,
                 yeucaudacbiet, price, month, importorExport, type);
+
     }
 
 }

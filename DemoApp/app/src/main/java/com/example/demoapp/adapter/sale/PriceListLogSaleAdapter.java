@@ -46,7 +46,7 @@ public class PriceListLogSaleAdapter extends RecyclerView.Adapter<PriceListLogSa
             holder.tvTenHang.setText(pricelog.getTenhang());
             holder.tvHScode.setText(pricelog.getHscode());
             holder.tvCongdung.setText(pricelog.getCongdung());
-            holder.tvHinhanh.setText(pricelog.getHinhanh());
+           // holder.tvHinhanh.setText(pricelog.getHinhanh());
             holder.tvCangdi.setText(pricelog.getCangdi());
             holder.tvCangden.setText(pricelog.getCangden());
             holder.tvLoaihang.setText(pricelog.getLoaihang());

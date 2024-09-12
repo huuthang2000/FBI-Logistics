@@ -5,8 +5,13 @@ import java.util.HashMap;
 public class Constants {
 
 
+<<<<<<< Updated upstream
     public static final String URL_API = "http://192.168.1.44/database/";
 
+=======
+    public static final String URL_API = "http://192.168.1.80/";
+    public static final String baseURL = "http://192.168.1.80/";
+>>>>>>> Stashed changes
 
     public static final String FCL_UPDATE = "update_fcl";
 
@@ -145,6 +150,11 @@ public class Constants {
     public static final String KEY_LOG = "Log";
     public static final String KEY_IMPORT= "Import";
     public static final String KEY_FCL = "Fcl";
+<<<<<<< Updated upstream
+=======
+    public static final String KEY_IMG = "hinhanh";
+    public static final String KEY_DRIVER = "Driver";
+>>>>>>> Stashed changes
 
 
     public static HashMap<String, String> remoteMsgHeaders = null;

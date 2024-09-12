@@ -116,21 +116,28 @@
                 android:hint="@string/collog_3" />
         </com.google.android.material.textfield.TextInputLayout>
 
-        <com.google.android.material.textfield.TextInputLayout
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            android:id="@+id/tf_hinhanh"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="5dp"
-            android:layout_marginEnd="10dp"
-            app:startIconDrawable="@drawable/baseline_redeem_black_24">
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-            <com.google.android.material.textfield.TextInputEditText
+            <ImageView
+                android:id="@+id/imageview"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:background="@drawable/ic_add_circle_outline_black_24dp"
+                android:text="@string/done"
+                android:textColor="@color/colorAccent"
+                android:textSize="14sp"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/selected_recycler_view"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="@string/collog_4" />
-        </com.google.android.material.textfield.TextInputLayout>
+                android:layout_marginTop="10dp"/>
+
+        </LinearLayout>
 
         <com.google.android.material.textfield.TextInputLayout
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
